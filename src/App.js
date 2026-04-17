@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import TopBar       from './components/TopBar/TopBar'
+import EventFeed    from './components/EventFeed/EventFeed'
+import MapView      from './components/MapView/MapView'
+import DevicePanel  from './components/DevicePanel/DevicePanel'
+import DispatchAlert from './components/DispatchAlert/DispatchAlert'
+import BottomBar    from './components/BottomBar/BottomBar'
+import useSimulation from './hooks/useSimulation'
+import useWeather    from './hooks/useWeather'
+import './App.css'
 
-function App() {
+export default function App() {
+  useSimulation()
+  useWeather()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="app-root">
+      {/* 지도 — 최하단 레이어 */}
+      <MapView />
 
-export default App;
+      {/* 상단 바 */}
+      <TopBar />
+
+      {/* 좌측 이벤트 피드 */}
+      <EventFeed />
+
+      {/* 우측 장치 상세 패널 (선택 시) */}
+      <DevicePanel />
+
+      {/* 하단 필터 바 */}
+      <BottomBar />
+
+      {/* 출동 요청 알림 (최상단) */}
+      <DispatchAlert />
+    </div>
+  )
+}

@@ -1214,35 +1214,7 @@
         activate(currentTarget);
         hydratePostsForDirectEntry();
 
-        // 데스크탑: permalink 페이지에서 댓글 패널을 우측으로 분리
-        (function () {
-          if (!currentPostTitle) return; // 리스트 페이지에서는 생성하지 않음
-          var commentCard = document.querySelector('#content .comment-card');
-          if (!commentCard) return;
-          var contentEl = document.getElementById('content');
-          if (!contentEl) return;
-          var article = contentEl.querySelector('.entry.card');
-          if (!article) return;
 
-          // 버튼 텍스트 변경 (댓글 남기기 → 전송)
-          var submitBtn = commentCard.querySelector('.btn');
-          if (submitBtn) submitBtn.textContent = '전송';
-
-          // comment-card 전체를 패널로 이동 (form 관계 유지)
-          var panel = document.createElement('aside');
-          panel.id = 'comment-panel';
-          commentCard.parentNode.removeChild(commentCard);
-          panel.appendChild(commentCard);
-
-          // article + panel을 감싸는 split-row 생성
-          var splitRow = document.createElement('div');
-          splitRow.className = 'permalink-split-row';
-          article.parentNode.insertBefore(splitRow, article);
-          splitRow.appendChild(article);
-          splitRow.appendChild(panel);
-
-          contentEl.classList.add('has-comment-panel');
-        }());
 
         // 목록 모드에서는 Tistory 기본 글 목록 카드·페이지네이션 숨김
         // 드로어가 글 목록을 담당하므로 콘텐츠 영역에 중복 표시 불필요

@@ -1,0 +1,63 @@
+.bottom-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;   /* 전체 너비 — 왼쪽 하단 빈 공간 해소 */
+  height: 48px;
+  z-index: 450;                    /* EventFeed(400)보다 위 */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px 0 284px;        /* 왼쪽 패널 너비(268) + 여백(16) */
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.06);
+}
+
+.filter-group { display: flex; align-items: center; gap: 5px; }
+
+.filter-chip {
+  display: flex; align-items: center; gap: 5px;
+  padding: 4px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 11px; font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.filter-chip:hover { background: var(--surface-hover); color: var(--text-primary); }
+.filter-chip.active {
+  background: var(--primary-bg);
+  color: var(--primary);
+  border-color: rgba(49,130,246,0.3);
+}
+
+.chip-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.chip-count { font-size: 10px; opacity: 0.8; font-variant-numeric: tabular-nums; }
+
+.bottom-divider {
+  width: 1px; height: 18px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.city-group { display: flex; align-items: center; gap: 6px; }
+.city-label { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+.city-select {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 11px; padding: 4px 8px;
+  cursor: pointer; outline: none;
+  transition: border-color 0.15s;
+}
+.city-select:focus { border-color: var(--primary); }
+
+.bottom-summary {
+  margin-left: auto;
+  font-size: 11px; color: var(--text-muted);
+  white-space: nowrap;
+}
+.bottom-summary strong { color: var(--text-secondary); }

@@ -1,0 +1,176 @@
+.device-panel {
+  position: absolute;
+  top: 56px; right: 0; bottom: 48px;
+  width: 320px;
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -2px 0 12px rgba(0,0,0,0.08);
+  animation: slideInRight 0.28s ease;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* 헤더 */
+.dp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.dp-name { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+.dp-addr { font-size: 11px; color: var(--text-muted); }
+.dp-header-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.dp-badge {
+  font-size: 10px; font-weight: 700;
+  padding: 3px 9px; border-radius: 20px;
+  border: 1px solid; white-space: nowrap;
+}
+.dp-close {
+  background: none; border: none;
+  color: var(--text-muted); font-size: 14px; cursor: pointer;
+  padding: 2px 6px; border-radius: 6px;
+  transition: all 0.15s;
+  line-height: 1;
+}
+.dp-close:hover { background: var(--surface-2); color: var(--text-primary); }
+
+/* 바디 */
+.dp-body { flex: 1; overflow-y: auto; }
+
+.dp-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.dp-section-label {
+  font-size: 10px; font-weight: 700;
+  color: var(--text-muted); letter-spacing: 0.5px;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.dp-row {
+  display: flex; align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.dp-row--between { justify-content: space-between; }
+
+/* 게이지 */
+.gauge-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 8px; }
+.gauge-wrap { display: flex; flex-direction: column; gap: 3px; }
+.gauge-label { font-size: 10px; color: var(--text-muted); }
+.gauge-value {
+  font-size: 16px; font-weight: 700;
+  font-variant-numeric: tabular-nums; line-height: 1;
+}
+.gauge-unit { font-size: 9px; color: var(--text-muted); margin-left: 2px; }
+.gauge-bar  { height: 4px; background: var(--border); border-radius: 2px; margin-top: 4px; overflow: hidden; }
+.gauge-fill { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
+
+.deviation-row {
+  display: flex; justify-content: space-between;
+  font-size: 11px; color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 밸브 */
+.valve-bar-wrap { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.valve-bar  { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.valve-fill { height: 100%; background: linear-gradient(90deg, #3182F6, #00C851); border-radius: 3px; transition: width 0.6s ease; }
+.valve-pct  { font-size: 12px; font-weight: 700; color: var(--text-secondary); min-width: 36px; text-align: right; }
+.valve-btns { display: flex; gap: 8px; }
+
+/* 목표압 설정 */
+.target-input-row { display: flex; align-items: center; gap: 8px; }
+.target-input {
+  flex: 1; background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 7px 10px; color: var(--text-primary); font-size: 13px;
+  outline: none; font-variant-numeric: tabular-nums;
+  transition: border-color 0.15s;
+}
+.target-input:focus { border-color: var(--primary); }
+.target-unit { font-size: 11px; color: var(--text-muted); flex-shrink: 0; }
+
+/* 파라미터 */
+.param-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.param-item { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; border: 1px solid var(--border-light); }
+.param-label { font-size: 10px; color: var(--text-muted); display: block; margin-bottom: 3px; }
+.param-value { font-size: 13px; font-weight: 600; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+
+/* 토글 */
+.toggle-btn {
+  position: relative;
+  width: 52px; height: 28px;
+  border-radius: 14px;
+  border: none; cursor: pointer;
+  display: flex; align-items: center;
+  transition: background 0.25s;
+}
+.toggle-on  { background: var(--primary); }
+.toggle-off { background: var(--border); }
+.toggle-thumb {
+  width: 20px; height: 20px;
+  border-radius: 50%; background: #fff;
+  position: absolute; transition: left 0.25s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.toggle-on  .toggle-thumb { left: 28px; }
+.toggle-off .toggle-thumb { left: 4px; }
+.toggle-label {
+  position: absolute; right: 7px;
+  font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.8);
+}
+.toggle-on .toggle-label { right: auto; left: 7px; }
+
+/* 버튼 */
+.btn {
+  border: none; border-radius: 8px;
+  font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+  padding: 8px 14px;
+}
+.btn-sm { padding: 6px 10px; font-size: 11px; border-radius: 6px; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost {
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { background: var(--surface-hover); color: var(--text-primary); }
+.btn-danger { background: #F04452; color: #fff; }
+.btn-danger:hover { background: #d63545; }
+
+/* 확인 모달 */
+.confirm-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.confirm-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 32px;
+  text-align: center; min-width: 280px;
+  box-shadow: var(--shadow-lg);
+}
+.confirm-icon { font-size: 32px; margin-bottom: 12px; }
+.confirm-msg {
+  font-size: 13px; color: var(--text-secondary);
+  white-space: pre-wrap; line-height: 1.6; margin-bottom: 20px;
+}
+.confirm-btns { display: flex; gap: 10px; justify-content: center; }
+
+/* 푸터 */
+.dp-footer {
+  padding: 10px 16px 0;
+  font-size: 10px; color: var(--text-muted); text-align: right;
+}

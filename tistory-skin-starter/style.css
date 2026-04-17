@@ -1,17 +1,17 @@
 @charset "utf-8";
 
 :root {
-  --background: #fafafa;          /* neutral-50 */
-  --foreground: #0a0a0a;          /* neutral-950 */
-  --muted: #737373;               /* neutral-500 */
-  --muted-2: #a3a3a3;             /* neutral-400 */
-  --border: #e5e5e5;              /* neutral-200 */
+  --background: #fafafa; /* neutral-50 */
+  --foreground: #0a0a0a; /* neutral-950 */
+  --muted: #737373; /* neutral-500 */
+  --muted-2: #a3a3a3; /* neutral-400 */
+  --border: #e5e5e5; /* neutral-200 */
   --card: #ffffff;
-  --accent: #f5f5f5;              /* neutral-100 */
-  --accent-strong: #e5e5e5;       /* neutral-200 */
-  --primary: #171717;             /* neutral-900 */
-  --primary-foreground: #fafafa;  /* neutral-50 */
-  --ring: #a3a3a3;                /* neutral-400 */
+  --accent: #f5f5f5; /* neutral-100 */
+  --accent-strong: #e5e5e5; /* neutral-200 */
+  --primary: #171717; /* neutral-900 */
+  --primary-foreground: #fafafa; /* neutral-50 */
+  --ring: #a3a3a3; /* neutral-400 */
   --radius: 12px;
   --radius-sm: 10px;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -34,7 +34,7 @@ body {
 body {
   background: #f5f5f5; /* neutral-100 */
   color: var(--foreground);
-  font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
   line-height: 1.5;
   font-size: 14px;
   overflow: hidden;
@@ -699,7 +699,7 @@ a {
 }
 
 .post-content code {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'D2Coding', monospace;
+  font-family: "JetBrains Mono", "Fira Code", "Consolas", "D2Coding", monospace;
 }
 
 .post-content :not(pre) > code {
@@ -713,8 +713,8 @@ a {
 
 .post-content pre,
 .post-content .hljs,
-.post-content figure[data-ke-type='codeblock'],
-.post-content [data-ke-type='codeblock'] {
+.post-content figure[data-ke-type="codeblock"],
+.post-content [data-ke-type="codeblock"] {
   margin: 14px 0;
   padding: 14px 16px;
   border: 1px solid #d4d4d4; /* neutral-300 */
@@ -727,7 +727,7 @@ a {
 
 .post-content pre code,
 .post-content .hljs code,
-.post-content [data-ke-type='codeblock'] code {
+.post-content [data-ke-type="codeblock"] code {
   padding: 0;
   border: 0;
   background: transparent;
@@ -738,13 +738,13 @@ a {
 
 .post-content pre::-webkit-scrollbar,
 .post-content .hljs::-webkit-scrollbar,
-.post-content [data-ke-type='codeblock']::-webkit-scrollbar {
+.post-content [data-ke-type="codeblock"]::-webkit-scrollbar {
   height: 8px;
 }
 
 .post-content pre::-webkit-scrollbar-thumb,
 .post-content .hljs::-webkit-scrollbar-thumb,
-.post-content [data-ke-type='codeblock']::-webkit-scrollbar-thumb {
+.post-content [data-ke-type="codeblock"]::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background: #d4d4d4; /* neutral-300 */
 }

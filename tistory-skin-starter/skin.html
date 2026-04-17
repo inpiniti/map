@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>[##_title_##] :: [##_page_title_##]</title>
+    <meta name="author" content="[##_blogger_##]" />
+    <meta
+      name="google-site-verification"
+      content="GZ1D_8FcYDU60aGKHRzjZNFvLzpkZIb5PoakTyyiukA"
+    />
+    <meta
+      name="naver-site-verification"
+      content="7a7146c6fea5df7112178283070ce70a24edd732"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="[##_title_##]"
+      href="[##_rss_url_##]"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body id="[##_body_id_##]" class="t3-skin">
+    <s_t3>
+      <a href="#content" class="skip-link">본문으로 바로가기</a>
+
+      <main id="main" class="container" role="main">
+        <div class="dock-shell">
+          <header class="shell-topbar" role="banner">
+            <h1 class="brand"><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+            <div class="header-right">
+              <a class="admin-link" href="[##_owner_url_##]">관리자</a>
+              <a class="btn btn-ghost" href="[##_rss_url_##]">RSS</a>
+            </div>
+          </header>
+
+          <aside id="left-rail" aria-label="빠른 메뉴">
+            <a href="https://dev-soip.tistory.com/" class="rail-home-btn" aria-label="홈으로 이동">
+              <span class="icon">
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+                  <polyline points="9 21 9 13 15 13 15 21"/>
+                </svg>
+              </span>
+            </a>
+            <div id="rail-dynamic" aria-label="카테고리 메뉴"></div>
+          </aside>
+
+          <section
+            id="left-drawer"
+            class="card"
+            aria-label="메뉴별 게시글 목록"
+          >
+            <header class="drawer-head">
+              <div class="drawer-title-wrap">
+                <h2 id="drawer-title">자바</h2>
+              </div>
+              <input
+                id="drawer-search"
+                type="search"
+                placeholder="Type to search..."
+                autocomplete="off"
+              />
+            </header>
+
+            <div id="drawer-list" class="drawer-list" aria-live="polite">
+              <p class="drawer-empty">게시글을 불러오는 중...</p>
+            </div>
+          </section>
+
+          <div id="category-source" aria-hidden="true">
+            [##_category_list_##]
+          </div>
+
+          <div class="layout">
+            <section id="content">
+              <header class="inset-header">
+                <button
+                  id="mobile-nav-toggle"
+                  class="mobile-nav-toggle"
+                  type="button"
+                  aria-label="메뉴 열기"
+                  aria-expanded="false"
+                >
+                  <span class="mobile-nav-bar"></span>
+                  <span class="mobile-nav-bar"></span>
+                  <span class="mobile-nav-bar"></span>
+                </button>
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                  <a href="https://dev-soip.tistory.com/" class="crumb crumb-blog muted">dev-soip.tistory</a>
+                  <span class="crumb-sep">›</span>
+                  <span id="active-crumb" class="crumb">자바</span>
+                  <span id="post-crumb-sep" class="crumb-sep" hidden>›</span>
+                  <span
+                    id="active-post-crumb"
+                    class="crumb crumb-post"
+                    hidden
+                  ></span>
+                </nav>
+                <div id="inset-floating-slot"></div>
+              </header>
+
+              <div
+                id="content-empty-state"
+                hidden
+                aria-live="polite"
+              >
+                <h2 id="empty-hint-title" class="empty-hint-title">컨텐츠를 선택해주세요.</h2>
+                <p id="empty-hint-desc" class="empty-hint-desc">왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.</p>
+
+                <section class="empty-state card">
+                  <h2>dev-soip.tistory</h2>
+                  <p>개발하다 삽질한 것들, 겨우 해결한 것들, 그리고 가끔은 잘 작동하는 코드들을 기록하는 기술 블로그입니다.</p>
+                  <div class="empty-state-intro">
+                    <strong>Frontend Developer · 2015 ~ </strong>
+                    <p>
+                      안드로이드 앱 개발로 시작해 Electron 데스크탑 앱, KRX 대규모
+                      서비스 운영, IoT·스마트제조 시스템, 해양 물류 플랫폼을 거쳐
+                      현재는 GRM에서 React · Zustand 기반의 모바일 현장 업무 앱을
+                      개발하고 있습니다.
+                    </p>
+                    <ul class="empty-state-career">
+                      <li>
+                        <span class="career-period">2015–2017</span>
+                        <span class="career-company">온웨어</span>
+                        <span class="career-desc"
+                          >Android · Spring · O2O 세탁 서비스</span
+                        >
+                      </li>
+                      <li>
+                        <span class="career-period">2018–2021</span>
+                        <span class="career-company">사이버이메지네이션</span>
+                        <span class="career-desc"
+                          >KRX 운영 · Electron · Flutter · 금융 API</span
+                        >
+                      </li>
+                      <li>
+                        <span class="career-period">2021–2023</span>
+                        <span class="career-company">아이오코드</span>
+                        <span class="career-desc"
+                          >Vue · IoT 항만물류 · 스마트제조혁신</span
+                        >
+                      </li>
+                      <li>
+                        <span class="career-period">2023–2024</span>
+                        <span class="career-company">에코마린</span>
+                        <span class="career-desc"
+                          >Nuxt3 · 선박 모니터링 · 해양드론 배송</span
+                        >
+                      </li>
+                      <li>
+                        <span class="career-period">2024–현재</span>
+                        <span class="career-company">서울도시가스 그룹 GRM</span>
+                        <span class="career-desc"
+                          >React · Zustand · 가스링크 현장 업무 앱</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+
+              <s_list>
+                <section class="hero-card">
+                  <h2>[##_list_conform_##]</h2>
+                  <p>
+                    해당 글 <span id="visible-count">[##_list_count_##]</span>건
+                  </p>
+                </section>
+              </s_list>
+
+              <s_notice_rep>
+                <article class="entry card notice-entry" data-category="공지">
+                  <s_index_article_rep>
+                    <a class="entry-link" href="[##_notice_rep_link_##]">
+                      <h3 class="entry-title">[##_notice_rep_title_##]</h3>
+                      <p class="entry-summary">[##_notice_rep_summary_##]</p>
+                    </a>
+                    <div class="entry-meta">
+                      <span class="badge">공지</span>
+                      <abbr>[##_notice_rep_date_##]</abbr>
+                    </div>
+                  </s_index_article_rep>
+
+                  <s_permalink_article_rep>
+                    <header class="entry-head">
+                      <h2>[##_notice_rep_title_##]</h2>
+                      <div class="entry-meta">
+                        <span class="badge">공지</span>
+                        <abbr>[##_notice_rep_date_##]</abbr>
+                        <span>by [##_notice_rep_author_##]</span>
+                      </div>
+                    </header>
+                    <div class="post-content">[##_notice_rep_desc_##]</div>
+                  </s_permalink_article_rep>
+                </article>
+              </s_notice_rep>
+
+              <s_article_rep>
+                <article
+                  class="entry card"
+                  data-category="[##_article_rep_category_##]"
+                >
+                  <s_index_article_rep>
+                    <s_article_rep_thumbnail>
+                      <a class="thumb-wrap" href="[##_article_rep_link_##]">
+                        <img
+                          class="thumb"
+                          src="[##_article_rep_thumbnail_url_##]"
+                          alt="[##_article_rep_title_##]"
+                        />
+                      </a>
+                    </s_article_rep_thumbnail>
+                    <a class="entry-link" href="[##_article_rep_link_##]">
+                      <h3 class="entry-title">[##_article_rep_title_##]</h3>
+                      <p class="entry-summary">[##_article_rep_summary_##]</p>
+                    </a>
+                    <div class="entry-meta">
+                      <a
+                        href="[##_article_rep_category_link_##]"
+                        class="badge outline"
+                        >[##_article_rep_category_##]</a
+                      >
+                      <abbr>[##_article_rep_date_##]</abbr>
+                    </div>
+                  </s_index_article_rep>
+
+                  <s_permalink_article_rep>
+                    <header class="entry-head">
+                      <h2>[##_article_rep_title_##]</h2>
+                      <div class="entry-meta">
+                        <span class="badge outline">[##_article_rep_category_##]</span>
+                        <abbr>[##_article_rep_date_##]</abbr>
+                        <span>by [##_article_rep_author_##]</span>
+                      </div>
+                    </header>
+
+                    <div class="post-content">[##_article_rep_desc_##]</div>
+
+                    <s_tag_label>
+                      <div class="entry-tag">[##_tag_label_rep_##]</div>
+                    </s_tag_label>
+
+                    <s_rp>
+                      <section class="comment-card">
+                        <h3>댓글</h3>
+                        <s_rp_input_form>
+                          <div class="comment-form">
+                            <textarea
+                              name="[##_rp_input_comment_##]"
+                              rows="4"
+                              placeholder="댓글을 남겨주세요"
+                            ></textarea>
+                            <button
+                              class="btn"
+                              type="submit"
+                              onclick="[##_rp_onclick_submit_##]"
+                            >
+                              댓글 남기기
+                            </button>
+                          </div>
+                        </s_rp_input_form>
+
+                        <s_rp_container>
+                          <ol class="comment-list">
+                            <s_rp_rep>
+                              <li id="[##_rp_rep_id_##]" class="comment-item">
+                                <div class="comment-head">
+                                  <strong>[##_rp_rep_name_##]</strong>
+                                  <abbr>[##_rp_rep_date_##]</abbr>
+                                </div>
+                                <p>[##_rp_rep_desc_##]</p>
+                              </li>
+                            </s_rp_rep>
+                          </ol>
+                        </s_rp_container>
+                      </section>
+                    </s_rp>
+                  </s_permalink_article_rep>
+                </article>
+              </s_article_rep>
+
+              <s_paging>
+                <nav id="paging" class="paging" aria-label="페이지 이동">
+                  <a
+                    [##_prev_page_##]
+                    class="btn btn-ghost [##_no_more_prev_##]"
+                    rel="prev"
+                    >이전</a
+                  >
+                  <s_paging_rep>
+                    <a [##_paging_rep_link_##] class="page-num"
+                      >[##_paging_rep_link_num_##]</a
+                    >
+                  </s_paging_rep>
+                  <a
+                    [##_next_page_##]
+                    class="btn btn-ghost [##_no_more_next_##]"
+                    rel="next"
+                    >다음</a
+                  >
+                </nav>
+              </s_paging>
+            </section>
+          </div>
+        </div>
+        <button
+          id="mobile-nav-backdrop"
+          class="mobile-nav-backdrop"
+          type="button"
+          aria-label="메뉴 닫기"
+        ></button>
+      </main>
+
+      <footer id="site-footer" class="container" role="contentinfo">
+        <div class="footer-links">
+          <a href="[##_blog_link_##]">홈</a>
+          <a href="[##_guestbook_link_##]">방명록</a>
+          <a href="https://www.tistory.com/login" class="admin-login">로그인</a>
+          <a href="https://www.tistory.com/logout" class="admin-logout"
+            >로그아웃</a
+          >
+        </div>
+        <small
+          >Copyright <a href="[##_blog_link_##]">[##_title_##]</a>. All rights
+          reserved.</small
+        >
+      </footer>
+    </s_t3>
+    <script>
+      (function () {
+        var rail = document.getElementById('left-rail');
+        var railDynamic = document.getElementById('rail-dynamic');
+        var categorySource = document.getElementById('category-source');
+        var cards = document.querySelectorAll('#content .entry.card');
+        var search = document.getElementById('drawer-search');
+        var drawerTitle = document.getElementById('drawer-title');
+        var mobileNavToggle = document.getElementById('mobile-nav-toggle');
+        var mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+        var activeCrumb = document.getElementById('active-crumb');
+        var activePostCrumb = document.getElementById('active-post-crumb');
+        var postCrumbSep = document.getElementById('post-crumb-sep');
+        var contentEmptyState = document.getElementById('content-empty-state');
+        var drawerList = document.getElementById('drawer-list');
+        var visibleCount = document.getElementById('visible-count');
+
+        if (
+          !rail ||
+          !railDynamic ||
+          !cards.length ||
+          !search ||
+          !drawerTitle ||
+          !activeCrumb ||
+          !drawerList
+        ) {
+          return;
+        }
+
+        function isMobileSidebarMode() {
+          return (
+            window.matchMedia &&
+            window.matchMedia('(max-width: 1200px)').matches
+          );
+        }
+
+        function setMobileNav(open) {
+          if (!isMobileSidebarMode()) {
+            document.body.classList.remove('nav-open');
+            if (mobileNavToggle) {
+              mobileNavToggle.setAttribute('aria-expanded', 'false');
+            }
+            return;
+          }
+
+          document.body.classList.toggle('nav-open', !!open);
+          if (mobileNavToggle) {
+            mobileNavToggle.setAttribute(
+              'aria-expanded',
+              open ? 'true' : 'false',
+            );
+          }
+        }
+
+        var buttons = [];
+        var targetConfig = {};
+        var isHydrating = false;
+        var drawerLoadingTimer = null;
+
+        var CACHE_KEY = 'tistory-drawer-posts-v4';
+        var TARGET_KEY = 'tistory-drawer-target-v1';
+
+        function normalizeText(text) {
+          return (text || '').replace(/\s+/g, ' ').trim().toLowerCase();
+        }
+
+        function normalizeCategoryKey(text) {
+          return normalizeText(text).replace(/^\d+\s*[-_.):]?\s*/, '');
+        }
+
+        function getTopCategory(categoryText) {
+          if (!categoryText) {
+            return '';
+          }
+          var top = categoryText.split('/')[0] || categoryText;
+          return normalizeCategoryKey(top);
+        }
+
+        function categoryLabel(text) {
+          return (text || '').replace(/\(\s*\d+\s*\)\s*$/, '').trim();
+        }
+
+        function normalizePath(href) {
+          try {
+            var u = new URL(href, window.location.href);
+            var path = (u.pathname || '').replace(/\/+$/, '');
+            return path || '/';
+          } catch (e) {
+            return '';
+          }
+        }
+
+        function getCurrentPostTitle() {
+          var node = document.querySelector('#content .entry-head h2');
+          return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
+        }
+
+        var currentPath = normalizePath(window.location.href);
+        var currentPostTitle = getCurrentPostTitle();
+
+        function syncPostCrumb(showPostCrumb) {
+          if (!activePostCrumb || !postCrumbSep) {
+            return;
+          }
+          var hasPost = !!currentPostTitle && showPostCrumb !== false;
+          activePostCrumb.hidden = !hasPost;
+          postCrumbSep.hidden = !hasPost;
+          if (hasPost) {
+            activePostCrumb.textContent = currentPostTitle;
+          }
+        }
+
+        syncPostCrumb(true);
+
+        var ICON_MAP = {
+          // Java / 자바
+          java: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Java"><path d="M9.5 19.5s-1.5.9 1.1 1.2c3.2.4 4.8.3 8.3-.3 0 0 .9.6 2.2 1.1-7.9 3.4-17.9-.2-11.6-2Z"/><path d="M8.6 16.7s-1.7 1.2 1.7 1.5c2.5.2 4.4.2 7.8-.3 0 0 .6.6 1.6.9-6.9 2-14.6.2-11.1-2.1Z"/><path d="M14 11.8c1.4 1.6-.4 3-.4 3s3.5-1.8 1.9-4.1c-1.5-2.1-2.7-3.2 3.6-6.7 0 0-9.8 2.5-5.1 7.8Z"/><path d="M19.3 21.3s1.1.9-1.2 1.6c-4.5 1.4-18.5 1.8-22.4.1-1.4-.6 1.2-1.5 2.1-1.7.8-.2 1.3-.1 1.3-.1-1.5-1.1-9.8 2.1-4.2 3 15.3 2.5 27.9-1.1 24.4-3Z"/><path d="M10.2 13.5s-7.1 1.7-2.5 2.3c1.9.2 5.7.2 9.3-.1 2.9-.2 5.8-.7 5.8-.7s-1 .4-1.7.9c-7 1.8-20.4 1-16.5-.9 3.3-1.6 5.6-1.5 5.6-1.5Z"/><path d="M17.5 17.5c7.1-3.7 3.8-7.3 1.5-6.8-.5.1-.8.2-.8.2s.2-.4.6-.5c4.5-1.6 8 4.7-1.5 7.1 0 .1.1 0 .2 0Z"/><path d="M12 1s4 4-3.8 10.2c-6.2 4.9-1.4 7.7 0 10.9C5 19.1 3.6 16.5 5 14.3 7 11.1 13.1 9.5 12 1Z"/></svg>',
+          // JavaScript / JS
+          javascript:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="JavaScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 15.5c.3.8 1 1.3 1.9 1.3 1 0 1.6-.5 1.6-1.3 0-.9-.6-1.2-1.6-1.6L8.8 13c-1.6-.7-2.7-1.5-2.7-3.3C6.1 7.9 7.5 7 9.3 7c1.5 0 2.7.6 3.4 2l-1.6 1c-.3-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3 1.1 0 .7.5 1 1.4 1.4l.6.3c2 .8 3 1.7 3 3.6 0 2-1.6 3.3-3.8 3.3-2.1 0-3.5-1-4.2-2.4l1.4-.7Z"/><path d="M14.5 16.5c.4.7 1 1.2 2 1.2.9 0 1.5-.4 1.5-2V7h2v8.7c0 3-1.7 4-3.4 4-1.6 0-2.8-.8-3.4-2l1.3-.7Z"/></svg>',
+          js: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="JavaScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 15.5c.3.8 1 1.3 1.9 1.3 1 0 1.6-.5 1.6-1.3 0-.9-.6-1.2-1.6-1.6L8.8 13c-1.6-.7-2.7-1.5-2.7-3.3C6.1 7.9 7.5 7 9.3 7c1.5 0 2.7.6 3.4 2l-1.6 1c-.3-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3 1.1 0 .7.5 1 1.4 1.4l.6.3c2 .8 3 1.7 3 3.6 0 2-1.6 3.3-3.8 3.3-2.1 0-3.5-1-4.2-2.4l1.4-.7Z"/><path d="M14.5 16.5c.4.7 1 1.2 2 1.2.9 0 1.5-.4 1.5-2V7h2v8.7c0 3-1.7 4-3.4 4-1.6 0-2.8-.8-3.4-2l1.3-.7Z"/></svg>',
+          // TypeScript / TS
+          typescript:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="TypeScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 9h10M12 9v9"/><path d="M15.5 15.5c.3.8 1 1.2 1.8 1.2.9 0 1.4-.4 1.4-1.1 0-.8-.5-1.1-1.6-1.5l-.5-.2c-1.6-.6-2.4-1.5-2.4-3 0-1.7 1.3-2.7 3.1-2.7 1.3 0 2.4.5 3 1.7l-1.4.8c-.3-.6-.8-1-1.6-1-.7 0-1.2.4-1.2 1 0 .7.4 1 1.4 1.4l.5.2c1.9.8 2.9 1.6 2.9 3.3 0 1.9-1.5 3.1-3.5 3.1-1.9 0-3.2-.9-3.8-2.2l1.4-.7Z"/></svg>',
+          ts: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="TypeScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 9h10M12 9v9"/><path d="M15.5 15.5c.3.8 1 1.2 1.8 1.2.9 0 1.4-.4 1.4-1.1 0-.8-.5-1.1-1.6-1.5l-.5-.2c-1.6-.6-2.4-1.5-2.4-3 0-1.7 1.3-2.7 3.1-2.7 1.3 0 2.4.5 3 1.7l-1.4.8c-.3-.6-.8-1-1.6-1-.7 0-1.2.4-1.2 1 0 .7.4 1 1.4 1.4l.5.2c1.9.8 2.9 1.6 2.9 3.3 0 1.9-1.5 3.1-3.5 3.1-1.9 0-3.2-.9-3.8-2.2l1.4-.7Z"/></svg>',
+          // React
+          react:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="React"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-60 12 12)"/></svg>',
+          // Docker
+          docker:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Docker"><rect x="2" y="11" width="3" height="3" rx="0.5"/><rect x="6" y="11" width="3" height="3" rx="0.5"/><rect x="10" y="11" width="3" height="3" rx="0.5"/><rect x="14" y="11" width="3" height="3" rx="0.5"/><rect x="10" y="7" width="3" height="3" rx="0.5"/><rect x="14" y="7" width="3" height="3" rx="0.5"/><path d="M21 12.5c-.5-.8-1.7-.8-2.3-.8H18c-.2-1.4-1.2-1.7-1.8-1.7H3c-.5 2-.3 4 .8 5.5C5 17.7 6.7 18 8.5 18h7c2.6 0 4.5-1 5.4-3 .4-.8.5-1.8.1-2.5Z"/></svg>',
+          // Electron
+          electron:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Electron"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(-60 12 12)" fill="none"/><circle cx="12" cy="5" r="1"/></svg>',
+          일렉트론:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Electron"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(-60 12 12)" fill="none"/><circle cx="12" cy="5" r="1"/></svg>',
+          // Jest / Testing
+          jest: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Jest"><path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg>',
+          테스트:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="테스트"><path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg>',
+          // News / 뉴스
+          news: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="뉴스"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7M7 17h5"/></svg>',
+          뉴스: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="뉴스"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7M7 17h5"/></svg>',
+          // Linux / 윈도우 / OS
+          linux:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Linux"><path d="M12 2c-2 0-4 2-4 5v3c0 2 1 3.5 2 4.5l-2 3.5c-.3.5 0 1 .5 1H9c.5 0 1-.5 1-1l.5-1.5c.4.1.7.2 1 .2h1c.3 0 .6-.1 1-.2L14 17c0 .5.5 1 1 1h.5c.5 0 .8-.5.5-1L14 13.5c1-1 2-2.5 2-4.5V7c0-3-2-5-4-5Z"/><circle cx="10" cy="9" r="1"/><circle cx="14" cy="9" r="1"/></svg>',
+          윈도우:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Windows"><path d="M3 5.5L10.5 4.5V11.5H3V5.5Z"/><path d="M11.5 4.3L21 3V11.5H11.5V4.3Z"/><path d="M3 12.5H10.5V19.5L3 18.5V12.5Z"/><path d="M11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>',
+          windows:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Windows"><path d="M3 5.5L10.5 4.5V11.5H3V5.5Z"/><path d="M11.5 4.3L21 3V11.5H11.5V4.3Z"/><path d="M3 12.5H10.5V19.5L3 18.5V12.5Z"/><path d="M11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>',
+          // Git
+          git: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Git"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h6M18 8v6a2 2 0 0 1-2 2h-2"/><path d="M6 8v6a2 2 0 0 0 2 2h2"/></svg>',
+          // Python
+          python:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Python"><path d="M12 2C8.7 2 7 3.5 7 5v2h5v1H5.5C4 8 3 9.2 3 11s.8 3.2 2.5 3.8L7 15v2c0 1.5 1.7 3 5 3s5-1.5 5-3v-2h-5v-1h6.5c1.5 0 2.5-1.2 2.5-3s-.8-3.2-2.5-3.8L17 7V5c0-1.5-1.7-3-5-3Z"/><circle cx="9.5" cy="5.5" r="1"/><circle cx="14.5" cy="18.5" r="1"/></svg>',
+          // Node.js
+          node: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Node.js"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 7v10M7 9.5l5 3 5-3"/></svg>',
+          nodejs:
+            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Node.js"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 7v10M7 9.5l5 3 5-3"/></svg>',
+        };
+
+        var FALLBACK_ICONS = [
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>',
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Z"/><path d="M12 6v6l4 2"/></svg>',
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M12 2L2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>',
+        ];
+
+        function iconSvg(index, categoryName) {
+          if (categoryName) {
+            var norm = normalizeText(categoryName);
+            // Try exact match first
+            if (ICON_MAP[norm]) {
+              return ICON_MAP[norm];
+            }
+            // Try partial keyword match
+            var keys = Object.keys(ICON_MAP);
+            for (var k = 0; k < keys.length; k += 1) {
+              if (norm.indexOf(keys[k]) > -1 || keys[k].indexOf(norm) > -1) {
+                return ICON_MAP[keys[k]];
+              }
+            }
+          }
+          return FALLBACK_ICONS[index % FALLBACK_ICONS.length];
+        }
+
+        function extractTopCategories() {
+          var result = [];
+          var seen = {};
+
+          if (!categorySource) {
+            return result;
+          }
+
+          // Prefer Tistory top-category anchors (exclude wrapper "분류 전체보기")
+          var links = categorySource.querySelectorAll(
+            '.category_list > li > a',
+          );
+          if (!links.length) {
+            // Fallback for unexpected markup variants
+            links = categorySource.querySelectorAll('li > a');
+          }
+
+          for (var i = 0; i < links.length; i += 1) {
+            var name = categoryLabel(links[i].textContent || '');
+            var norm = normalizeCategoryKey(name);
+            var href = links[i].getAttribute('href') || '';
+            if (
+              norm === '분류 전체보기' ||
+              name.indexOf('분류 전체보기') > -1
+            ) {
+              continue;
+            }
+            if (!name || !norm || seen[norm]) {
+              continue;
+            }
+
+            seen[norm] = true;
+            result.push({ title: name, category: name, href: href });
+          }
+
+          return result;
+        }
+
+        function buildDynamicRail(categories) {
+          var html = [];
+          targetConfig = {};
+
+          for (var i = 0; i < categories.length; i += 1) {
+            var target = 'cat-' + i;
+            targetConfig[target] = {
+              title: categories[i].title,
+              category: categories[i].category,
+              href: categories[i].href || '',
+            };
+
+            html.push(
+              '<button type="button" class="rail-btn" data-target="' +
+                target +
+                '" aria-pressed="false" title="' +
+                categories[i].title.replace(/"/g, '&quot;') +
+                '">' +
+                '<span class="icon" aria-hidden="true">' +
+                iconSvg(i, categories[i].category) +
+                '</span>' +
+                '</button>',
+            );
+          }
+
+          railDynamic.innerHTML = html.join('');
+          buttons = rail.querySelectorAll('.rail-btn');
+        }
+
+        function readSavedTarget() {
+          try {
+            var saved = window.sessionStorage.getItem(TARGET_KEY);
+            return saved || '';
+          } catch (e) {
+            return '';
+          }
+        }
+
+        function saveTarget(target) {
+          try {
+            window.sessionStorage.setItem(TARGET_KEY, target);
+          } catch (e) {
+            // no-op for environments where storage is not available
+          }
+        }
+
+        function getText(el, selector) {
+          var node = el.querySelector(selector);
+          return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
+        }
+
+        function cleanSnippet(text) {
+          var t = (text || '')
+            .replace(/---[\s\S]*?---/g, ' ')
+            .replace(/```[\s\S]*?```/g, ' ')
+            .replace(/`[^`]*`/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+          if (t.length > 170) {
+            t = t.substring(0, 170).trim() + '...';
+          }
+
+          return t;
+        }
+
+        function getSummaryText(card) {
+          var summary = getText(card, '.entry-summary');
+          if (summary) {
+            return cleanSnippet(summary);
+          }
+
+          var content = card.querySelector('.post-content');
+          if (!content) {
+            return '';
+          }
+
+          var clone = content.cloneNode(true);
+          var noisyNodes = clone.querySelectorAll(
+            'pre, code, script, style, figure, table, iframe, svg',
+          );
+          for (var i = 0; i < noisyNodes.length; i += 1) {
+            noisyNodes[i].remove();
+          }
+
+          var firstParagraph = clone.querySelector('p');
+          var raw = firstParagraph
+            ? firstParagraph.textContent
+            : clone.textContent;
+          return cleanSnippet(raw);
+        }
+
+        function escapeHtml(text) {
+          return String(text || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/\"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
+
+        var posts = [];
+        for (var p = 0; p < cards.length; p += 1) {
+          var card = cards[p];
+          var title =
+            getText(card, '.entry-title') || getText(card, '.entry-head h2');
+          if (!title) {
+            continue;
+          }
+          var summary = getSummaryText(card);
+          var date = getText(card, '.entry-meta abbr');
+          var category = (
+            card.getAttribute('data-category') ||
+            getText(card, '.badge.outline') ||
+            ''
+          ).trim();
+          var linkNode = card.querySelector('.entry-link');
+          posts.push({
+            title: title,
+            summary: summary,
+            date: date,
+            category: category,
+            href: linkNode
+              ? linkNode.getAttribute('href')
+              : window.location.href,
+            element: card,
+          });
+        }
+
+        function readCachedPosts() {
+          try {
+            var raw = window.sessionStorage.getItem(CACHE_KEY);
+            if (!raw) {
+              return [];
+            }
+            var parsed = JSON.parse(raw);
+            if (!Array.isArray(parsed)) {
+              return [];
+            }
+            return parsed;
+          } catch (e) {
+            return [];
+          }
+        }
+
+        function writeCachedPosts(list) {
+          try {
+            var serializable = [];
+            for (var i = 0; i < list.length; i += 1) {
+              serializable.push({
+                title: list[i].title,
+                summary: list[i].summary,
+                date: list[i].date,
+                category: list[i].category,
+                href: list[i].href,
+                element: null,
+              });
+            }
+            window.sessionStorage.setItem(
+              CACHE_KEY,
+              JSON.stringify(serializable),
+            );
+          } catch (e) {
+            // no-op for environments where storage is not available
+          }
+        }
+
+        function mergePosts(current, cached) {
+          var merged = [];
+          var indexByPath = {};
+
+          function add(post, prefer) {
+            var pathKey = normalizePath(post.href || '');
+            var fallbackKey = normalizeText(post.title || '');
+            var key = pathKey || fallbackKey;
+            if (!key) {
+              return;
+            }
+
+            if (indexByPath[key] === undefined) {
+              indexByPath[key] = merged.length;
+              merged.push(post);
+              return;
+            }
+
+            if (prefer) {
+              merged[indexByPath[key]] = post;
+            }
+          }
+
+          for (var j = 0; j < cached.length; j += 1) {
+            add(cached[j], false);
+          }
+          for (var i = 0; i < current.length; i += 1) {
+            // Current page data should overwrite stale cached entry with the same href.
+            add(current[i], true);
+          }
+
+          return merged;
+        }
+
+        posts = mergePosts(posts, readCachedPosts());
+        if (posts.length) {
+          writeCachedPosts(posts);
+        }
+
+        var categories = extractTopCategories();
+        if (!categories.length) {
+          var categorySeen = {};
+          categories = [];
+          for (var c = 0; c < posts.length; c += 1) {
+            var topCategory = (posts[c].category || '').split('/')[0].trim();
+            var topNorm = normalizeText(topCategory);
+            if (!topNorm || categorySeen[topNorm]) {
+              continue;
+            }
+            categorySeen[topNorm] = true;
+            categories.push({
+              title: topCategory,
+              category: topCategory,
+              href: '',
+            });
+          }
+        }
+
+        if (!categories.length) {
+          categories = [{ title: '전체', category: '', href: '' }];
+        }
+
+        buildDynamicRail(categories);
+
+        function hasPostsForCategory(conf) {
+          if (!conf || !conf.category) {
+            return false;
+          }
+          var catNorm = normalizeCategoryKey(conf.category);
+          for (var i = 0; i < posts.length; i += 1) {
+            if (getTopCategory(posts[i].category) === catNorm) {
+              return true;
+            }
+          }
+          return false;
+        }
+
+        var targetKeys = Object.keys(targetConfig);
+        var defaultTarget = targetKeys[0] || '';
+        for (var d = 0; d < targetKeys.length; d += 1) {
+          if (hasPostsForCategory(targetConfig[targetKeys[d]])) {
+            defaultTarget = targetKeys[d];
+            break;
+          }
+        }
+
+        var currentTarget = readSavedTarget() || defaultTarget;
+        if (!targetConfig[currentTarget]) {
+          currentTarget = defaultTarget;
+        }
+
+        function matchesTarget(post, target) {
+          var conf = targetConfig[target];
+          if (!conf) {
+            return false;
+          }
+          if (!conf.category) {
+            return true;
+          }
+          return (
+            getTopCategory(post.category) ===
+            normalizeCategoryKey(conf.category)
+          );
+        }
+
+        function matchesQuery(post, query) {
+          if (!query) {
+            return true;
+          }
+          var q = query.toLowerCase();
+          return (
+            (post.title + ' ' + post.summary).toLowerCase().indexOf(q) > -1
+          );
+        }
+
+        function renderDrawerLoading() {
+          // Show loading skeleton only when hydration is actually slow.
+          if (drawerLoadingTimer) {
+            clearTimeout(drawerLoadingTimer);
+          }
+
+          drawerList.setAttribute('aria-busy', 'true');
+
+          drawerLoadingTimer = setTimeout(function () {
+            if (!isHydrating) {
+              return;
+            }
+
+            var hasExistingItems = !!drawerList.querySelector('.drawer-item');
+            if (hasExistingItems) {
+              return;
+            }
+
+            drawerList.classList.add('is-loading');
+            drawerList.innerHTML =
+              '<div class="drawer-loading-wrap" aria-hidden="true">' +
+              '<p class="drawer-loading">카테고리 글을 불러오는 중...</p>' +
+              '<div class="drawer-skeleton"></div>' +
+              '<div class="drawer-skeleton"></div>' +
+              '<div class="drawer-skeleton"></div>' +
+              '</div>';
+          }, 320);
+        }
+
+        function clearDrawerLoading() {
+          if (drawerLoadingTimer) {
+            clearTimeout(drawerLoadingTimer);
+            drawerLoadingTimer = null;
+          }
+
+          drawerList.classList.remove('is-loading');
+          drawerList.setAttribute('aria-busy', 'false');
+        }
+
+        function renderDrawer(items) {
+          clearDrawerLoading();
+
+          if (!items.length) {
+            var msg = isHydrating
+              ? '카테고리 글을 불러오는 중...'
+              : '조건에 맞는 게시글이 없습니다.';
+            drawerList.innerHTML = '<p class="drawer-empty">' + msg + '</p>';
+            return;
+          }
+
+          var html = [];
+          for (var i = 0; i < items.length; i += 1) {
+            var samePath = normalizePath(items[i].href) === currentPath;
+            var sameTitle =
+              currentPostTitle &&
+              normalizeText(items[i].title) === normalizeText(currentPostTitle);
+            var currentClass = samePath || sameTitle ? ' is-current' : '';
+            var safeCategory = escapeHtml(items[i].category);
+            var safeDate = escapeHtml(items[i].date);
+            var safeTitle = escapeHtml(items[i].title);
+            var safeSummary = escapeHtml(items[i].summary);
+            html.push(
+              '<button type="button" class="drawer-item' +
+                currentClass +
+                '" data-href="' +
+                (items[i].href || '#').replace(/"/g, '&quot;') +
+                '">' +
+                '<span class="drawer-item-top"><strong>' +
+                safeCategory +
+                '</strong><span>' +
+                safeDate +
+                '</span></span>' +
+                '<span class="drawer-item-subject">' +
+                safeTitle +
+                '</span>' +
+                '<span class="drawer-item-teaser">' +
+                safeSummary +
+                '</span>' +
+                '</button>',
+            );
+          }
+          drawerList.innerHTML = html.join('');
+
+          var drawerButtons = drawerList.querySelectorAll('.drawer-item');
+          for (var j = 0; j < drawerButtons.length; j += 1) {
+            drawerButtons[j].addEventListener('click', function () {
+              var href = this.getAttribute('data-href');
+              if (href && href !== '#') {
+                saveTarget(currentTarget);
+                setMobileNav(false);
+                window.location.href = href;
+              }
+            });
+          }
+        }
+
+        function applyFilter() {
+          var query = search.value.replace(/\s+/g, ' ').trim();
+          var filtered = [];
+          var currentPostVisible = false;
+
+          for (var i = 0; i < posts.length; i += 1) {
+            var visible =
+              matchesTarget(posts[i], currentTarget) &&
+              matchesQuery(posts[i], query);
+            if (posts[i].element) {
+              if (currentPostTitle) {
+                // 포스트 조회 모드: 현재 글 카드만 표시 여부 판단
+                posts[i].element.style.display = visible ? 'block' : 'none';
+                var samePath = normalizePath(posts[i].href) === currentPath;
+                var sameTitle =
+                  normalizeText(posts[i].title) ===
+                  normalizeText(currentPostTitle);
+                if (samePath || sameTitle) {
+                  currentPostVisible = !!visible;
+                }
+              } else {
+                // 목록 모드: 콘텐츠 영역 카드는 항상 숨김 — 드로어가 글 목록 담당
+                posts[i].element.style.display = 'none';
+              }
+            }
+            if (visible) {
+              filtered.push(posts[i]);
+            }
+          }
+
+          renderDrawer(filtered);
+          syncPostCrumb(currentPostVisible);
+
+          if (contentEmptyState) {
+            var hintTitle = document.getElementById('empty-hint-title');
+            var hintDesc = document.getElementById('empty-hint-desc');
+            if (currentPostTitle && currentPostVisible) {
+              // 포스트 조회 모드 + 현재 카테고리 일치: 글 본문 표시, 빈 상태 숨김
+              contentEmptyState.hidden = true;
+            } else if (query && !filtered.length) {
+              // 검색 결과 없음
+              contentEmptyState.hidden = false;
+              if (hintTitle) { hintTitle.textContent = '검색 결과가 없습니다.'; }
+              if (hintDesc) { hintDesc.textContent = '검색어를 바꾸거나 다른 카테고리를 선택해보세요.'; }
+            } else {
+              // 목록 모드 또는 다른 카테고리 선택 시: 선택 안내 표시
+              contentEmptyState.hidden = false;
+              if (hintTitle) { hintTitle.textContent = '컨텐츠를 선택해주세요.'; }
+              if (hintDesc) { hintDesc.textContent = '왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.'; }
+            }
+          }
+
+          if (visibleCount) {
+            visibleCount.textContent = String(filtered.length);
+          }
+        }
+
+        function parsePostsFromDocument(doc) {
+          var remote = [];
+          var remoteCards = doc.querySelectorAll(
+            '#content .entry.card, .entry.card',
+          );
+
+          function getRemoteText(el, selector) {
+            var node = el.querySelector(selector);
+            return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
+          }
+
+          for (var i = 0; i < remoteCards.length; i += 1) {
+            var card = remoteCards[i];
+            var title =
+              getRemoteText(card, '.entry-title') ||
+              getRemoteText(card, '.entry-head h2');
+            if (!title) {
+              continue;
+            }
+
+            var summary = cleanSnippet(
+              getRemoteText(card, '.entry-summary') ||
+                getRemoteText(card, '.post-content'),
+            );
+            var date = getRemoteText(card, '.entry-meta abbr');
+            var category = (
+              card.getAttribute('data-category') ||
+              getRemoteText(card, '.badge.outline') ||
+              ''
+            ).trim();
+            var linkNode = card.querySelector('.entry-link');
+
+            remote.push({
+              title: title,
+              summary: summary,
+              date: date,
+              category: category,
+              href: linkNode ? linkNode.getAttribute('href') : '',
+              element: null,
+            });
+          }
+
+          return remote;
+        }
+
+        function fetchCategoryPosts(onDone) {
+          if (!window.fetch || !window.DOMParser) {
+            onDone([]);
+            return;
+          }
+
+          var urls = [];
+          var seen = {};
+
+          for (var i = 0; i < categories.length; i += 1) {
+            var href = categories[i].href || '';
+            var pathKey = normalizePath(href);
+            if (!href || !pathKey || seen[pathKey]) {
+              continue;
+            }
+            seen[pathKey] = true;
+            urls.push(href);
+          }
+
+          if (!urls.length) {
+            onDone([]);
+            return;
+          }
+
+          Promise.all(
+            urls.map(function (url) {
+              return fetch(url, { credentials: 'same-origin' })
+                .then(function (res) {
+                  return res.ok ? res.text() : '';
+                })
+                .then(function (html) {
+                  if (!html) {
+                    return [];
+                  }
+                  var doc = new DOMParser().parseFromString(html, 'text/html');
+                  return parsePostsFromDocument(doc);
+                })
+                .catch(function () {
+                  return [];
+                });
+            }),
+          ).then(function (all) {
+            var combined = [];
+            for (var j = 0; j < all.length; j += 1) {
+              combined = combined.concat(all[j]);
+            }
+            onDone(combined);
+          });
+        }
+
+        function hasAnyLocalPostsForCategory(categoryName) {
+          var catNorm = normalizeCategoryKey(categoryName);
+          if (!catNorm) {
+            return false;
+          }
+
+          for (var i = 0; i < posts.length; i += 1) {
+            if (getTopCategory(posts[i].category) === catNorm) {
+              return true;
+            }
+          }
+
+          return false;
+        }
+
+        function hasEnoughLocalPostsForCurrentTarget() {
+          var count = 0;
+          for (var i = 0; i < posts.length; i += 1) {
+            if (matchesTarget(posts[i], currentTarget)) {
+              count += 1;
+              if (count >= 2) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+
+        function needsCategoryCoverageHydration() {
+          for (var i = 0; i < categories.length; i += 1) {
+            if (!categories[i].category || !categories[i].href) {
+              continue;
+            }
+
+            if (!hasAnyLocalPostsForCategory(categories[i].category)) {
+              return true;
+            }
+          }
+          return false;
+        }
+
+        function shouldHydratePosts() {
+          var isDirectEntryLike = !!currentPostTitle || posts.length <= 1;
+
+          if (isDirectEntryLike) {
+            return !hasEnoughLocalPostsForCurrentTarget();
+          }
+
+          return needsCategoryCoverageHydration();
+        }
+
+        function hydratePostsForDirectEntry() {
+          if (!shouldHydratePosts()) {
+            return;
+          }
+
+          isHydrating = true;
+          renderDrawerLoading();
+
+          fetchCategoryPosts(function (fetchedPosts) {
+            isHydrating = false;
+
+            if (!fetchedPosts.length) {
+              applyFilter();
+              return;
+            }
+
+            var before = posts.length;
+            posts = mergePosts(posts, fetchedPosts);
+
+            if (posts.length !== before) {
+              writeCachedPosts(posts);
+            }
+
+            applyFilter();
+          });
+        }
+
+        function activate(target) {
+          currentTarget = target;
+          saveTarget(target);
+          var conf = targetConfig[target];
+          drawerTitle.textContent = conf ? conf.title : target;
+          activeCrumb.textContent = conf ? conf.title : target;
+
+          for (var i = 0; i < buttons.length; i += 1) {
+            var isTarget = buttons[i].getAttribute('data-target') === target;
+            buttons[i].classList.toggle('is-active', isTarget);
+            buttons[i].setAttribute(
+              'aria-pressed',
+              isTarget ? 'true' : 'false',
+            );
+          }
+
+          applyFilter();
+        }
+
+        for (var n = 0; n < buttons.length; n += 1) {
+          buttons[n].addEventListener('click', function () {
+            activate(this.getAttribute('data-target'));
+          });
+        }
+
+        if (mobileNavToggle) {
+          mobileNavToggle.addEventListener('click', function () {
+            setMobileNav(!document.body.classList.contains('nav-open'));
+          });
+        }
+
+        if (mobileNavBackdrop) {
+          mobileNavBackdrop.addEventListener('click', function () {
+            setMobileNav(false);
+          });
+        }
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            setMobileNav(false);
+          }
+        });
+
+        window.addEventListener('resize', function () {
+          if (!isMobileSidebarMode()) {
+            setMobileNav(false);
+          }
+        });
+
+        search.addEventListener('input', applyFilter);
+        activate(currentTarget);
+        hydratePostsForDirectEntry();
+
+        // 데스크탑: permalink 페이지에서 댓글 패널을 우측으로 분리
+        (function () {
+          if (!currentPostTitle) return; // 리스트 페이지에서는 생성하지 않음
+          var commentCard = document.querySelector('#content .comment-card');
+          if (!commentCard) return;
+          var contentEl = document.getElementById('content');
+          if (!contentEl) return;
+          var article = contentEl.querySelector('.entry.card');
+          if (!article) return;
+
+          // 버튼 텍스트 변경 (댓글 남기기 → 전송)
+          var submitBtn = commentCard.querySelector('.btn');
+          if (submitBtn) submitBtn.textContent = '전송';
+
+          // comment-card 전체를 패널로 이동 (form 관계 유지)
+          var panel = document.createElement('aside');
+          panel.id = 'comment-panel';
+          commentCard.parentNode.removeChild(commentCard);
+          panel.appendChild(commentCard);
+
+          // article + panel을 감싸는 split-row 생성
+          var splitRow = document.createElement('div');
+          splitRow.className = 'permalink-split-row';
+          article.parentNode.insertBefore(splitRow, article);
+          splitRow.appendChild(article);
+          splitRow.appendChild(panel);
+
+          contentEl.classList.add('has-comment-panel');
+        }());
+
+        // 목록 모드에서는 Tistory 기본 글 목록 카드·페이지네이션 숨김
+        // 드로어가 글 목록을 담당하므로 콘텐츠 영역에 중복 표시 불필요
+        if (!currentPostTitle) {
+          var heroCard = document.querySelector('.hero-card');
+          if (heroCard) {
+            heroCard.style.display = 'none';
+          }
+          var pagingEl = document.getElementById('paging');
+          if (pagingEl) {
+            pagingEl.style.display = 'none';
+          }
+        }
+
+        // Move Tistory injected floating element into inset-header
+        var floatingSlot = document.getElementById('inset-floating-slot');
+        function resetFloatingStyle(el) {
+          if (!el) {
+            return;
+          }
+          el.style.position = 'static';
+          el.style.top = 'auto';
+          el.style.right = 'auto';
+          el.style.bottom = 'auto';
+          el.style.left = 'auto';
+          el.style.transform = 'none';
+          el.style.zIndex = 'auto';
+          el.style.margin = '0';
+          // Also reset immediate children (Tistory sometimes wraps in a div)
+          var children = el.children;
+          for (var i = 0; i < children.length; i += 1) {
+            resetFloatingStyle(children[i]);
+          }
+        }
+        function moveTistoryFloating() {
+          var floating = document.getElementById('tistory_floating');
+          if (!floating || !floatingSlot) {
+            return;
+          }
+          if (floating.parentNode !== floatingSlot) {
+            floatingSlot.appendChild(floating);
+          }
+          resetFloatingStyle(floating);
+        }
+        moveTistoryFloating();
+        var floatingObserver = new MutationObserver(function () {
+          moveTistoryFloating();
+        });
+        // subtree:true to catch late injection inside body children
+        floatingObserver.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+    </script>
+  </body>
+</html>

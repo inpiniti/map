@@ -56,3 +56,7 @@ const mutation = useMutation(updateUser, {
 - React Query의 invalidateQueries는 key를 명확히 지정하지 않으면 아무 쿼리도 invalidate되지 않을 수 있다
 - mutation 후 캐시 갱신이 안 되는 현상은 대부분 key 누락/오타에서 발생
 - QA/테스트에서 반드시 캐시 미갱신 케이스를 체크할 것
+
+## 추천 태그
+
+`react-query,캐시,invalidate,버그,react,실무버그,프론트엔드`

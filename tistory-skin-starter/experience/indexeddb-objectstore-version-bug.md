@@ -36,17 +36,21 @@ IndexedDB에서 object store의 스키마(필드/인덱스 등)를 변경할 때
 ### 예시 코드
 
 ```js
-const request = indexedDB.open('mydb', 2)
+const request = indexedDB.open("mydb", 2);
 request.onupgradeneeded = (event) => {
-  const db = event.target.result
-  if (!db.objectStoreNames.contains('photos')) {
-    db.createObjectStore('photos', { keyPath: 'id' })
+  const db = event.target.result;
+  if (!db.objectStoreNames.contains("photos")) {
+    db.createObjectStore("photos", { keyPath: "id" });
   }
   // 기존 데이터 마이그레이션 로직 추가
-}
+};
 ```
 
 ## 교훈
 
 - IndexedDB object store/인덱스 변경 시 버전 관리/마이그레이션을 반드시 구현할 것
 - QA/테스트에서 버전 업그레이드/마이그레이션 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`indexeddb,objectstore,버전관리,마이그레이션,버그,실무버그,프론트엔드`

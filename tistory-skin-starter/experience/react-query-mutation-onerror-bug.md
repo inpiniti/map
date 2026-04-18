@@ -47,3 +47,7 @@ const mutation = useMutation(updateData, {
 
 - React Query mutation의 onError 콜백을 반드시 구현해 에러를 UI에 노출할 것
 - QA/테스트에서 에러 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`react-query,mutation,onError,에러핸들링,버그,실무버그,프론트엔드`

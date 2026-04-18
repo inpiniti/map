@@ -1,5 +1,5 @@
 ---
-title: '같은 API가 두 번 날아갔다 — React 환경에서 중복 요청을 막는 방법'
+title: "같은 API가 두 번 날아갔다 — React 환경에서 중복 요청을 막는 방법"
 author: dev
 date: 2025-11-26
 category: experience
@@ -61,7 +61,7 @@ const generateRequestKey = (method, url, params) => {
 };
 
 const callApiGet = async (url, params, config) => {
-  const requestKey = generateRequestKey('GET', url, params);
+  const requestKey = generateRequestKey("GET", url, params);
 
   // 이미 진행 중인 동일 요청이 있으면 그 Promise를 반환
   if (pendingRequests.has(requestKey)) {
@@ -172,3 +172,7 @@ useEffect(() => {
 - React Query를 쓴다면 `queryKey` 기반으로 이미 처리되므로 별도 구현 불필요
 - `catch`에서 반드시 Map에서 삭제해야 누수가 없다
 - React StrictMode의 이중 실행은 별도 현상이며 AbortController로 처리한다
+
+## 추천 태그
+
+`react,api,중복요청,debounce,throttle,실무버그,프론트엔드`

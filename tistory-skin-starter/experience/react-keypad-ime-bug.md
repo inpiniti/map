@@ -60,3 +60,7 @@ function MyInput() {
 - 커스텀 키패드 + IME 입력 조합 시 composition 이벤트를 반드시 감지해 충돌을 방지해야 한다
 - isComposing 플래그, composition 이벤트 활용으로 입력 꼬임/유실을 예방할 것
 - QA/테스트에서 한글/일본어 등 IME 입력 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`react,ime,커스텀키패드,한글입력,입력버그,composition,프론트엔드,실무버그`

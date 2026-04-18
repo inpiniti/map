@@ -50,3 +50,7 @@ const mutation = useMutation(updateData, {
 - React Query의 Promise deduplication은 race condition, 캐시 미동기화 문제를 유발할 수 있다
 - mutation 후 invalidate/refetch 순서, 시점에 주의할 것
 - QA/테스트에서 중복 fetch, race condition 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`react-query,promise,deduplication,중복요청,race-condition,refetch,실무버그,프론트엔드`

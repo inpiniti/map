@@ -38,14 +38,14 @@ const results = await Promise.allSettled([
 
 const [userRes, postsRes, notiRes] = results;
 
-if (userRes.status === 'fulfilled') {
+if (userRes.status === "fulfilled") {
   renderUser(userRes.value);
 }
-if (postsRes.status === 'fulfilled') {
+if (postsRes.status === "fulfilled") {
   renderPosts(postsRes.value);
 }
-if (notiRes.status === 'rejected') {
-  showToast('알림을 불러오지 못했습니다.');
+if (notiRes.status === "rejected") {
+  showToast("알림을 불러오지 못했습니다.");
 }
 ```
 
@@ -79,4 +79,4 @@ const extras = await Promise.allSettled([
 
 ## 추천 태그
 
-`javascript`, `promise`, `async-await`, `promise-all`, `allsettled`, `frontend`, `api`, `실무패턴`
+`javascript,promise,async-await,promise-all,allsettled,frontend,api,실무패턴`

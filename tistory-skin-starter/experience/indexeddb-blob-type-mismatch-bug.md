@@ -36,10 +36,10 @@ IndexedDB에 Blob 데이터를 저장/조회할 때, 타입 불일치로 인해 
 ### 예시 코드
 
 ```js
-const blob = await db.get('photos', id)
+const blob = await db.get("photos", id);
 if (!(blob instanceof Blob)) {
   // 타입 변환
-  const fixedBlob = new Blob([blob], { type: 'image/jpeg' })
+  const fixedBlob = new Blob([blob], { type: "image/jpeg" });
 }
 ```
 
@@ -48,3 +48,7 @@ if (!(blob instanceof Blob)) {
 - IndexedDB에 Blob 저장/조회 시 타입 불일치 문제를 반드시 고려해야 한다
 - 타입 체크/변환, 브라우저별 테스트 등으로 데이터 유실/깨짐을 예방할 것
 - QA/테스트에서 Blob 타입 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`indexeddb,blob,타입,버그,브라우저,실무버그,프론트엔드`

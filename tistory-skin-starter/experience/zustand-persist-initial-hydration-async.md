@@ -78,3 +78,7 @@ function MyComponent() {
 - **localStorage → IndexedDB 마이그레이션 시, hydration 비동기화로 인한 빈 화면/깜빡임을 반드시 고려해야 한다**
 - `isHydrated` 플래그, 스켈레톤 UI, SSR/초기값 등으로 사용자 경험을 보완할 것
 - 실제 운영에서만 드러나는 문제이므로, QA/테스트 단계에서 강제로 IndexedDB 지연을 시뮬레이션해보는 것이 좋다
+
+## 추천 태그
+
+`zustand,indexeddb,localstorage,비동기,hydration,react,스토어,실무버그,프론트엔드`

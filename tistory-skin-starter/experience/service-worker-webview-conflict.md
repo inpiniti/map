@@ -137,3 +137,7 @@ const isWebView = window.__IS_WEBVIEW__ === true;
 - WebView에서 SW를 사용하면 캐시 오염, 업데이트 미반영 등의 문제가 생길 수 있다
 - 환경을 감지해서 WebView에서는 SW 등록을 건너뛰고, **기존 등록된 SW도 해제**해야 한다
 - 개발에서 `PROD=false`로 테스트하면 절대 재현 안 된다 — 반드시 빌드 후 기기에서 테스트하자
+
+## 추천 태그
+
+`service-worker,webview,hybrid,캐시,오프라인,프론트엔드,실무버그,안드로이드,iOS`

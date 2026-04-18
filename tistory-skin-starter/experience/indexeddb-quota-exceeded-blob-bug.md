@@ -37,10 +37,10 @@ IndexedDB에 사진/파일 등 대용량 Blob 데이터를 저장할 때, 브라
 
 ```js
 try {
-  await db.put('photos', blob)
+  await db.put("photos", blob);
 } catch (e) {
-  if (e.name === 'QuotaExceededError') {
-    alert('저장 용량이 초과되었습니다. 일부 사진이 저장되지 않을 수 있습니다.')
+  if (e.name === "QuotaExceededError") {
+    alert("저장 용량이 초과되었습니다. 일부 사진이 저장되지 않을 수 있습니다.");
   }
 }
 ```
@@ -50,3 +50,7 @@ try {
 - IndexedDB에 대용량 Blob 저장 시 QuotaExceededError와 데이터 유실을 반드시 고려해야 한다
 - 트랜잭션 분할, 에러 핸들링, 사용자 피드백 등으로 데이터 유실을 최소화할 것
 - 브라우저/OS별 용량 제한을 미리 파악하고, QA에서 대용량 저장 시나리오를 반드시 테스트할 것
+
+## 추천 태그
+
+`indexeddb,blob,quota,브라우저,데이터유실,실무버그,프론트엔드`

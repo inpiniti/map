@@ -204,3 +204,7 @@ try {
 - `idb-keyval` 같은 라이브러리를 쓰면 위 래퍼 코드 없이 더 깔끔하게 쓸 수 있다
 
 `localStorage` 용량 초과는 개발 환경에서는 거의 안 터진다. 실제 운영에서 데이터가 쌓일 때 처음으로 터진다. 미리 설계 단계에서 큰 데이터는 IndexedDB로 갈 수 있도록 스토리지 전략을 잡아두는 것이 좋다.
+
+## 추천 태그
+
+`zustand,localstorage,indexeddb,quota,storage,프론트엔드,실무버그`

@@ -38,11 +38,11 @@ IndexedDB에서 트랜잭션이 비활성화(TransactionInactiveError)되어 데
 ```js
 async function safePut(db, store, value) {
   try {
-    await db.put(store, value)
+    await db.put(store, value);
   } catch (e) {
-    if (e.name === 'TransactionInactiveError') {
+    if (e.name === "TransactionInactiveError") {
       // 재시도 로직
-      setTimeout(() => safePut(db, store, value), 100)
+      setTimeout(() => safePut(db, store, value), 100);
     }
   }
 }
@@ -53,3 +53,7 @@ async function safePut(db, store, value) {
 - IndexedDB에서 TransactionInactiveError(비활성 트랜잭션)로 인한 데이터 저장 실패를 반드시 고려해야 한다
 - 트랜잭션 내에서만 조작, 비동기 코드 구조 개선, 재시도 등으로 문제를 예방할 것
 - QA/테스트에서 비동기 트랜잭션 만료 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`indexeddb,transactioninactiveerror,트랜잭션,버그,브라우저,실무버그,프론트엔드`

@@ -38,7 +38,7 @@ IndexedDB에 수십~수백 개의 데이터를 한 번에 일괄 저장할 때, 
 ```js
 for (const item of items) {
   try {
-    await db.put('store', item)
+    await db.put("store", item);
   } catch (e) {
     // 실패한 데이터만 별도 처리
   }
@@ -50,3 +50,7 @@ for (const item of items) {
 - IndexedDB에 대량 데이터를 일괄 저장할 때 트랜잭션 롤백/유실을 반드시 고려해야 한다
 - 트랜잭션 분할, 에러 핸들링, 개별 피드백 등으로 데이터 유실을 최소화할 것
 - QA/테스트에서 대량 저장 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`indexeddb,트랜잭션,대량저장,데이터유실,브라우저,실무버그,프론트엔드`

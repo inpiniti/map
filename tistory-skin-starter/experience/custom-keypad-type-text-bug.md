@@ -1,5 +1,5 @@
 ---
-title: '모바일 앱에서 커스텀 숫자 키패드를 만들 때 빠지는 함정 — type=text 이슈'
+title: "모바일 앱에서 커스텀 숫자 키패드를 만들 때 빠지는 함정 — type=text 이슈"
 author: dev
 date: 2026-03-18
 category: experience
@@ -62,7 +62,7 @@ Vite 마이그레이션 과정에서 일부 필드에 `type="text"`를 전달하
 const handleDigitPress = (digit) => {
   let newValue = currentValue;
 
-  if (type === 'number') {
+  if (type === "number") {
     // 숫자 타입 처리
     newValue = handleNumberInput(currentValue, digit);
   }
@@ -78,11 +78,11 @@ const handleDigitPress = (digit) => {
 ## 수정
 
 ```jsx
-if (type === 'number' || type === 'tel') {
+if (type === "number" || type === "tel") {
   newValue = handleNumberInput(currentValue, digit);
 } else {
   // type="text" 등 레거시 호환: 숫자 문자열 누적 처리
-  const sanitizedDigit = String(digit).replace(/\D/g, '');
+  const sanitizedDigit = String(digit).replace(/\D/g, "");
   if (!sanitizedDigit) {
     return; // 숫자가 아닌 입력은 무시
   }
@@ -146,3 +146,7 @@ prop 이름을 분리하는 게 더 명확하다:
 - 커스텀 키패드를 만들 때 `type` prop의 의미를 명확히 정의하지 않으면 분기 처리에서 버그가 생긴다
 - HTML input의 `type`과 내부 처리 모드는 별도 prop으로 분리하는 것이 좋다
 - `type="text"` + `inputmode="numeric"`은 일관된 숫자 UI를 얻는 좋은 타협점이다
+
+## 추천 태그
+
+`react,custom-keypad,input,number,모바일웹,실무버그,프론트엔드`

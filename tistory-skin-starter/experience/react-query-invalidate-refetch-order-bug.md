@@ -49,3 +49,7 @@ const mutation = useMutation(updateData, {
 - invalidateQueries와 refetchQueries 호출 순서에 따라 캐시/데이터 동기화가 어긋날 수 있다
 - 반드시 invalidate가 끝난 후 refetch를 호출할 것
 - QA/테스트에서 동기화 어긋남 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`react-query,invalidate,refetch,캐시,버그,동기화,실무버그,프론트엔드`

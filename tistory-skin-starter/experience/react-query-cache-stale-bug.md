@@ -53,3 +53,7 @@ const mutation = useMutation(updateData, {
 - React Query의 stale cache로 인한 데이터 미동기화 문제를 반드시 고려해야 한다
 - staleTime, invalidate/refetch, QA 등으로 데이터 동기화를 보장할 것
 - QA/테스트에서 stale cache 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`react-query,stale,캐시,데이터동기화,refetch,실무버그,프론트엔드`

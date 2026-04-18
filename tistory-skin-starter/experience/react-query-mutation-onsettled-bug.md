@@ -48,3 +48,7 @@ const mutation = useMutation(updateData, {
 
 - React Query mutation의 onSettled 콜백을 반드시 구현해 후처리 누락을 방지할 것
 - QA/테스트에서 실패 시나리오를 반드시 검증할 것
+
+## 추천 태그
+
+`react-query,mutation,onSettled,후처리,버그,실무버그,프론트엔드`

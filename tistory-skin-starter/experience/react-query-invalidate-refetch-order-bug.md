@@ -37,11 +37,11 @@ React Query에서 mutation 후 invalidateQueries와 refetchQueries를 동시에 
 ```js
 const mutation = useMutation(updateData, {
   onSuccess: () => {
-    queryClient.invalidateQueries(['myKey']).then(() => {
-      queryClient.refetchQueries(['myKey'])
-    })
+    queryClient.invalidateQueries(["myKey"]).then(() => {
+      queryClient.refetchQueries(["myKey"]);
+    });
   },
-})
+});
 ```
 
 ## 교훈

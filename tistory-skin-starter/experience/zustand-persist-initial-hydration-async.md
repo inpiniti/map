@@ -57,19 +57,19 @@ const useStore = create(
       setData: (d) => set({ data: d }),
     }),
     {
-      name: 'my-storage',
+      name: "my-storage",
       storage: createJSONStorage(() => indexedDBStorage),
       onRehydrateStorage: () => (state) => {
-        state.isHydrated = true
+        state.isHydrated = true;
       },
-    }
-  )
-)
+    },
+  ),
+);
 
 function MyComponent() {
-  const { data, isHydrated } = useStore()
-  if (!isHydrated) return <Skeleton />
-  return <List data={data} />
+  const { data, isHydrated } = useStore();
+  if (!isHydrated) return <Skeleton />;
+  return <List data={data} />;
 }
 ```
 

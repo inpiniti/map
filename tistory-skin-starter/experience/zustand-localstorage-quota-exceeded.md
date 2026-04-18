@@ -1,5 +1,5 @@
 ---
-title: 'Zustand persist가 앱을 죽였다 — QuotaExceededError와 IndexedDB 마이그레이션'
+title: "Zustand persist가 앱을 죽였다 — QuotaExceededError와 IndexedDB 마이그레이션"
 author: dev
 date: 2025-11-19
 category: experience
@@ -50,8 +50,8 @@ interface StateStorage {
 
 ```js
 const createIndexedDBStorage = (
-  dbName = 'map-search-db',
-  storeName = 'keyval',
+  dbName = "map-search-db",
+  storeName = "keyval",
 ) => {
   const getDB = () =>
     new Promise((resolve, reject) => {
@@ -70,7 +70,7 @@ const createIndexedDBStorage = (
   const getRaw = async (key) => {
     const db = await getDB();
     return new Promise((resolve, reject) => {
-      const tx = db.transaction(storeName, 'readonly');
+      const tx = db.transaction(storeName, "readonly");
       const req = tx.objectStore(storeName).get(key);
       req.onsuccess = () => resolve(req.result ?? null);
       req.onerror = () => reject(req.error);
@@ -80,7 +80,7 @@ const createIndexedDBStorage = (
   const setRaw = async (key, value) => {
     const db = await getDB();
     return new Promise((resolve, reject) => {
-      const tx = db.transaction(storeName, 'readwrite');
+      const tx = db.transaction(storeName, "readwrite");
       const req = tx.objectStore(storeName).put(value, key);
       req.onsuccess = () => resolve();
       req.onerror = () => reject(req.error);
@@ -90,7 +90,7 @@ const createIndexedDBStorage = (
   const removeRaw = async (key) => {
     const db = await getDB();
     return new Promise((resolve, reject) => {
-      const tx = db.transaction(storeName, 'readwrite');
+      const tx = db.transaction(storeName, "readwrite");
       const req = tx.objectStore(storeName).delete(key);
       req.onsuccess = () => resolve();
       req.onerror = () => reject(req.error);
@@ -118,7 +118,7 @@ export const useMapSearchStore = create(
       /* ... */
     }),
     {
-      name: 'mapSearch-storage',
+      name: "mapSearch-storage",
       storage: createJSONStorage(() => localStorage), // ← 문제의 원인
     },
   ),
@@ -131,7 +131,7 @@ export const useMapSearchStore = create(
       /* ... */
     }),
     {
-      name: 'mapSearch-storage',
+      name: "mapSearch-storage",
       storage: createJSONStorage(() => createIndexedDBStorage()), // ← IndexedDB
     },
   ),
@@ -181,11 +181,11 @@ const useHasHydrated = () => {
 ```js
 // index.js (앱 진입점)
 try {
-  if (typeof localStorage !== 'undefined') {
+  if (typeof localStorage !== "undefined") {
     const keysToRemove = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith('meterReplacement')) {
+      if (key && key.startsWith("meterReplacement")) {
         keysToRemove.push(key);
       }
     }

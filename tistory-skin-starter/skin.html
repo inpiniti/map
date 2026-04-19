@@ -19,7 +19,10 @@
       title="[##_title_##]"
       href="[##_rss_url_##]"
     />
+    <meta name="view-transition" content="same-origin" />
     <link rel="stylesheet" href="./style.css" />
+    <!-- Medium Zoom CDN -->
+    <script src="https://unpkg.com/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
   </head>
   <body id="[##_body_id_##]" class="t3-skin">
     <s_t3>
@@ -35,6 +38,7 @@
             </div>
           </header>
 
+          <div id="scroll-progress"></div>
           <aside id="left-rail" aria-label="빠른 메뉴">
             <a
               href="https://dev-soip.tistory.com/"
@@ -51,6 +55,14 @@
               </span>
             </a>
             <div id="rail-dynamic" aria-label="카테고리 메뉴"></div>
+            <div style="flex-grow: 1;"></div>
+            <button id="dark-mode-toggle" class="rail-btn" aria-label="다크 모드 토글">
+              <span class="icon">
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </span>
+            </button>
           </aside>
 
           <section
@@ -1304,6 +1316,77 @@
           childList: true,
           subtree: true,
         });
+        // Interactive Features
+        // 1. Scroll Progress Bar
+        var progress = document.getElementById('scroll-progress');
+        var contentArea = document.getElementById('content');
+        if (progress && contentArea) {
+          contentArea.addEventListener('scroll', function() {
+            var scrollH = contentArea.scrollHeight - contentArea.clientHeight;
+            var pct = scrollH > 0 ? (contentArea.scrollTop / scrollH) * 100 : 0;
+            progress.style.width = pct + '%';
+          });
+        }
+
+        // 2. Dark Mode Toggle
+        var darkModeBtn = document.getElementById('dark-mode-toggle');
+        function toggleDark() {
+          var isDark = document.body.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+        if (darkModeBtn) {
+          darkModeBtn.addEventListener('click', function(e) {
+            if (!document.startViewTransition) {
+              toggleDark();
+              return;
+            }
+            var x = e.clientX;
+            var y = e.clientY;
+            document.documentElement.style.setProperty('--click-x', x + 'px');
+            document.documentElement.style.setProperty('--click-y', y + 'px');
+            
+            document.documentElement.classList.add('dark-mode-transition');
+            document.startViewTransition(function() {
+              toggleDark();
+            }).finished.finally(function() {
+              document.documentElement.classList.remove('dark-mode-transition');
+            });
+          });
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark');
+        }
+
+        // 3. Medium Zoom
+        if (typeof mediumZoom !== 'undefined') {
+          mediumZoom('.post-content img', {
+            margin: 24,
+            background: 'var(--background)' 
+          });
+        }
+
+        // 4. Code Copy Button
+        var codeBlocks = document.querySelectorAll('.post-content pre, .post-content [data-ke-type="codeblock"]');
+        codeBlocks.forEach(function(pre) {
+          var btn = document.createElement('button');
+          btn.className = 'code-copy-btn';
+          btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+          btn.addEventListener('click', function() {
+            var code = pre.querySelector('code');
+            var text = code ? code.innerText : pre.innerText;
+            navigator.clipboard.writeText(text).then(function() {
+              btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+              btn.classList.add('copied');
+              setTimeout(function() {
+                btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+                btn.classList.remove('copied');
+              }, 2000);
+            });
+          });
+          // pre의 자식으로 맨 위에 넣어야 정상 렌더
+          pre.insertBefore(btn, pre.firstChild);
+        });
+
       })();
     </script>
   </body>

@@ -1336,21 +1336,17 @@
         }
         if (darkModeBtn) {
           darkModeBtn.addEventListener('click', function(e) {
-            if (!document.startViewTransition) {
-              toggleDark();
-              return;
-            }
             var x = e.clientX;
             var y = e.clientY;
             document.documentElement.style.setProperty('--click-x', x + 'px');
             document.documentElement.style.setProperty('--click-y', y + 'px');
-            
-            document.documentElement.classList.add('dark-mode-transition');
-            document.startViewTransition(function() {
-              toggleDark();
-            }).finished.finally(function() {
-              document.documentElement.classList.remove('dark-mode-transition');
-            });
+            toggleDark();
+            document.body.classList.remove('theme-transitioning');
+            void document.body.offsetWidth; // reflow
+            document.body.classList.add('theme-transitioning');
+            setTimeout(function() {
+              document.body.classList.remove('theme-transitioning');
+            }, 700);
           });
         }
         if (localStorage.getItem('theme') === 'dark') {

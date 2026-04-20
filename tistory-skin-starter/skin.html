@@ -1126,10 +1126,17 @@
               var href = this.getAttribute('data-href');
               if (href && href !== '#') {
                 saveTarget(currentTarget);
+                window.sessionStorage.setItem('tistory-drawer-scroll-v1', String(drawerList.scrollTop));
                 setMobileNav(false);
                 window.location.href = href;
               }
             });
+          }
+
+          var savedScroll = window.sessionStorage.getItem('tistory-drawer-scroll-v1');
+          if (savedScroll !== null) {
+            window.sessionStorage.removeItem('tistory-drawer-scroll-v1');
+            drawerList.scrollTop = parseInt(savedScroll, 10) || 0;
           }
         }
 

@@ -1479,6 +1479,57 @@
           subtree: true,
         });
         // Interactive Features
+        // 0. Drawer Item 3D Tilt Effect (Holographic Card Style)
+        (function () {
+          var tiltedItem = null;
+
+          function resetTilt(el) {
+            if (!el) {
+              return;
+            }
+            // CSS transition 복원 → 부드럽게 원위치로 복귀
+            el.style.transition = '';
+            el.style.removeProperty('--rx');
+            el.style.removeProperty('--ry');
+            el.style.removeProperty('--mx');
+            el.style.removeProperty('--my');
+          }
+
+          drawerList.addEventListener('mousemove', function (e) {
+            var item = e.target.closest('.drawer-item');
+
+            if (tiltedItem && tiltedItem !== item) {
+              resetTilt(tiltedItem);
+              tiltedItem = null;
+            }
+
+            if (!item) {
+              return;
+            }
+
+            // 마우스 추적 중에는 transform transition 비활성화 → 즉각 반응
+            if (tiltedItem !== item) {
+              item.style.transition =
+                'background 0.25s ease, box-shadow 0.25s ease';
+            }
+
+            tiltedItem = item;
+            var rect = item.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width;
+            var y = (e.clientY - rect.top) / rect.height;
+
+            item.style.setProperty('--rx', ((0.5 - y) * 10) + 'deg');
+            item.style.setProperty('--ry', ((x - 0.5) * 10) + 'deg');
+            item.style.setProperty('--mx', (x * 100) + '%');
+            item.style.setProperty('--my', (y * 100) + '%');
+          });
+
+          drawerList.addEventListener('mouseleave', function () {
+            resetTilt(tiltedItem);
+            tiltedItem = null;
+          });
+        })();
+
         // 1. Scroll Progress Bar
         var progress = document.getElementById('scroll-progress');
         var contentArea = document.getElementById('content');

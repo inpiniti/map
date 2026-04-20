@@ -1125,20 +1125,22 @@ button {
   }
 }
 
-/* Dark Mode: circle reveal transition (View Transition API 미사용) */
-body.theme-transitioning::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  pointer-events: none;
-  background: var(--background);
-  clip-path: circle(0% at var(--click-x, 50%) var(--click-y, 50%));
-  animation: themeReveal 0.65s cubic-bezier(0.5, 0, 0.2, 1) forwards;
+/* View Transition Effect (Dark Mode) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
-@keyframes themeReveal {
-  from { clip-path: circle(0% at var(--click-x, 50%) var(--click-y, 50%)); }
-  to   { clip-path: circle(150% at var(--click-x, 50%) var(--click-y, 50%)); }
+.dark-mode-transition::view-transition-old(root) {
+  z-index: 1;
+}
+.dark-mode-transition::view-transition-new(root) {
+  z-index: 9999;
+  animation: reveal 0.7s cubic-bezier(0.5, 0, 0.2, 1);
+}
+@keyframes reveal {
+  from { clip-path: circle(0% at var(--click-x) var(--click-y)); }
+  to { clip-path: circle(150% at var(--click-x) var(--click-y)); }
 }
 
 /* Medium Zoom Dark Mode Overlay Fix */

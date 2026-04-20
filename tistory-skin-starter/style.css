@@ -241,8 +241,7 @@ a {
   flex-direction: column;
   min-width: 0;
   min-height: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 0;
   overflow: hidden;
 }
 

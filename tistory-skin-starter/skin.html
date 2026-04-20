@@ -359,6 +359,11 @@
     </s_t3>
     <script>
       (function () {
+        // early return 전에 항상 다크모드 복원
+        if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark');
+        }
+
         var rail = document.getElementById("left-rail");
         var railDynamic = document.getElementById("rail-dynamic");
         var categorySource = document.getElementById("category-source");
@@ -377,7 +382,6 @@
         if (
           !rail ||
           !railDynamic ||
-          !cards.length ||
           !search ||
           !drawerTitle ||
           !activeCrumb ||
@@ -1352,10 +1356,6 @@
             });
           });
         }
-        if (localStorage.getItem('theme') === 'dark') {
-          document.body.classList.add('dark');
-        }
-
         // 3. Medium Zoom
         if (typeof mediumZoom !== 'undefined') {
           mediumZoom('.post-content img', {

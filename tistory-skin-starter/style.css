@@ -20,17 +20,17 @@
 }
 
 .dark {
-  --background: hsl(0, 0%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(0, 0%, 14.9%);
-  --muted-2: hsl(0, 0%, 25.1%);
-  --border: hsl(0, 0%, 14.9%);
-  --card: hsl(0, 0%, 9%);
-  --accent: hsl(0, 0%, 14.9%);
-  --accent-strong: hsl(0, 0%, 20%);
-  --primary: hsl(0, 0%, 98%);
+  --background: hsl(0, 0%, 7%);
+  --foreground: hsl(0, 0%, 95%);
+  --muted: hsl(0, 0%, 55%);
+  --muted-2: hsl(0, 0%, 40%);
+  --border: hsl(0, 0%, 22%);
+  --card: hsl(0, 0%, 14%);
+  --accent: hsl(0, 0%, 10%);
+  --accent-strong: hsl(0, 0%, 18%);
+  --primary: hsl(0, 0%, 95%);
   --primary-foreground: hsl(0, 0%, 9%);
-  --ring: hsl(0, 0%, 83.1%);
+  --ring: hsl(0, 0%, 65%);
 }
 
 * {
@@ -1146,4 +1146,75 @@ button {
 /* Medium Zoom Dark Mode Overlay Fix */
 .medium-zoom-overlay {
   background: var(--background) !important;
+}
+
+/* Dark Mode: hardcoded color overrides */
+.dark .icon {
+  color: var(--muted);
+}
+.dark .drawer-item-top strong {
+  color: var(--foreground);
+}
+.dark .entry-summary,
+.dark .empty-state-intro p,
+.dark .career-desc {
+  color: var(--muted);
+}
+.dark .post-content {
+  color: var(--foreground);
+}
+.dark #drawer-search {
+  background: var(--card);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+.dark .admin-link {
+  color: var(--muted);
+}
+.dark .mobile-nav-bar {
+  background: var(--foreground);
+}
+.dark .mobile-nav-toggle {
+  background: var(--card);
+  border-color: var(--border);
+}
+.dark .rail-btn.is-active {
+  border-color: var(--border);
+}
+.dark .btn {
+  background: var(--card);
+}
+.dark .page-num {
+  background: var(--card);
+}
+.dark .entry-tag a {
+  background: var(--card);
+}
+.dark .footer-links a {
+  background: var(--card);
+}
+.dark .badge.outline {
+  background: var(--card);
+  color: var(--foreground);
+}
+.dark .crumb-blog:hover {
+  color: var(--foreground);
+}
+.dark .post-content :not(pre) > code {
+  border-color: var(--border);
+}
+.dark .post-content pre,
+.dark .post-content .hljs,
+.dark .post-content figure[data-ke-type="codeblock"],
+.dark .post-content [data-ke-type="codeblock"] {
+  border-color: var(--border);
+}
+.dark .entry.is-focus {
+  outline-color: var(--border);
+}
+.dark .drawer-skeleton {
+  background: linear-gradient(90deg, hsl(0,0%,12%) 0%, hsl(0,0%,20%) 45%, hsl(0,0%,12%) 100%);
+}
+.dark .skip-link:focus {
+  background: var(--card);
 }

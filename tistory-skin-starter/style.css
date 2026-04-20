@@ -1133,14 +1133,15 @@ button {
 }
 .dark-mode-transition::view-transition-old(root) {
   z-index: 1;
+  animation: none;
 }
 .dark-mode-transition::view-transition-new(root) {
   z-index: 9999;
-  animation: reveal 0.7s cubic-bezier(0.5, 0, 0.2, 1);
+  animation: darkFadeIn 0.35s ease;
 }
-@keyframes reveal {
-  from { clip-path: circle(0% at var(--click-x) var(--click-y)); }
-  to { clip-path: circle(150% at var(--click-x) var(--click-y)); }
+@keyframes darkFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Medium Zoom Dark Mode Overlay Fix */
@@ -1217,4 +1218,10 @@ button {
 }
 .dark .skip-link:focus {
   background: var(--card);
+}
+.dark .drawer-item-subject {
+  color: var(--foreground);
+}
+.dark .drawer-title-wrap h2 {
+  color: var(--foreground);
 }

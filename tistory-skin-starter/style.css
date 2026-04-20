@@ -1200,6 +1200,71 @@ button {
   }
 }
 
+/* Admin Menu */
+.admin-menu-wrap {
+  position: relative;
+}
+
+.admin-menu-popup {
+  position: fixed;
+  left: calc(var(--rail-width) + 6px);
+  bottom: 56px;
+  width: 188px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.06);
+  z-index: 200;
+  overflow: hidden;
+  animation: adminMenuIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes adminMenuIn {
+  from { opacity: 0; transform: translateX(-6px) scale(0.97); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.admin-menu-header {
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-menu-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.admin-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: background 0.12s ease;
+}
+
+.admin-menu-item:hover {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+.admin-menu-item svg {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.admin-menu-sep {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
 /* View Transition Effect (Dark Mode) */
 ::view-transition-old(root),
 ::view-transition-new(root) {

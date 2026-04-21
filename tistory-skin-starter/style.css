@@ -985,11 +985,89 @@ a {
 }
 
 .post-content {
-  margin-top: 14px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: #404040;
-  /* neutral-700 */
+  margin-top: 24px;
+  font-size: 16px;
+  /* slightly larger for readability */
+  line-height: 1.8;
+  /* better paragraph spacing */
+  color: var(--foreground);
+  word-break: break-all;
+}
+
+.post-content p {
+  margin-bottom: 24px !important;
+  line-height: 1.8 !important;
+}
+
+/* 티스토리 마크다운 엔진이 p 태그 대신 단순 텍스트 줄바꿈(<br>)을 여러 개 렌더링할 때를 대비 */
+.post-content br {
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
+
+.post-content strong,
+.post-content b {
+  font-weight: 700;
+  color: var(--primary);
+  /* highlight bold text slightly */
+  background-color: var(--accent);
+  /* subtle bg highlight like VSCode sometimes does, or just slightly stronger contrast */
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.post-content h1 {
+  font-size: 26px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.post-content h2 {
+  font-size: 22px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.post-content h3 {
+  font-size: 18px;
+}
+
+.post-content blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--primary);
+  background: var(--accent);
+  color: var(--muted);
+  border-radius: 0 8px 8px 0;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.post-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.post-content hr {
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
 }
 
 .post-content code {

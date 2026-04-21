@@ -1344,6 +1344,117 @@ button {
   background: var(--background) !important;
 }
 
+/* Drawer item — click transitioning state */
+@keyframes drawerBorderRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes drawerAfterScan {
+  0%   { background-position: 220% 0, 0 0; }
+  100% { background-position: -120% 0, 0 0; }
+}
+
+.drawer-item.is-transitioning {
+  background: var(--card);
+  pointer-events: none;
+  overflow: hidden;
+  transform-style: flat;
+  transform: none;
+}
+
+.drawer-item.is-transitioning > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 회전하는 conic-gradient 스포트라이트 */
+.drawer-item.is-transitioning::before {
+  top: calc(50% - 300px);
+  left: calc(50% - 300px);
+  bottom: auto;
+  right: auto;
+  width: 600px;
+  height: 600px;
+  border-radius: 0;
+  box-shadow: none;
+  transform-origin: center;
+  transform: rotate(0deg);
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 270deg,
+    rgba(255, 255, 255, 0.12) 300deg,
+    rgba(255, 255, 255, 0.82) 345deg,
+    rgba(255, 255, 255, 0.12) 360deg
+  );
+  animation: drawerBorderRotate 1.5s linear infinite;
+  opacity: 1;
+  transition: none;
+  z-index: 0;
+}
+
+/* 내부 마스크(2px 테두리만 노출) + 스캔 shimmer */
+.drawer-item.is-transitioning::after {
+  inset: 2px;
+  border-radius: 0;
+  opacity: 1;
+  transition: none;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.07) 38%,
+      rgba(255, 255, 255, 0.18) 50%,
+      rgba(255, 255, 255, 0.07) 62%,
+      transparent 80%
+    ),
+    var(--card);
+  background-size: 300% 100%, 100% 100%;
+  animation: drawerAfterScan 1.4s cubic-bezier(0.25, 0, 0.75, 1) infinite;
+}
+
+body:not(.dark) .drawer-item.is-transitioning::before {
+  background: conic-gradient(
+    transparent 0deg,
+    transparent 270deg,
+    rgba(0, 0, 0, 0.04) 300deg,
+    rgba(0, 0, 0, 0.24) 345deg,
+    rgba(0, 0, 0, 0.04) 360deg
+  );
+}
+
+body:not(.dark) .drawer-item.is-transitioning::after {
+  background:
+    linear-gradient(
+      90deg,
+      transparent 20%,
+      rgba(0, 0, 0, 0.02) 38%,
+      rgba(0, 0, 0, 0.07) 50%,
+      rgba(0, 0, 0, 0.02) 62%,
+      transparent 80%
+    ),
+    var(--card);
+  background-size: 300% 100%, 100% 100%;
+}
+
+/* Typewriter cursor */
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 1.5px;
+  height: 0.8em;
+  background: currentColor;
+  vertical-align: -0.05em;
+  margin-left: 1px;
+  animation: cursorBlink 0.55s step-end infinite;
+}
+
 /* Page Transition — slide left / slide in from right */
 @keyframes contentSlideOut {
   from { transform: translateX(0);    opacity: 1; }
@@ -1360,12 +1471,12 @@ button {
 }
 
 #content-body.is-exiting {
-  animation: contentSlideOut 0.22s cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation: contentSlideOut 1s cubic-bezier(0.4, 0, 1, 1) forwards;
   pointer-events: none;
 }
 
 #content-body.is-entering {
-  animation: contentSlideIn 0.36s cubic-bezier(0.0, 0, 0.2, 1) forwards;
+  animation: contentSlideIn 1s cubic-bezier(0.0, 0, 0.2, 1) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

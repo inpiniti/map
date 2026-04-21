@@ -525,8 +525,10 @@
         }
 
         // 페이지 전환 enter 애니메이션
+        var shouldAnimateEnter = false;
         if (window.sessionStorage.getItem('tistory-content-enter')) {
           window.sessionStorage.removeItem('tistory-content-enter');
+          shouldAnimateEnter = true;
           var contentEnterEl = document.getElementById('content-body');
           if (contentEnterEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             contentEnterEl.classList.add('is-entering');
@@ -1090,6 +1092,50 @@
           drawerList.setAttribute('aria-busy', 'false');
         }
 
+        function makeCursor() {
+          var c = document.createElement('span');
+          c.className = 'typewriter-cursor';
+          c.setAttribute('aria-hidden', 'true');
+          return c;
+        }
+
+        function typewriterOut(el, duration) {
+          var text = el.textContent;
+          var len = text.length;
+          if (!len) { return; }
+          var cursor = makeCursor();
+          el.parentNode.insertBefore(cursor, el.nextSibling);
+          var charTime = Math.max(28, Math.floor(duration / len));
+          var remaining = len;
+          var timer = setInterval(function () {
+            remaining--;
+            el.textContent = text.slice(0, remaining);
+            if (remaining <= 0) {
+              clearInterval(timer);
+              cursor.remove();
+            }
+          }, charTime);
+        }
+
+        function typewriterIn(el, duration) {
+          var text = el.textContent;
+          var len = text.length;
+          el.textContent = '';
+          if (!len) { return; }
+          var cursor = makeCursor();
+          el.parentNode.insertBefore(cursor, el.nextSibling);
+          var charTime = Math.max(28, Math.floor(duration / len));
+          var pos = 0;
+          var timer = setInterval(function () {
+            pos++;
+            el.textContent = text.slice(0, pos);
+            if (pos >= len) {
+              clearInterval(timer);
+              setTimeout(function () { cursor.remove(); }, 420);
+            }
+          }, charTime);
+        }
+
         function renderDrawer(items) {
           clearDrawerLoading();
 
@@ -1139,6 +1185,7 @@
             drawerButtons[j].addEventListener('click', function () {
               var href = this.getAttribute('data-href');
               if (href && href !== '#') {
+                this.classList.add('is-transitioning');
                 saveTarget(currentTarget);
                 window.sessionStorage.setItem('tistory-drawer-scroll-v1', String(drawerList.scrollTop));
                 window.sessionStorage.setItem('tistory-content-enter', '1');
@@ -1147,7 +1194,9 @@
                 var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
                 if (contentEl && !reduced) {
                   contentEl.classList.add('is-exiting');
-                  setTimeout(function () { window.location.href = href; }, 200);
+                  var crumbEl = (activePostCrumb && !activePostCrumb.hidden) ? activePostCrumb : activeCrumb;
+                  if (crumbEl) { typewriterOut(crumbEl, 680); }
+                  setTimeout(function () { window.location.href = href; }, 980);
                 } else {
                   window.location.href = href;
                 }
@@ -1453,6 +1502,10 @@
 
         search.addEventListener('input', applyFilter);
         activate(currentTarget);
+        if (shouldAnimateEnter && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          var enterCrumbEl = (activePostCrumb && !activePostCrumb.hidden) ? activePostCrumb : activeCrumb;
+          if (enterCrumbEl) { typewriterIn(enterCrumbEl, 850); }
+        }
         hydratePostsForDirectEntry();
 
         // 목록 모드에서는 Tistory 기본 글 목록 카드·페이지네이션 숨김

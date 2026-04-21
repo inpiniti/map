@@ -256,6 +256,7 @@
                 <div id="inset-floating-slot"></div>
               </header>
 
+              <div id="content-body">
               <div id="content-empty-state" hidden aria-live="polite">
                 <h2 id="empty-hint-title" class="empty-hint-title">
                   컨텐츠를 선택해주세요.
@@ -489,6 +490,7 @@
                   >
                 </nav>
               </s_paging>
+              </div><!-- /#content-body -->
             </section>
           </div>
         </div>
@@ -520,6 +522,18 @@
         // early return 전에 항상 다크모드 복원
         if (localStorage.getItem('theme') === 'dark') {
           document.body.classList.add('dark');
+        }
+
+        // 페이지 전환 enter 애니메이션
+        if (window.sessionStorage.getItem('tistory-content-enter')) {
+          window.sessionStorage.removeItem('tistory-content-enter');
+          var contentEnterEl = document.getElementById('content-body');
+          if (contentEnterEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            contentEnterEl.classList.add('is-entering');
+            contentEnterEl.addEventListener('animationend', function () {
+              contentEnterEl.classList.remove('is-entering');
+            }, { once: true });
+          }
         }
 
         var rail = document.getElementById('left-rail');
@@ -1127,8 +1141,16 @@
               if (href && href !== '#') {
                 saveTarget(currentTarget);
                 window.sessionStorage.setItem('tistory-drawer-scroll-v1', String(drawerList.scrollTop));
+                window.sessionStorage.setItem('tistory-content-enter', '1');
                 setMobileNav(false);
-                window.location.href = href;
+                var contentEl = document.getElementById('content-body');
+                var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if (contentEl && !reduced) {
+                  contentEl.classList.add('is-exiting');
+                  setTimeout(function () { window.location.href = href; }, 200);
+                } else {
+                  window.location.href = href;
+                }
               }
             });
           }

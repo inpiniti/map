@@ -1344,6 +1344,37 @@ button {
   background: var(--background) !important;
 }
 
+/* Page Transition — slide left / slide in from right */
+@keyframes contentSlideOut {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(-48px); opacity: 0; }
+}
+
+@keyframes contentSlideIn {
+  from { transform: translateX(48px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+#content {
+  overflow: hidden;
+}
+
+#content-body.is-exiting {
+  animation: contentSlideOut 0.22s cubic-bezier(0.4, 0, 1, 1) forwards;
+  pointer-events: none;
+}
+
+#content-body.is-entering {
+  animation: contentSlideIn 0.36s cubic-bezier(0.0, 0, 0.2, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #content-body.is-exiting,
+  #content-body.is-entering {
+    animation: none;
+  }
+}
+
 /* Dark Mode: hardcoded color overrides */
 .dark .icon {
   color: var(--muted);

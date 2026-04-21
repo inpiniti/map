@@ -57,132 +57,128 @@
             <div id="rail-dynamic" aria-label="카테고리 메뉴"></div>
             <div style="flex-grow: 1"></div>
             <div class="admin-menu-wrap" id="admin-menu-wrap">
-                <button
-                  id="admin-menu-toggle"
-                  class="rail-btn"
-                  aria-label="관리자 메뉴"
-                  aria-expanded="false"
-                >
-                  <span class="icon">
-                    <svg
-                      class="icon-svg"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="3"></circle>
-                      <path
-                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <div id="admin-menu-popup" class="admin-menu-popup" hidden>
-                  <div class="admin-menu-header">
-                    <span class="admin-menu-label">관리자</span>
-                  </div>
-                  <a
-                    href="https://dev-soip.tistory.com/manage/newpost"
-                    target="_blank"
-                    rel="noopener"
-                    class="admin-menu-item"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
-                      />
-                      <path
-                        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
-                      />
-                    </svg>
-                    글쓰기
-                  </a>
-                  <a
-                    href="https://dev-soip.tistory.com/manage/design/skin/edit"
-                    target="_blank"
-                    rel="noopener"
-                    class="admin-menu-item"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                      <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                      <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                      <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                      <path
-                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
-                      />
-                    </svg>
-                    스킨편집
-                  </a>
-                  <a
-                    href="https://dev-soip.tistory.com/manage/comments"
-                    target="_blank"
-                    rel="noopener"
-                    class="admin-menu-item"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                      />
-                    </svg>
-                    댓글관리
-                  </a>
-                  <div class="admin-menu-sep"></div>
-                  <a
-                    href="https://dev-soip.tistory.com/manage"
-                    target="_blank"
-                    rel="noopener"
-                    class="admin-menu-item"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="3" />
-                      <path
-                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
-                      />
-                    </svg>
-                    설정
-                  </a>
+              <button
+                id="admin-menu-toggle"
+                class="rail-btn"
+                aria-label="관리자 메뉴"
+                aria-expanded="false"
+              >
+                <span class="icon">
+                  <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div id="admin-menu-popup" class="admin-menu-popup" hidden>
+                <div class="admin-menu-header">
+                  <span class="admin-menu-label">관리자</span>
                 </div>
+                <a
+                  href="https://dev-soip.tistory.com/manage/newpost"
+                  target="_blank"
+                  rel="noopener"
+                  class="admin-menu-item"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                    />
+                    <path
+                      d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                    />
+                  </svg>
+                  글쓰기
+                </a>
+                <a
+                  href="https://dev-soip.tistory.com/manage/design/skin/edit"
+                  target="_blank"
+                  rel="noopener"
+                  class="admin-menu-item"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                    <path
+                      d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
+                    />
+                  </svg>
+                  스킨편집
+                </a>
+                <a
+                  href="https://dev-soip.tistory.com/manage/comments"
+                  target="_blank"
+                  rel="noopener"
+                  class="admin-menu-item"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    />
+                  </svg>
+                  댓글관리
+                </a>
+                <div class="admin-menu-sep"></div>
+                <a
+                  href="https://dev-soip.tistory.com/manage"
+                  target="_blank"
+                  rel="noopener"
+                  class="admin-menu-item"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    />
+                  </svg>
+                  설정
+                </a>
               </div>
+            </div>
             <button
               id="dark-mode-toggle"
               class="rail-btn"
@@ -257,240 +253,242 @@
               </header>
 
               <div id="content-body">
-              <div id="content-empty-state" hidden aria-live="polite">
-                <h2 id="empty-hint-title" class="empty-hint-title">
-                  컨텐츠를 선택해주세요.
-                </h2>
-                <p id="empty-hint-desc" class="empty-hint-desc">
-                  왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.
-                </p>
-
-                <section class="empty-state card">
-                  <h2>dev-soip.tistory</h2>
-                  <p>
-                    개발하다 삽질한 것들, 겨우 해결한 것들, 그리고 가끔은 잘
-                    작동하는 코드들을 기록하는 기술 블로그입니다.
+                <div id="content-empty-state" hidden aria-live="polite">
+                  <h2 id="empty-hint-title" class="empty-hint-title">
+                    컨텐츠를 선택해주세요.
+                  </h2>
+                  <p id="empty-hint-desc" class="empty-hint-desc">
+                    왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.
                   </p>
-                  <div class="empty-state-intro">
-                    <strong>Frontend Developer · 2015 ~ </strong>
+
+                  <section class="empty-state card">
+                    <h2>dev-soip.tistory</h2>
                     <p>
-                      안드로이드 앱 개발로 시작해 Electron 데스크탑 앱, KRX
-                      대규모 서비스 운영, IoT·스마트제조 시스템, 해양 물류
-                      플랫폼을 거쳐 현재는 GRM에서 React · Zustand 기반의 모바일
-                      현장 업무 앱을 개발하고 있습니다.
+                      개발하다 삽질한 것들, 겨우 해결한 것들, 그리고 가끔은 잘
+                      작동하는 코드들을 기록하는 기술 블로그입니다.
                     </p>
-                    <ul class="empty-state-career">
-                      <li>
-                        <span class="career-period">2015–2017</span>
-                        <span class="career-company">온웨어</span>
-                        <span class="career-desc"
-                          >Android · Spring · O2O 세탁 서비스</span
-                        >
-                      </li>
-                      <li>
-                        <span class="career-period">2018–2021</span>
-                        <span class="career-company">사이버이메지네이션</span>
-                        <span class="career-desc"
-                          >KRX 운영 · Electron · Flutter · 금융 API</span
-                        >
-                      </li>
-                      <li>
-                        <span class="career-period">2021–2023</span>
-                        <span class="career-company">아이오코드</span>
-                        <span class="career-desc"
-                          >Vue · IoT 항만물류 · 스마트제조혁신</span
-                        >
-                      </li>
-                      <li>
-                        <span class="career-period">2023–2024</span>
-                        <span class="career-company">에코마린</span>
-                        <span class="career-desc"
-                          >Nuxt3 · 선박 모니터링 · 해양드론 배송</span
-                        >
-                      </li>
-                      <li>
-                        <span class="career-period">2024–현재</span>
-                        <span class="career-company"
-                          >서울도시가스 그룹 GRM</span
-                        >
-                        <span class="career-desc"
-                          >React · Zustand · 가스링크 현장 업무 앱</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-
-              <s_list>
-                <section class="hero-card">
-                  <h2>[##_list_conform_##]</h2>
-                  <p>
-                    해당 글 <span id="visible-count">[##_list_count_##]</span>건
-                  </p>
-                </section>
-              </s_list>
-
-              <s_notice_rep>
-                <article class="entry card notice-entry" data-category="공지">
-                  <s_index_article_rep>
-                    <a class="entry-link" href="[##_notice_rep_link_##]">
-                      <h3 class="entry-title">[##_notice_rep_title_##]</h3>
-                      <p class="entry-summary">[##_notice_rep_summary_##]</p>
-                    </a>
-                    <div class="entry-meta">
-                      <span class="badge">공지</span>
-                      <abbr>[##_notice_rep_date_##]</abbr>
+                    <div class="empty-state-intro">
+                      <strong>Frontend Developer · 2015 ~ </strong>
+                      <p>
+                        안드로이드 앱 개발로 시작해 Electron 데스크탑 앱, KRX
+                        대규모 서비스 운영, IoT·스마트제조 시스템, 해양 물류
+                        플랫폼을 거쳐 현재는 GRM에서 React · Zustand 기반의
+                        모바일 현장 업무 앱을 개발하고 있습니다.
+                      </p>
+                      <ul class="empty-state-career">
+                        <li>
+                          <span class="career-period">2015–2017</span>
+                          <span class="career-company">온웨어</span>
+                          <span class="career-desc"
+                            >Android · Spring · O2O 세탁 서비스</span
+                          >
+                        </li>
+                        <li>
+                          <span class="career-period">2018–2021</span>
+                          <span class="career-company">사이버이메지네이션</span>
+                          <span class="career-desc"
+                            >KRX 운영 · Electron · Flutter · 금융 API</span
+                          >
+                        </li>
+                        <li>
+                          <span class="career-period">2021–2023</span>
+                          <span class="career-company">아이오코드</span>
+                          <span class="career-desc"
+                            >Vue · IoT 항만물류 · 스마트제조혁신</span
+                          >
+                        </li>
+                        <li>
+                          <span class="career-period">2023–2024</span>
+                          <span class="career-company">에코마린</span>
+                          <span class="career-desc"
+                            >Nuxt3 · 선박 모니터링 · 해양드론 배송</span
+                          >
+                        </li>
+                        <li>
+                          <span class="career-period">2024–현재</span>
+                          <span class="career-company"
+                            >서울도시가스 그룹 GRM</span
+                          >
+                          <span class="career-desc"
+                            >React · Zustand · 가스링크 현장 업무 앱</span
+                          >
+                        </li>
+                      </ul>
                     </div>
-                  </s_index_article_rep>
+                  </section>
+                </div>
 
-                  <s_permalink_article_rep>
-                    <header class="entry-head">
-                      <h2>[##_notice_rep_title_##]</h2>
+                <s_list>
+                  <section class="hero-card">
+                    <h2>[##_list_conform_##]</h2>
+                    <p>
+                      해당 글
+                      <span id="visible-count">[##_list_count_##]</span>건
+                    </p>
+                  </section>
+                </s_list>
+
+                <s_notice_rep>
+                  <article class="entry card notice-entry" data-category="공지">
+                    <s_index_article_rep>
+                      <a class="entry-link" href="[##_notice_rep_link_##]">
+                        <h3 class="entry-title">[##_notice_rep_title_##]</h3>
+                        <p class="entry-summary">[##_notice_rep_summary_##]</p>
+                      </a>
                       <div class="entry-meta">
                         <span class="badge">공지</span>
                         <abbr>[##_notice_rep_date_##]</abbr>
-                        <span>by [##_notice_rep_author_##]</span>
                       </div>
-                    </header>
-                    <div class="post-content">[##_notice_rep_desc_##]</div>
-                  </s_permalink_article_rep>
-                </article>
-              </s_notice_rep>
+                    </s_index_article_rep>
 
-              <s_article_rep>
-                <article
-                  class="entry card"
-                  data-category="[##_article_rep_category_##]"
-                >
-                  <s_index_article_rep>
-                    <s_article_rep_thumbnail>
-                      <a class="thumb-wrap" href="[##_article_rep_link_##]">
-                        <img
-                          class="thumb"
-                          src="[##_article_rep_thumbnail_url_##]"
-                          alt="[##_article_rep_title_##]"
-                        />
+                    <s_permalink_article_rep>
+                      <header class="entry-head">
+                        <h2>[##_notice_rep_title_##]</h2>
+                        <div class="entry-meta">
+                          <span class="badge">공지</span>
+                          <abbr>[##_notice_rep_date_##]</abbr>
+                          <span>by [##_notice_rep_author_##]</span>
+                        </div>
+                      </header>
+                      <div class="post-content">[##_notice_rep_desc_##]</div>
+                    </s_permalink_article_rep>
+                  </article>
+                </s_notice_rep>
+
+                <s_article_rep>
+                  <article
+                    class="entry card"
+                    data-category="[##_article_rep_category_##]"
+                  >
+                    <s_index_article_rep>
+                      <s_article_rep_thumbnail>
+                        <a class="thumb-wrap" href="[##_article_rep_link_##]">
+                          <img
+                            class="thumb"
+                            src="[##_article_rep_thumbnail_url_##]"
+                            alt="[##_article_rep_title_##]"
+                          />
+                        </a>
+                      </s_article_rep_thumbnail>
+                      <a class="entry-link" href="[##_article_rep_link_##]">
+                        <h3 class="entry-title">[##_article_rep_title_##]</h3>
+                        <p class="entry-summary">[##_article_rep_summary_##]</p>
                       </a>
-                    </s_article_rep_thumbnail>
-                    <a class="entry-link" href="[##_article_rep_link_##]">
-                      <h3 class="entry-title">[##_article_rep_title_##]</h3>
-                      <p class="entry-summary">[##_article_rep_summary_##]</p>
-                    </a>
-                    <div class="entry-meta">
-                      <a
-                        href="[##_article_rep_category_link_##]"
-                        class="badge outline"
-                        >[##_article_rep_category_##]</a
-                      >
-                      <abbr>[##_article_rep_date_##]</abbr>
-                    </div>
-                  </s_index_article_rep>
-
-                  <s_permalink_article_rep>
-                    <header class="entry-head">
-                      <h2>[##_article_rep_title_##]</h2>
                       <div class="entry-meta">
-                        <span class="badge outline"
-                          >[##_article_rep_category_##]</span
+                        <a
+                          href="[##_article_rep_category_link_##]"
+                          class="badge outline"
+                          >[##_article_rep_category_##]</a
                         >
                         <abbr>[##_article_rep_date_##]</abbr>
-                        <span>by [##_article_rep_author_##]</span>
                       </div>
-                    </header>
+                    </s_index_article_rep>
 
-                    <div class="post-content">[##_article_rep_desc_##]</div>
+                    <s_permalink_article_rep>
+                      <header class="entry-head">
+                        <h2>[##_article_rep_title_##]</h2>
+                        <div class="entry-meta">
+                          <span class="badge outline"
+                            >[##_article_rep_category_##]</span
+                          >
+                          <abbr>[##_article_rep_date_##]</abbr>
+                          <span>by [##_article_rep_author_##]</span>
+                        </div>
+                      </header>
 
-                    <s_tag_label>
-                      <div class="entry-tag">[##_tag_label_rep_##]</div>
-                    </s_tag_label>
+                      <div class="post-content">[##_article_rep_desc_##]</div>
 
-                    <s_rp>
-                      <section class="comment-card">
-                        <h3>댓글</h3>
-                        <s_rp_input_form>
-                          <div class="comment-form">
-                            <textarea
-                              name="[##_rp_input_comment_##]"
-                              rows="4"
-                              placeholder="댓글을 남겨주세요"
-                            ></textarea>
-                            <button
-                              class="btn"
-                              type="submit"
-                              onclick="[##_rp_onclick_submit_##]"
-                            >
-                              댓글 남기기
-                            </button>
-                          </div>
-                        </s_rp_input_form>
+                      <s_tag_label>
+                        <div class="entry-tag">[##_tag_label_rep_##]</div>
+                      </s_tag_label>
 
-                        <s_rp_container>
-                          <ol class="comment-list">
-                            <s_rp_rep>
-                              <li
-                                id="[##_rp_rep_id_##]"
-                                class="comment-item [##_rp_rep_class_##]"
+                      <s_rp>
+                        <section class="comment-card">
+                          <h3>댓글</h3>
+                          <s_rp_input_form>
+                            <div class="comment-form">
+                              <textarea
+                                name="[##_rp_input_comment_##]"
+                                rows="4"
+                                placeholder="댓글을 남겨주세요"
+                              ></textarea>
+                              <button
+                                class="btn"
+                                type="submit"
+                                onclick="[##_rp_onclick_submit_##]"
                               >
-                                <div class="comment-head">
-                                  <strong>[##_rp_rep_name_##]</strong>
-                                  <abbr>[##_rp_rep_date_##]</abbr>
-                                  <button
-                                    class="reply-btn"
-                                    onclick="[##_rp_rep_onclick_reply_##]"
-                                  >
-                                    답글
-                                  </button>
-                                </div>
-                                <p>[##_rp_rep_desc_##]</p>
-                                <s_rp2_container>
-                                  <ul class="reply-list">
-                                    <s_rp2_rep>
-                                      <li
-                                        id="[##_rp_rep_id_##]"
-                                        class="comment-item reply"
-                                      >
-                                        <div class="comment-head">
-                                          <strong>[##_rp_rep_name_##]</strong>
-                                          <abbr>[##_rp_rep_date_##]</abbr>
-                                        </div>
-                                        <p>[##_rp_rep_desc_##]</p>
-                                      </li>
-                                    </s_rp2_rep>
-                                  </ul>
-                                </s_rp2_container>
-                              </li>
-                            </s_rp_rep>
-                          </ol>
-                        </s_rp_container>
-                      </section>
-                    </s_rp>
-                  </s_permalink_article_rep>
-                </article>
-              </s_article_rep>
+                                댓글 남기기
+                              </button>
+                            </div>
+                          </s_rp_input_form>
 
-              <s_paging>
-                <nav id="paging" class="paging" aria-label="페이지 이동">
-                  <a
-                    [##_prev_page_##]
-                    class="btn btn-ghost [##_no_more_prev_##]"
-                    rel="prev"
-                    >이전</a
-                  >
-                  <s_paging_rep>
-                    <a [##_paging_rep_link_##] class="page-num"
-                      >[##_paging_rep_link_num_##]</a
+                          <s_rp_container>
+                            <ol class="comment-list">
+                              <s_rp_rep>
+                                <li
+                                  id="[##_rp_rep_id_##]"
+                                  class="comment-item [##_rp_rep_class_##]"
+                                >
+                                  <div class="comment-head">
+                                    <strong>[##_rp_rep_name_##]</strong>
+                                    <abbr>[##_rp_rep_date_##]</abbr>
+                                    <button
+                                      class="reply-btn"
+                                      onclick="[##_rp_rep_onclick_reply_##]"
+                                    >
+                                      답글
+                                    </button>
+                                  </div>
+                                  <p>[##_rp_rep_desc_##]</p>
+                                  <s_rp2_container>
+                                    <ul class="reply-list">
+                                      <s_rp2_rep>
+                                        <li
+                                          id="[##_rp_rep_id_##]"
+                                          class="comment-item reply"
+                                        >
+                                          <div class="comment-head">
+                                            <strong>[##_rp_rep_name_##]</strong>
+                                            <abbr>[##_rp_rep_date_##]</abbr>
+                                          </div>
+                                          <p>[##_rp_rep_desc_##]</p>
+                                        </li>
+                                      </s_rp2_rep>
+                                    </ul>
+                                  </s_rp2_container>
+                                </li>
+                              </s_rp_rep>
+                            </ol>
+                          </s_rp_container>
+                        </section>
+                      </s_rp>
+                    </s_permalink_article_rep>
+                  </article>
+                </s_article_rep>
+
+                <s_paging>
+                  <nav id="paging" class="paging" aria-label="페이지 이동">
+                    <a
+                      [##_prev_page_##]
+                      class="btn btn-ghost [##_no_more_prev_##]"
+                      rel="prev"
+                      >이전</a
                     >
-                  </s_paging_rep>
-                  <a
-                    [##_next_page_##]
-                    class="btn btn-ghost [##_no_more_next_##]"
-                    rel="next"
-                    >다음</a
-                  >
-                </nav>
-              </s_paging>
-              </div><!-- /#content-body -->
+                    <s_paging_rep>
+                      <a [##_paging_rep_link_##] class="page-num"
+                        >[##_paging_rep_link_num_##]</a
+                      >
+                    </s_paging_rep>
+                    <a
+                      [##_next_page_##]
+                      class="btn btn-ghost [##_no_more_next_##]"
+                      rel="next"
+                      >다음</a
+                    >
+                  </nav>
+                </s_paging>
+              </div>
+              <!-- /#content-body -->
             </section>
           </div>
         </div>
@@ -530,11 +528,18 @@
           window.sessionStorage.removeItem('tistory-content-enter');
           shouldAnimateEnter = true;
           var contentEnterEl = document.getElementById('content-body');
-          if (contentEnterEl && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          if (
+            contentEnterEl &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ) {
             contentEnterEl.classList.add('is-entering');
-            contentEnterEl.addEventListener('animationend', function () {
-              contentEnterEl.classList.remove('is-entering');
-            }, { once: true });
+            contentEnterEl.addEventListener(
+              'animationend',
+              function () {
+                contentEnterEl.classList.remove('is-entering');
+              },
+              { once: true },
+            );
           }
         }
 
@@ -1102,7 +1107,9 @@
         function typewriterOut(el, duration) {
           var text = el.textContent;
           var len = text.length;
-          if (!len) { return; }
+          if (!len) {
+            return;
+          }
           var cursor = makeCursor();
           el.parentNode.insertBefore(cursor, el.nextSibling);
           var charTime = Math.max(28, Math.floor(duration / len));
@@ -1121,7 +1128,9 @@
           var text = el.textContent;
           var len = text.length;
           el.textContent = '';
-          if (!len) { return; }
+          if (!len) {
+            return;
+          }
           var cursor = makeCursor();
           el.parentNode.insertBefore(cursor, el.nextSibling);
           var charTime = Math.max(28, Math.floor(duration / len));
@@ -1131,7 +1140,9 @@
             el.textContent = text.slice(0, pos);
             if (pos >= len) {
               clearInterval(timer);
-              setTimeout(function () { cursor.remove(); }, 420);
+              setTimeout(function () {
+                cursor.remove();
+              }, 420);
             }
           }, charTime);
         }
@@ -1187,16 +1198,28 @@
               if (href && href !== '#') {
                 this.classList.add('is-transitioning');
                 saveTarget(currentTarget);
-                window.sessionStorage.setItem('tistory-drawer-scroll-v1', String(drawerList.scrollTop));
+                window.sessionStorage.setItem(
+                  'tistory-drawer-scroll-v1',
+                  String(drawerList.scrollTop),
+                );
                 window.sessionStorage.setItem('tistory-content-enter', '1');
                 setMobileNav(false);
                 var contentEl = document.getElementById('content-body');
-                var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var reduced = window.matchMedia(
+                  '(prefers-reduced-motion: reduce)',
+                ).matches;
                 if (contentEl && !reduced) {
                   contentEl.classList.add('is-exiting');
-                  var crumbEl = (activePostCrumb && !activePostCrumb.hidden) ? activePostCrumb : activeCrumb;
-                  if (crumbEl) { typewriterOut(crumbEl, 680); }
-                  setTimeout(function () { window.location.href = href; }, 980);
+                  var crumbEl =
+                    activePostCrumb && !activePostCrumb.hidden
+                      ? activePostCrumb
+                      : activeCrumb;
+                  if (crumbEl) {
+                    typewriterOut(crumbEl, 680);
+                  }
+                  setTimeout(function () {
+                    window.location.href = href;
+                  }, 980);
                 } else {
                   window.location.href = href;
                 }
@@ -1204,7 +1227,9 @@
             });
           }
 
-          var savedScroll = window.sessionStorage.getItem('tistory-drawer-scroll-v1');
+          var savedScroll = window.sessionStorage.getItem(
+            'tistory-drawer-scroll-v1',
+          );
           if (savedScroll !== null) {
             window.sessionStorage.removeItem('tistory-drawer-scroll-v1');
             drawerList.scrollTop = parseInt(savedScroll, 10) || 0;
@@ -1473,6 +1498,41 @@
         for (var n = 0; n < buttons.length; n += 1) {
           buttons[n].addEventListener('click', function () {
             activate(this.getAttribute('data-target'));
+
+            // 현재 카테고리에 속한 글을 보고 있지 않으면 첫 번째(최신) 글로 자동 이동
+            if (contentEmptyState && !contentEmptyState.hidden) {
+              var firstItem = drawerList.querySelector('.drawer-item');
+              if (firstItem) {
+                var firstHref = firstItem.getAttribute('data-href');
+                if (firstHref && firstHref !== '#') {
+                  firstItem.classList.add('is-transitioning');
+                  window.sessionStorage.setItem(
+                    'tistory-drawer-scroll-v1',
+                    '0',
+                  );
+                  window.sessionStorage.setItem('tistory-content-enter', '1');
+                  var firstContentEl = document.getElementById('content-body');
+                  var firstReduced = window.matchMedia(
+                    '(prefers-reduced-motion: reduce)',
+                  ).matches;
+                  if (firstContentEl && !firstReduced) {
+                    firstContentEl.classList.add('is-exiting');
+                    var firstCrumbEl =
+                      activePostCrumb && !activePostCrumb.hidden
+                        ? activePostCrumb
+                        : activeCrumb;
+                    if (firstCrumbEl) {
+                      typewriterOut(firstCrumbEl, 680);
+                    }
+                    setTimeout(function () {
+                      window.location.href = firstHref;
+                    }, 980);
+                  } else {
+                    window.location.href = firstHref;
+                  }
+                }
+              }
+            }
           });
         }
 
@@ -1502,9 +1562,17 @@
 
         search.addEventListener('input', applyFilter);
         activate(currentTarget);
-        if (shouldAnimateEnter && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          var enterCrumbEl = (activePostCrumb && !activePostCrumb.hidden) ? activePostCrumb : activeCrumb;
-          if (enterCrumbEl) { typewriterIn(enterCrumbEl, 850); }
+        if (
+          shouldAnimateEnter &&
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ) {
+          var enterCrumbEl =
+            activePostCrumb && !activePostCrumb.hidden
+              ? activePostCrumb
+              : activeCrumb;
+          if (enterCrumbEl) {
+            typewriterIn(enterCrumbEl, 850);
+          }
         }
         hydratePostsForDirectEntry();
 
@@ -1600,10 +1668,10 @@
             var x = (e.clientX - rect.left) / rect.width;
             var y = (e.clientY - rect.top) / rect.height;
 
-            item.style.setProperty('--rx', ((0.5 - y) * 10) + 'deg');
-            item.style.setProperty('--ry', ((x - 0.5) * 10) + 'deg');
-            item.style.setProperty('--mx', (x * 100) + '%');
-            item.style.setProperty('--my', (y * 100) + '%');
+            item.style.setProperty('--rx', (0.5 - y) * 10 + 'deg');
+            item.style.setProperty('--ry', (x - 0.5) * 10 + 'deg');
+            item.style.setProperty('--mx', x * 100 + '%');
+            item.style.setProperty('--my', y * 100 + '%');
           });
 
           drawerList.addEventListener('mouseleave', function () {
@@ -1718,6 +1786,40 @@
           // pre의 자식으로 맨 위에 넣어야 정상 렌더
           pre.insertBefore(btn, pre.firstChild);
         });
+
+        // 5. 홈 버튼 / 블로그 타이틀 링크 — 페이지 전환 애니메이션
+        var homeLinks = document.querySelectorAll(
+          '.rail-home-btn, .crumb-blog',
+        );
+        for (var hl = 0; hl < homeLinks.length; hl += 1) {
+          homeLinks[hl].addEventListener('click', function (e) {
+            var dest = this.getAttribute('href');
+            if (!dest) {
+              return;
+            }
+            e.preventDefault();
+            window.sessionStorage.setItem('tistory-content-enter', '1');
+            var hlContentEl = document.getElementById('content-body');
+            var hlReduced = window.matchMedia(
+              '(prefers-reduced-motion: reduce)',
+            ).matches;
+            if (hlContentEl && !hlReduced) {
+              hlContentEl.classList.add('is-exiting');
+              var hlCrumbEl =
+                activePostCrumb && !activePostCrumb.hidden
+                  ? activePostCrumb
+                  : activeCrumb;
+              if (hlCrumbEl) {
+                typewriterOut(hlCrumbEl, 680);
+              }
+              setTimeout(function () {
+                window.location.href = dest;
+              }, 980);
+            } else {
+              window.location.href = dest;
+            }
+          });
+        }
       })();
     </script>
   </body>

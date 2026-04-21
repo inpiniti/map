@@ -1,1839 +1,1824 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>[##_title_##] :: [##_page_title_##]</title>
-    <meta name="author" content="[##_blogger_##]" />
-    <meta
-      name="google-site-verification"
-      content="GZ1D_8FcYDU60aGKHRzjZNFvLzpkZIb5PoakTyyiukA"
-    />
-    <meta
-      name="naver-site-verification"
-      content="7a7146c6fea5df7112178283070ce70a24edd732"
-    />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="[##_title_##]"
-      href="[##_rss_url_##]"
-    />
-    <meta name="view-transition" content="same-origin" />
-    <link rel="stylesheet" href="./style.css" />
-    <!-- Medium Zoom CDN -->
-    <script src="https://unpkg.com/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
-  </head>
-  <body id="[##_body_id_##]" class="t3-skin">
-    <s_t3>
-      <a href="#content" class="skip-link">본문으로 바로가기</a>
 
-      <main id="main" class="container" role="main">
-        <div class="dock-shell">
-          <header class="shell-topbar" role="banner">
-            <h1 class="brand"><a href="[##_blog_link_##]">[##_title_##]</a></h1>
-            <div class="header-right">
-              <a class="admin-link" href="[##_owner_url_##]">관리자</a>
-              <a class="btn btn-ghost" href="[##_rss_url_##]">RSS</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[##_title_##] :: [##_page_title_##]</title>
+  <meta name="author" content="[##_blogger_##]" />
+  <meta name="google-site-verification" content="GZ1D_8FcYDU60aGKHRzjZNFvLzpkZIb5PoakTyyiukA" />
+  <meta name="naver-site-verification" content="7a7146c6fea5df7112178283070ce70a24edd732" />
+  <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+  <meta name="view-transition" content="same-origin" />
+  <link rel="stylesheet" href="./style.css" />
+  <!-- Medium Zoom CDN -->
+  <script src="https://unpkg.com/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+</head>
+
+<body id="[##_body_id_##]" class="t3-skin">
+  <s_t3>
+    <a href="#content" class="skip-link">본문으로 바로가기</a>
+
+    <main id="main" class="container" role="main">
+      <div class="dock-shell">
+        <header class="shell-topbar" role="banner">
+          <h1 class="brand"><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+          <div class="header-right">
+            <a class="admin-link" href="[##_owner_url_##]">관리자</a>
+            <a class="btn btn-ghost" href="[##_rss_url_##]">RSS</a>
+          </div>
+        </header>
+
+        <div id="scroll-progress"></div>
+        <aside id="left-rail" aria-label="빠른 메뉴">
+          <a href="https://dev-soip.tistory.com/" class="rail-home-btn" aria-label="홈으로 이동">
+            <span class="icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z" />
+                <polyline points="9 21 9 13 15 13 15 21" />
+              </svg>
+            </span>
+            <span class="rail-btn-label" aria-hidden="true">dev-soip</span>
+          </a>
+          <div id="rail-dynamic" aria-label="카테고리 메뉴"></div>
+          <div style="flex-grow: 1"></div>
+          <div class="admin-menu-wrap" id="admin-menu-wrap">
+            <button id="admin-menu-toggle" class="rail-btn" aria-label="관리자 메뉴" aria-expanded="false">
+              <span class="icon">
+                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                  </path>
+                </svg>
+              </span>
+              <span class="rail-btn-label" aria-hidden="true">설정</span>
+            </button>
+            <div id="admin-menu-popup" class="admin-menu-popup" hidden>
+              <div class="admin-menu-header">
+                <span class="admin-menu-label">관리자</span>
+              </div>
+              <a href="https://dev-soip.tistory.com/manage/newpost" target="_blank" rel="noopener"
+                class="admin-menu-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                </svg>
+                글쓰기
+              </a>
+              <a href="https://dev-soip.tistory.com/manage/design/skin/edit" target="_blank" rel="noopener"
+                class="admin-menu-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                  <path
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                </svg>
+                스킨편집
+              </a>
+              <a href="https://dev-soip.tistory.com/manage/comments" target="_blank" rel="noopener"
+                class="admin-menu-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                댓글관리
+              </a>
+              <div class="admin-menu-sep"></div>
+              <a href="https://dev-soip.tistory.com/manage" target="_blank" rel="noopener" class="admin-menu-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+                설정
+              </a>
             </div>
+          </div>
+          <button id="dark-mode-toggle" class="rail-btn" aria-label="다크 모드 토글">
+            <span class="icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+            <span class="rail-btn-label" aria-hidden="true">다크모드</span>
+          </button>
+        </aside>
+
+        <section id="left-drawer" class="card" aria-label="메뉴별 게시글 목록">
+          <header class="drawer-head">
+            <div class="drawer-title-wrap">
+              <h2 id="drawer-title">자바</h2>
+            </div>
+            <input id="drawer-search" type="search" placeholder="Type to search..." autocomplete="off" />
           </header>
 
-          <div id="scroll-progress"></div>
-          <aside id="left-rail" aria-label="빠른 메뉴">
-            <a
-              href="https://dev-soip.tistory.com/"
-              class="rail-home-btn"
-              aria-label="홈으로 이동"
-            >
-              <span class="icon">
-                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"
-                  />
-                  <polyline points="9 21 9 13 15 13 15 21" />
-                </svg>
-              </span>
-              <span class="rail-btn-label" aria-hidden="true">dev-soip</span>
-            </a>
-            <div id="rail-dynamic" aria-label="카테고리 메뉴"></div>
-            <div style="flex-grow: 1"></div>
-            <div class="admin-menu-wrap" id="admin-menu-wrap">
-              <button
-                id="admin-menu-toggle"
-                class="rail-btn"
-                aria-label="관리자 메뉴"
-                aria-expanded="false"
-              >
-                <span class="icon">
-                  <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path
-                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
-                    ></path>
-                  </svg>
-                </span>
-                <span class="rail-btn-label" aria-hidden="true">설정</span>
-              </button>
-              <div id="admin-menu-popup" class="admin-menu-popup" hidden>
-                <div class="admin-menu-header">
-                  <span class="admin-menu-label">관리자</span>
-                </div>
-                <a
-                  href="https://dev-soip.tistory.com/manage/newpost"
-                  target="_blank"
-                  rel="noopener"
-                  class="admin-menu-item"
-                >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
-                    />
-                    <path
-                      d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
-                    />
-                  </svg>
-                  글쓰기
-                </a>
-                <a
-                  href="https://dev-soip.tistory.com/manage/design/skin/edit"
-                  target="_blank"
-                  rel="noopener"
-                  class="admin-menu-item"
-                >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                    <path
-                      d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"
-                    />
-                  </svg>
-                  스킨편집
-                </a>
-                <a
-                  href="https://dev-soip.tistory.com/manage/comments"
-                  target="_blank"
-                  rel="noopener"
-                  class="admin-menu-item"
-                >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                    />
-                  </svg>
-                  댓글관리
-                </a>
-                <div class="admin-menu-sep"></div>
-                <a
-                  href="https://dev-soip.tistory.com/manage"
-                  target="_blank"
-                  rel="noopener"
-                  class="admin-menu-item"
-                >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="3" />
-                    <path
-                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
-                    />
-                  </svg>
-                  설정
-                </a>
-              </div>
-            </div>
-            <button
-              id="dark-mode-toggle"
-              class="rail-btn"
-              aria-label="다크 모드 토글"
-            >
-              <span class="icon">
-                <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="rail-btn-label" aria-hidden="true">다크모드</span>
-            </button>
-          </aside>
+          <div id="drawer-list" class="drawer-list" aria-live="polite">
+            <p class="drawer-empty">게시글을 불러오는 중...</p>
+          </div>
+        </section>
 
-          <section
-            id="left-drawer"
-            class="card"
-            aria-label="메뉴별 게시글 목록"
-          >
-            <header class="drawer-head">
-              <div class="drawer-title-wrap">
-                <h2 id="drawer-title">자바</h2>
-              </div>
-              <input
-                id="drawer-search"
-                type="search"
-                placeholder="Type to search..."
-                autocomplete="off"
-              />
+        <div id="category-source" aria-hidden="true">
+          [##_category_list_##]
+        </div>
+
+        <div class="layout">
+          <section id="content">
+            <header class="inset-header">
+              <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-label="메뉴 열기"
+                aria-expanded="false">
+                <span class="mobile-nav-bar"></span>
+                <span class="mobile-nav-bar"></span>
+                <span class="mobile-nav-bar"></span>
+              </button>
+              <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="https://dev-soip.tistory.com/" class="crumb crumb-blog muted">dev-soip.tistory</a>
+                <span class="crumb-sep">›</span>
+                <span id="active-crumb" class="crumb">자바</span>
+                <span id="post-crumb-sep" class="crumb-sep" hidden>›</span>
+                <span id="active-post-crumb" class="crumb crumb-post" hidden></span>
+              </nav>
+              <div id="inset-floating-slot"></div>
             </header>
 
-            <div id="drawer-list" class="drawer-list" aria-live="polite">
-              <p class="drawer-empty">게시글을 불러오는 중...</p>
-            </div>
-          </section>
+            <div id="content-body">
+              <div id="content-empty-state" hidden aria-live="polite">
+                <h2 id="empty-hint-title" class="empty-hint-title">
+                  컨텐츠를 선택해주세요.
+                </h2>
+                <p id="empty-hint-desc" class="empty-hint-desc">
+                  왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.
+                </p>
 
-          <div id="category-source" aria-hidden="true">
-            [##_category_list_##]
-          </div>
-
-          <div class="layout">
-            <section id="content">
-              <header class="inset-header">
-                <button
-                  id="mobile-nav-toggle"
-                  class="mobile-nav-toggle"
-                  type="button"
-                  aria-label="메뉴 열기"
-                  aria-expanded="false"
-                >
-                  <span class="mobile-nav-bar"></span>
-                  <span class="mobile-nav-bar"></span>
-                  <span class="mobile-nav-bar"></span>
-                </button>
-                <nav class="breadcrumb" aria-label="breadcrumb">
-                  <a
-                    href="https://dev-soip.tistory.com/"
-                    class="crumb crumb-blog muted"
-                    >dev-soip.tistory</a
-                  >
-                  <span class="crumb-sep">›</span>
-                  <span id="active-crumb" class="crumb">자바</span>
-                  <span id="post-crumb-sep" class="crumb-sep" hidden>›</span>
-                  <span
-                    id="active-post-crumb"
-                    class="crumb crumb-post"
-                    hidden
-                  ></span>
-                </nav>
-                <div id="inset-floating-slot"></div>
-              </header>
-
-              <div id="content-body">
-                <div id="content-empty-state" hidden aria-live="polite">
-                  <h2 id="empty-hint-title" class="empty-hint-title">
-                    컨텐츠를 선택해주세요.
-                  </h2>
-                  <p id="empty-hint-desc" class="empty-hint-desc">
-                    왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.
+                <section class="empty-state card">
+                  <h2>dev-soip.tistory</h2>
+                  <p>
+                    개발하다 삽질한 것들, 겨우 해결한 것들, 그리고 가끔은 잘
+                    작동하는 코드들을 기록하는 기술 블로그입니다.
                   </p>
-
-                  <section class="empty-state card">
-                    <h2>dev-soip.tistory</h2>
+                  <div class="empty-state-intro">
+                    <strong>Frontend Developer · 2015 ~ </strong>
                     <p>
-                      개발하다 삽질한 것들, 겨우 해결한 것들, 그리고 가끔은 잘
-                      작동하는 코드들을 기록하는 기술 블로그입니다.
+                      안드로이드 앱 개발로 시작해 Electron 데스크탑 앱, KRX
+                      대규모 서비스 운영, IoT·스마트제조 시스템, 해양 물류
+                      플랫폼을 거쳐 현재는 GRM에서 React · Zustand 기반의
+                      모바일 현장 업무 앱을 개발하고 있습니다.
                     </p>
-                    <div class="empty-state-intro">
-                      <strong>Frontend Developer · 2015 ~ </strong>
-                      <p>
-                        안드로이드 앱 개발로 시작해 Electron 데스크탑 앱, KRX
-                        대규모 서비스 운영, IoT·스마트제조 시스템, 해양 물류
-                        플랫폼을 거쳐 현재는 GRM에서 React · Zustand 기반의
-                        모바일 현장 업무 앱을 개발하고 있습니다.
-                      </p>
-                      <ul class="empty-state-career">
-                        <li>
-                          <span class="career-period">2015–2017</span>
-                          <span class="career-company">온웨어</span>
-                          <span class="career-desc"
-                            >Android · Spring · O2O 세탁 서비스</span
-                          >
-                        </li>
-                        <li>
-                          <span class="career-period">2018–2021</span>
-                          <span class="career-company">사이버이메지네이션</span>
-                          <span class="career-desc"
-                            >KRX 운영 · Electron · Flutter · 금융 API</span
-                          >
-                        </li>
-                        <li>
-                          <span class="career-period">2021–2023</span>
-                          <span class="career-company">아이오코드</span>
-                          <span class="career-desc"
-                            >Vue · IoT 항만물류 · 스마트제조혁신</span
-                          >
-                        </li>
-                        <li>
-                          <span class="career-period">2023–2024</span>
-                          <span class="career-company">에코마린</span>
-                          <span class="career-desc"
-                            >Nuxt3 · 선박 모니터링 · 해양드론 배송</span
-                          >
-                        </li>
-                        <li>
-                          <span class="career-period">2024–현재</span>
-                          <span class="career-company"
-                            >서울도시가스 그룹 GRM</span
-                          >
-                          <span class="career-desc"
-                            >React · Zustand · 가스링크 현장 업무 앱</span
-                          >
-                        </li>
-                      </ul>
+                    <ul class="empty-state-career">
+                      <li>
+                        <span class="career-period">2015–2017</span>
+                        <span class="career-company">온웨어</span>
+                        <span class="career-desc">Android · Spring · O2O 세탁 서비스</span>
+                      </li>
+                      <li>
+                        <span class="career-period">2018–2021</span>
+                        <span class="career-company">사이버이메지네이션</span>
+                        <span class="career-desc">KRX 운영 · Electron · Flutter · 금융 API</span>
+                      </li>
+                      <li>
+                        <span class="career-period">2021–2023</span>
+                        <span class="career-company">아이오코드</span>
+                        <span class="career-desc">Vue · IoT 항만물류 · 스마트제조혁신</span>
+                      </li>
+                      <li>
+                        <span class="career-period">2023–2024</span>
+                        <span class="career-company">에코마린</span>
+                        <span class="career-desc">Nuxt3 · 선박 모니터링 · 해양드론 배송</span>
+                      </li>
+                      <li>
+                        <span class="career-period">2024–현재</span>
+                        <span class="career-company">서울도시가스 그룹 GRM</span>
+                        <span class="career-desc">React · Zustand · 가스링크 현장 업무 앱</span>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+
+              <s_list>
+                <section class="hero-card">
+                  <h2>[##_list_conform_##]</h2>
+                  <p>
+                    해당 글
+                    <span id="visible-count">[##_list_count_##]</span>건
+                  </p>
+                </section>
+              </s_list>
+
+              <s_notice_rep>
+                <article class="entry card notice-entry" data-category="공지">
+                  <s_index_article_rep>
+                    <a class="entry-link" href="[##_notice_rep_link_##]">
+                      <h3 class="entry-title">[##_notice_rep_title_##]</h3>
+                      <p class="entry-summary">[##_notice_rep_summary_##]</p>
+                    </a>
+                    <div class="entry-meta">
+                      <span class="badge">공지</span>
+                      <abbr>[##_notice_rep_date_##]</abbr>
                     </div>
-                  </section>
-                </div>
+                  </s_index_article_rep>
 
-                <s_list>
-                  <section class="hero-card">
-                    <h2>[##_list_conform_##]</h2>
-                    <p>
-                      해당 글
-                      <span id="visible-count">[##_list_count_##]</span>건
-                    </p>
-                  </section>
-                </s_list>
-
-                <s_notice_rep>
-                  <article class="entry card notice-entry" data-category="공지">
-                    <s_index_article_rep>
-                      <a class="entry-link" href="[##_notice_rep_link_##]">
-                        <h3 class="entry-title">[##_notice_rep_title_##]</h3>
-                        <p class="entry-summary">[##_notice_rep_summary_##]</p>
-                      </a>
+                  <s_permalink_article_rep>
+                    <header class="entry-head">
+                      <h2>[##_notice_rep_title_##]</h2>
                       <div class="entry-meta">
                         <span class="badge">공지</span>
                         <abbr>[##_notice_rep_date_##]</abbr>
+                        <span>by [##_notice_rep_author_##]</span>
                       </div>
-                    </s_index_article_rep>
+                    </header>
+                    <div class="post-content">[##_notice_rep_desc_##]</div>
+                  </s_permalink_article_rep>
+                </article>
+              </s_notice_rep>
 
-                    <s_permalink_article_rep>
-                      <header class="entry-head">
-                        <h2>[##_notice_rep_title_##]</h2>
-                        <div class="entry-meta">
-                          <span class="badge">공지</span>
-                          <abbr>[##_notice_rep_date_##]</abbr>
-                          <span>by [##_notice_rep_author_##]</span>
-                        </div>
-                      </header>
-                      <div class="post-content">[##_notice_rep_desc_##]</div>
-                    </s_permalink_article_rep>
-                  </article>
-                </s_notice_rep>
-
-                <s_article_rep>
-                  <article
-                    class="entry card"
-                    data-category="[##_article_rep_category_##]"
-                  >
-                    <s_index_article_rep>
-                      <s_article_rep_thumbnail>
-                        <a class="thumb-wrap" href="[##_article_rep_link_##]">
-                          <img
-                            class="thumb"
-                            src="[##_article_rep_thumbnail_url_##]"
-                            alt="[##_article_rep_title_##]"
-                          />
-                        </a>
-                      </s_article_rep_thumbnail>
-                      <a class="entry-link" href="[##_article_rep_link_##]">
-                        <h3 class="entry-title">[##_article_rep_title_##]</h3>
-                        <p class="entry-summary">[##_article_rep_summary_##]</p>
+              <s_article_rep>
+                <article class="entry card" data-category="[##_article_rep_category_##]">
+                  <s_rp_count><span class="tistory-reply-count" hidden>[##_article_rep_rp_cnt_##]</span></s_rp_count>
+                  <s_index_article_rep>
+                    <s_article_rep_thumbnail>
+                      <a class="thumb-wrap" href="[##_article_rep_link_##]">
+                        <img class="thumb" src="[##_article_rep_thumbnail_url_##]" alt="[##_article_rep_title_##]" />
                       </a>
+                    </s_article_rep_thumbnail>
+                    <a class="entry-link" href="[##_article_rep_link_##]">
+                      <h3 class="entry-title">[##_article_rep_title_##]</h3>
+                      <p class="entry-summary">[##_article_rep_summary_##]</p>
+                    </a>
+                    <div class="entry-meta">
+                      <a href="[##_article_rep_category_link_##]" class="badge outline">[##_article_rep_category_##]</a>
+                      <abbr>[##_article_rep_date_##]</abbr>
+                    </div>
+                  </s_index_article_rep>
+
+                  <s_permalink_article_rep>
+                    <header class="entry-head">
+                      <h2>[##_article_rep_title_##]</h2>
                       <div class="entry-meta">
-                        <a
-                          href="[##_article_rep_category_link_##]"
-                          class="badge outline"
-                          >[##_article_rep_category_##]</a
-                        >
+                        <span class="badge outline">[##_article_rep_category_##]</span>
                         <abbr>[##_article_rep_date_##]</abbr>
+                        <span>by [##_article_rep_author_##]</span>
                       </div>
-                    </s_index_article_rep>
+                    </header>
 
-                    <s_permalink_article_rep>
-                      <header class="entry-head">
-                        <h2>[##_article_rep_title_##]</h2>
-                        <div class="entry-meta">
-                          <span class="badge outline"
-                            >[##_article_rep_category_##]</span
-                          >
-                          <abbr>[##_article_rep_date_##]</abbr>
-                          <span>by [##_article_rep_author_##]</span>
-                        </div>
-                      </header>
+                    <div class="post-content">[##_article_rep_desc_##]</div>
 
-                      <div class="post-content">[##_article_rep_desc_##]</div>
+                    <s_tag_label>
+                      <div class="entry-tag">[##_tag_label_rep_##]</div>
+                    </s_tag_label>
 
-                      <s_tag_label>
-                        <div class="entry-tag">[##_tag_label_rep_##]</div>
-                      </s_tag_label>
+                    <s_rp>
+                      <section class="comment-card">
+                        <h3>댓글</h3>
+                        <s_rp_input_form>
+                          <div class="comment-form">
+                            <textarea name="[##_rp_input_comment_##]" rows="4" placeholder="댓글을 남겨주세요"></textarea>
+                            <button class="btn" type="submit" onclick="[##_rp_onclick_submit_##]">
+                              댓글 남기기
+                            </button>
+                          </div>
+                        </s_rp_input_form>
 
-                      <s_rp>
-                        <section class="comment-card">
-                          <h3>댓글</h3>
-                          <s_rp_input_form>
-                            <div class="comment-form">
-                              <textarea
-                                name="[##_rp_input_comment_##]"
-                                rows="4"
-                                placeholder="댓글을 남겨주세요"
-                              ></textarea>
-                              <button
-                                class="btn"
-                                type="submit"
-                                onclick="[##_rp_onclick_submit_##]"
-                              >
-                                댓글 남기기
-                              </button>
-                            </div>
-                          </s_rp_input_form>
+                        <s_rp_container>
+                          <ol class="comment-list">
+                            <s_rp_rep>
+                              <li id="[##_rp_rep_id_##]" class="comment-item [##_rp_rep_class_##]">
+                                <div class="comment-head">
+                                  <strong>[##_rp_rep_name_##]</strong>
+                                  <abbr>[##_rp_rep_date_##]</abbr>
+                                  <button class="reply-btn" onclick="[##_rp_rep_onclick_reply_##]">
+                                    답글
+                                  </button>
+                                </div>
+                                <p>[##_rp_rep_desc_##]</p>
+                                <s_rp2_container>
+                                  <ul class="reply-list">
+                                    <s_rp2_rep>
+                                      <li id="[##_rp_rep_id_##]" class="comment-item reply">
+                                        <div class="comment-head">
+                                          <strong>[##_rp_rep_name_##]</strong>
+                                          <abbr>[##_rp_rep_date_##]</abbr>
+                                        </div>
+                                        <p>[##_rp_rep_desc_##]</p>
+                                      </li>
+                                    </s_rp2_rep>
+                                  </ul>
+                                </s_rp2_container>
+                              </li>
+                            </s_rp_rep>
+                          </ol>
+                        </s_rp_container>
+                      </section>
+                    </s_rp>
+                  </s_permalink_article_rep>
+                </article>
+              </s_article_rep>
 
-                          <s_rp_container>
-                            <ol class="comment-list">
-                              <s_rp_rep>
-                                <li
-                                  id="[##_rp_rep_id_##]"
-                                  class="comment-item [##_rp_rep_class_##]"
-                                >
-                                  <div class="comment-head">
-                                    <strong>[##_rp_rep_name_##]</strong>
-                                    <abbr>[##_rp_rep_date_##]</abbr>
-                                    <button
-                                      class="reply-btn"
-                                      onclick="[##_rp_rep_onclick_reply_##]"
-                                    >
-                                      답글
-                                    </button>
-                                  </div>
-                                  <p>[##_rp_rep_desc_##]</p>
-                                  <s_rp2_container>
-                                    <ul class="reply-list">
-                                      <s_rp2_rep>
-                                        <li
-                                          id="[##_rp_rep_id_##]"
-                                          class="comment-item reply"
-                                        >
-                                          <div class="comment-head">
-                                            <strong>[##_rp_rep_name_##]</strong>
-                                            <abbr>[##_rp_rep_date_##]</abbr>
-                                          </div>
-                                          <p>[##_rp_rep_desc_##]</p>
-                                        </li>
-                                      </s_rp2_rep>
-                                    </ul>
-                                  </s_rp2_container>
-                                </li>
-                              </s_rp_rep>
-                            </ol>
-                          </s_rp_container>
-                        </section>
-                      </s_rp>
-                    </s_permalink_article_rep>
-                  </article>
-                </s_article_rep>
-
-                <s_paging>
-                  <nav id="paging" class="paging" aria-label="페이지 이동">
-                    <a
-                      [##_prev_page_##]
-                      class="btn btn-ghost [##_no_more_prev_##]"
-                      rel="prev"
-                      >이전</a
-                    >
-                    <s_paging_rep>
-                      <a [##_paging_rep_link_##] class="page-num"
-                        >[##_paging_rep_link_num_##]</a
-                      >
-                    </s_paging_rep>
-                    <a
-                      [##_next_page_##]
-                      class="btn btn-ghost [##_no_more_next_##]"
-                      rel="next"
-                      >다음</a
-                    >
-                  </nav>
-                </s_paging>
-              </div>
-              <!-- /#content-body -->
-            </section>
-          </div>
+              <s_paging>
+                <nav id="paging" class="paging" aria-label="페이지 이동">
+                  <a [##_prev_page_##] class="btn btn-ghost [##_no_more_prev_##]" rel="prev">이전</a>
+                  <s_paging_rep>
+                    <a [##_paging_rep_link_##] class="page-num">[##_paging_rep_link_num_##]</a>
+                  </s_paging_rep>
+                  <a [##_next_page_##] class="btn btn-ghost [##_no_more_next_##]" rel="next">다음</a>
+                </nav>
+              </s_paging>
+            </div>
+            <!-- /#content-body -->
+          </section>
         </div>
-        <button
-          id="mobile-nav-backdrop"
-          class="mobile-nav-backdrop"
-          type="button"
-          aria-label="메뉴 닫기"
-        ></button>
-      </main>
+      </div>
+      <button id="mobile-nav-backdrop" class="mobile-nav-backdrop" type="button" aria-label="메뉴 닫기"></button>
+    </main>
 
-      <footer id="site-footer" class="container" role="contentinfo">
-        <div class="footer-links">
-          <a href="[##_blog_link_##]">홈</a>
-          <a href="[##_guestbook_link_##]">방명록</a>
-          <a href="https://www.tistory.com/login" class="admin-login">로그인</a>
-          <a href="https://www.tistory.com/logout" class="admin-logout"
-            >로그아웃</a
-          >
-        </div>
-        <small
-          >Copyright <a href="[##_blog_link_##]">[##_title_##]</a>. All rights
-          reserved.</small
-        >
-      </footer>
-    </s_t3>
-    <script>
-      (function () {
-        // early return 전에 항상 다크모드 복원
-        if (localStorage.getItem('theme') === 'dark') {
-          document.body.classList.add('dark');
-        }
+    <footer id="site-footer" class="container" role="contentinfo">
+      <div class="footer-links">
+        <a href="[##_blog_link_##]">홈</a>
+        <a href="[##_guestbook_link_##]">방명록</a>
+        <a href="https://www.tistory.com/login" class="admin-login">로그인</a>
+        <a href="https://www.tistory.com/logout" class="admin-logout">로그아웃</a>
+      </div>
+      <small>Copyright <a href="[##_blog_link_##]">[##_title_##]</a>. All rights
+        reserved.</small>
+    </footer>
+  </s_t3>
+  <script>
+    (function () {
+      // early return 전에 항상 다크모드 복원
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
 
-        // 페이지 전환 enter 애니메이션
-        var shouldAnimateEnter = false;
-        if (window.sessionStorage.getItem('tistory-content-enter')) {
-          window.sessionStorage.removeItem('tistory-content-enter');
-          shouldAnimateEnter = true;
-          var contentEnterEl = document.getElementById('content-body');
-          if (
-            contentEnterEl &&
-            !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-          ) {
-            contentEnterEl.classList.add('is-entering');
-            contentEnterEl.addEventListener(
-              'animationend',
-              function () {
-                contentEnterEl.classList.remove('is-entering');
-              },
-              { once: true },
-            );
-          }
-        }
-
-        var rail = document.getElementById('left-rail');
-        var railDynamic = document.getElementById('rail-dynamic');
-        var categorySource = document.getElementById('category-source');
-        var cards = document.querySelectorAll('#content .entry.card');
-        var search = document.getElementById('drawer-search');
-        var drawerTitle = document.getElementById('drawer-title');
-        var mobileNavToggle = document.getElementById('mobile-nav-toggle');
-        var mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
-        var activeCrumb = document.getElementById('active-crumb');
-        var activePostCrumb = document.getElementById('active-post-crumb');
-        var postCrumbSep = document.getElementById('post-crumb-sep');
-        var contentEmptyState = document.getElementById('content-empty-state');
-        var drawerList = document.getElementById('drawer-list');
-        var visibleCount = document.getElementById('visible-count');
-
+      // 페이지 전환 enter 애니메이션
+      var shouldAnimateEnter = false;
+      if (window.sessionStorage.getItem('tistory-content-enter')) {
+        window.sessionStorage.removeItem('tistory-content-enter');
+        shouldAnimateEnter = true;
+        var contentEnterEl = document.getElementById('content-body');
         if (
-          !rail ||
-          !railDynamic ||
-          !search ||
-          !drawerTitle ||
-          !activeCrumb ||
-          !drawerList
+          contentEnterEl &&
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches
         ) {
+          contentEnterEl.classList.add('is-entering');
+          contentEnterEl.addEventListener(
+            'animationend',
+            function () {
+              contentEnterEl.classList.remove('is-entering');
+            },
+            { once: true },
+          );
+        }
+      }
+
+      var rail = document.getElementById('left-rail');
+      var railDynamic = document.getElementById('rail-dynamic');
+      var categorySource = document.getElementById('category-source');
+      var cards = document.querySelectorAll('#content .entry.card');
+      var search = document.getElementById('drawer-search');
+      var drawerTitle = document.getElementById('drawer-title');
+      var mobileNavToggle = document.getElementById('mobile-nav-toggle');
+      var mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+      var activeCrumb = document.getElementById('active-crumb');
+      var activePostCrumb = document.getElementById('active-post-crumb');
+      var postCrumbSep = document.getElementById('post-crumb-sep');
+      var contentEmptyState = document.getElementById('content-empty-state');
+      var drawerList = document.getElementById('drawer-list');
+      var visibleCount = document.getElementById('visible-count');
+
+      if (
+        !rail ||
+        !railDynamic ||
+        !search ||
+        !drawerTitle ||
+        !activeCrumb ||
+        !drawerList
+      ) {
+        return;
+      }
+
+      function isMobileSidebarMode() {
+        return (
+          window.matchMedia &&
+          window.matchMedia('(max-width: 1200px)').matches
+        );
+      }
+
+      function setMobileNav(open) {
+        if (!isMobileSidebarMode()) {
+          document.body.classList.remove('nav-open');
+          if (mobileNavToggle) {
+            mobileNavToggle.setAttribute('aria-expanded', 'false');
+          }
           return;
         }
 
-        function isMobileSidebarMode() {
-          return (
-            window.matchMedia &&
-            window.matchMedia('(max-width: 1200px)').matches
+        document.body.classList.toggle('nav-open', !!open);
+        if (mobileNavToggle) {
+          mobileNavToggle.setAttribute(
+            'aria-expanded',
+            open ? 'true' : 'false',
           );
         }
+      }
 
-        function setMobileNav(open) {
-          if (!isMobileSidebarMode()) {
-            document.body.classList.remove('nav-open');
-            if (mobileNavToggle) {
-              mobileNavToggle.setAttribute('aria-expanded', 'false');
-            }
-            return;
-          }
+      var buttons = [];
+      var targetConfig = {};
+      var isHydrating = false;
+      var drawerLoadingTimer = null;
 
-          document.body.classList.toggle('nav-open', !!open);
-          if (mobileNavToggle) {
-            mobileNavToggle.setAttribute(
-              'aria-expanded',
-              open ? 'true' : 'false',
-            );
-          }
+      var CACHE_KEY = 'tistory-drawer-posts-v8';
+      var TARGET_KEY = 'tistory-drawer-target-v1';
+      var THUMB_CACHE_KEY = 'tistory-thumb-cache-v1';
+
+      var thumbCache = (function () {
+        try {
+          var raw = window.sessionStorage.getItem(THUMB_CACHE_KEY);
+          return raw ? JSON.parse(raw) : {};
+        } catch (e) {
+          return {};
+        }
+      })();
+
+      function saveThumbEntry(href, url) {
+        thumbCache[normalizePath(href)] = url;
+        try {
+          window.sessionStorage.setItem(
+            THUMB_CACHE_KEY,
+            JSON.stringify(thumbCache),
+          );
+        } catch (e) { }
+      }
+
+      function normalizeText(text) {
+        return (text || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      }
+
+      function normalizeCategoryKey(text) {
+        return normalizeText(text).replace(/^\d+\s*[-_.):]?\s*/, '');
+      }
+
+      function getTopCategory(categoryText) {
+        if (!categoryText) {
+          return '';
+        }
+        var top = categoryText.split('/')[0] || categoryText;
+        return normalizeCategoryKey(top);
+      }
+
+      function categoryLabel(text) {
+        return (text || '').replace(/\(\s*\d+\s*\)\s*$/, '').trim();
+      }
+
+      function normalizePath(href) {
+        try {
+          var u = new URL(href, window.location.href);
+          var path = (u.pathname || '').replace(/\/+$/, '');
+          return path || '/';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function getCurrentPostTitle() {
+        var node = document.querySelector('#content .entry-head h2');
+        return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
+      }
+
+      var currentPath = normalizePath(window.location.href);
+      var currentPostTitle = getCurrentPostTitle();
+
+      function syncPostCrumb(showPostCrumb) {
+        if (!activePostCrumb || !postCrumbSep) {
+          return;
+        }
+        var hasPost = !!currentPostTitle && showPostCrumb !== false;
+        activePostCrumb.hidden = !hasPost;
+        postCrumbSep.hidden = !hasPost;
+
+        // 모바일 레이아웃 처리를 위해 클래스 토글
+        var breadcrumbEl = document.querySelector('.breadcrumb');
+        if (breadcrumbEl) {
+          breadcrumbEl.classList.toggle('has-post', hasPost);
         }
 
-        var buttons = [];
-        var targetConfig = {};
-        var isHydrating = false;
-        var drawerLoadingTimer = null;
-
-        var CACHE_KEY = 'tistory-drawer-posts-v4';
-        var TARGET_KEY = 'tistory-drawer-target-v1';
-
-        function normalizeText(text) {
-          return (text || '').replace(/\s+/g, ' ').trim().toLowerCase();
+        if (hasPost) {
+          activePostCrumb.textContent = currentPostTitle;
         }
+      }
 
-        function normalizeCategoryKey(text) {
-          return normalizeText(text).replace(/^\d+\s*[-_.):]?\s*/, '');
-        }
+      syncPostCrumb(true);
 
-        function getTopCategory(categoryText) {
-          if (!categoryText) {
-            return '';
-          }
-          var top = categoryText.split('/')[0] || categoryText;
-          return normalizeCategoryKey(top);
-        }
-
-        function categoryLabel(text) {
-          return (text || '').replace(/\(\s*\d+\s*\)\s*$/, '').trim();
-        }
-
-        function normalizePath(href) {
-          try {
-            var u = new URL(href, window.location.href);
-            var path = (u.pathname || '').replace(/\/+$/, '');
-            return path || '/';
-          } catch (e) {
-            return '';
-          }
-        }
-
-        function getCurrentPostTitle() {
-          var node = document.querySelector('#content .entry-head h2');
-          return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
-        }
-
-        var currentPath = normalizePath(window.location.href);
-        var currentPostTitle = getCurrentPostTitle();
-
-        function syncPostCrumb(showPostCrumb) {
-          if (!activePostCrumb || !postCrumbSep) {
-            return;
-          }
-          var hasPost = !!currentPostTitle && showPostCrumb !== false;
-          activePostCrumb.hidden = !hasPost;
-          postCrumbSep.hidden = !hasPost;
-
-          // 모바일 레이아웃 처리를 위해 클래스 토글
-          var breadcrumbEl = document.querySelector('.breadcrumb');
-          if (breadcrumbEl) {
-            breadcrumbEl.classList.toggle('has-post', hasPost);
-          }
-
-          if (hasPost) {
-            activePostCrumb.textContent = currentPostTitle;
-          }
-        }
-
-        syncPostCrumb(true);
-
-        var ICON_MAP = {
-          // Java / 자바
-          자바: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1023">
+      var ICON_MAP = {
+        // Java / 자바
+        자바: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1024 1023">
     <path fill="currentColor" d="M942 767q-24 0-49.5-18T850 702q9 1 14 1q40 0 68-19t28-45q0-25-25-43t-62-21q-41 28-139.5 46T512 639q-159 0-271.5-28.5T128 543q0-30 66-54q14 36 114 61t236 25q113 0 203-18t128-46q12 9 17 18q26-18 50-18q34 0 58 37.5t24 90.5t-24 90.5t-58 37.5zM576 318q0 33 10 59t22 41t22 39.5t10 53.5q-5-3-13.5-8t-31-23.5t-39-39T526 387t-14-69q0-33 31.5-69.5t74.5-62t85-42.5t65-16q-18 0-63.5 31t-87 78t-41.5 81zm-192 33q0 35 16 75t32 63l16 23q-48 0-88-51t-40-110q0-26 20-52.5t48-48t56-40.5t48-37.5t20-32.5q0-28-3-49t-16.5-48T454 0q62 7 92 44.5t30 95.5q0 32-20 57t-48 41t-56 31t-48 35.5t-20 46.5zm128 480q147 0 221-32q35 15 35 32q0 26-75 45t-181 19t-181-19t-75-45q0-17 35-32q74 32 221 32zM192 703q0-17 43-32q93 32 277 32t277-32q43 15 43 32q0 26-94 45t-226.5 19t-226-19t-93.5-45zm-64 128q0 35 51.5 64.5t140 46.5T512 959t192.5-17t140-46.5T896 831q0-11-6-22q134 36 134 86q0 35-68.5 64.5T769 1006t-257 17t-257-17t-186.5-46.5T0 895q0-50 134-86q-6 11-6 22z"/>
 </svg>`,
-          // JavaScript / JS
-          javascript:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="JavaScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 15.5c.3.8 1 1.3 1.9 1.3 1 0 1.6-.5 1.6-1.3 0-.9-.6-1.2-1.6-1.6L8.8 13c-1.6-.7-2.7-1.5-2.7-3.3C6.1 7.9 7.5 7 9.3 7c1.5 0 2.7.6 3.4 2l-1.6 1c-.3-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3 1.1 0 .7.5 1 1.4 1.4l.6.3c2 .8 3 1.7 3 3.6 0 2-1.6 3.3-3.8 3.3-2.1 0-3.5-1-4.2-2.4l1.4-.7Z"/><path d="M14.5 16.5c.4.7 1 1.2 2 1.2.9 0 1.5-.4 1.5-2V7h2v8.7c0 3-1.7 4-3.4 4-1.6 0-2.8-.8-3.4-2l1.3-.7Z"/></svg>',
-          자바스크립트: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect width="16.5" height="16.5" x="3.75" y="3.75" rx="2"/><path d="M11.5 11.25v5a1 1 0 0 1-1 1H9m8.25-6h-2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2"/></g></svg>`,
-          // TypeScript / TS
-          typescript:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="TypeScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 9h10M12 9v9"/><path d="M15.5 15.5c.3.8 1 1.2 1.8 1.2.9 0 1.4-.4 1.4-1.1 0-.8-.5-1.1-1.6-1.5l-.5-.2c-1.6-.6-2.4-1.5-2.4-3 0-1.7 1.3-2.7 3.1-2.7 1.3 0 2.4.5 3 1.7l-1.4.8c-.3-.6-.8-1-1.6-1-.7 0-1.2.4-1.2 1 0 .7.4 1 1.4 1.4l.5.2c1.9.8 2.9 1.6 2.9 3.3 0 1.9-1.5 3.1-3.5 3.1-1.9 0-3.2-.9-3.8-2.2l1.4-.7Z"/></svg>',
-          ts: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="TypeScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 9h10M12 9v9"/><path d="M15.5 15.5c.3.8 1 1.2 1.8 1.2.9 0 1.4-.4 1.4-1.1 0-.8-.5-1.1-1.6-1.5l-.5-.2c-1.6-.6-2.4-1.5-2.4-3 0-1.7 1.3-2.7 3.1-2.7 1.3 0 2.4.5 3 1.7l-1.4.8c-.3-.6-.8-1-1.6-1-.7 0-1.2.4-1.2 1 0 .7.4 1 1.4 1.4l.5.2c1.9.8 2.9 1.6 2.9 3.3 0 1.9-1.5 3.1-3.5 3.1-1.9 0-3.2-.9-3.8-2.2l1.4-.7Z"/></svg>',
-          // React
-          react:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="React"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-60 12 12)"/></svg>',
-          // Docker
-          docker: `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-linejoin="round"><path stroke-linecap="round" d="M9.5 21.5c-4.63 0-8-3-8-7.5c-.01-.257.244-.5.5-.5h13.5c2 0 2.136-2.467 2.136-2.467c-1.37-1.826.177-2.975.177-2.975s2.489.25 2.032 2.534c1.242-.526 2.18-.355 2.655.907c-.475 1.265-1.953 1.942-3.196 1.414c0 4.792-5.013 8.587-9.804 8.587"/><path d="M12 13.5h3v-3h-3zm-3 0h3v-3H9zm-3 0h3v-3H6zm3-3h3v-3H9zm0-3h3v-3H9zm-3 3h3v-3H6zm-3 3h3v-3H3z"/></g></svg>`,
-          // Electron
-          electron:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Electron"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(-60 12 12)" fill="none"/><circle cx="12" cy="5" r="1"/></svg>',
-          일렉트론: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 474 512">
+        // JavaScript / JS
+        javascript:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="JavaScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 15.5c.3.8 1 1.3 1.9 1.3 1 0 1.6-.5 1.6-1.3 0-.9-.6-1.2-1.6-1.6L8.8 13c-1.6-.7-2.7-1.5-2.7-3.3C6.1 7.9 7.5 7 9.3 7c1.5 0 2.7.6 3.4 2l-1.6 1c-.3-.7-.9-1.1-1.7-1.1-.8 0-1.3.4-1.3 1.1 0 .7.5 1 1.4 1.4l.6.3c2 .8 3 1.7 3 3.6 0 2-1.6 3.3-3.8 3.3-2.1 0-3.5-1-4.2-2.4l1.4-.7Z"/><path d="M14.5 16.5c.4.7 1 1.2 2 1.2.9 0 1.5-.4 1.5-2V7h2v8.7c0 3-1.7 4-3.4 4-1.6 0-2.8-.8-3.4-2l1.3-.7Z"/></svg>',
+        자바스크립트: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect width="16.5" height="16.5" x="3.75" y="3.75" rx="2"/><path d="M11.5 11.25v5a1 1 0 0 1-1 1H9m8.25-6h-2a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-2"/></g></svg>`,
+        // TypeScript / TS
+        typescript:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="TypeScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 9h10M12 9v9"/><path d="M15.5 15.5c.3.8 1 1.2 1.8 1.2.9 0 1.4-.4 1.4-1.1 0-.8-.5-1.1-1.6-1.5l-.5-.2c-1.6-.6-2.4-1.5-2.4-3 0-1.7 1.3-2.7 3.1-2.7 1.3 0 2.4.5 3 1.7l-1.4.8c-.3-.6-.8-1-1.6-1-.7 0-1.2.4-1.2 1 0 .7.4 1 1.4 1.4l.5.2c1.9.8 2.9 1.6 2.9 3.3 0 1.9-1.5 3.1-3.5 3.1-1.9 0-3.2-.9-3.8-2.2l1.4-.7Z"/></svg>',
+        ts: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="TypeScript"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 9h10M12 9v9"/><path d="M15.5 15.5c.3.8 1 1.2 1.8 1.2.9 0 1.4-.4 1.4-1.1 0-.8-.5-1.1-1.6-1.5l-.5-.2c-1.6-.6-2.4-1.5-2.4-3 0-1.7 1.3-2.7 3.1-2.7 1.3 0 2.4.5 3 1.7l-1.4.8c-.3-.6-.8-1-1.6-1-.7 0-1.2.4-1.2 1 0 .7.4 1 1.4 1.4l.5.2c1.9.8 2.9 1.6 2.9 3.3 0 1.9-1.5 3.1-3.5 3.1-1.9 0-3.2-.9-3.8-2.2l1.4-.7Z"/></svg>',
+        // React
+        react:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="React"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-60 12 12)"/></svg>',
+        // Docker
+        docker: `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-linejoin="round"><path stroke-linecap="round" d="M9.5 21.5c-4.63 0-8-3-8-7.5c-.01-.257.244-.5.5-.5h13.5c2 0 2.136-2.467 2.136-2.467c-1.37-1.826.177-2.975.177-2.975s2.489.25 2.032 2.534c1.242-.526 2.18-.355 2.655.907c-.475 1.265-1.953 1.942-3.196 1.414c0 4.792-5.013 8.587-9.804 8.587"/><path d="M12 13.5h3v-3h-3zm-3 0h3v-3H9zm-3 0h3v-3H6zm3-3h3v-3H9zm0-3h3v-3H9zm-3 3h3v-3H6zm-3 3h3v-3H3z"/></g></svg>`,
+        // Electron
+        electron:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Electron"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)" fill="none"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(-60 12 12)" fill="none"/><circle cx="12" cy="5" r="1"/></svg>',
+        일렉트론: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 474 512">
     <path fill="currentColor" d="M168.45 108.991c12.09 2.231 8.728 20.458-3.363 18.227C69.19 109.396 2.003 147.295 52.867 241.137c6.079 10.657-10.048 19.855-16.126 9.197C-23.822 144.24 54.71 87.452 168.45 108.99zm241.855 179.952c85.725-104.828 47.973-182.785-55.1-184.06c-12.242-.16-12.468 18.372-.226 18.532c91.237-.39 112.944 67.104 41.124 153.587c-7.915 9.624 6.582 21.085 14.202 11.94zm-90.171 164.42c6.265-10.401-9.334-20.096-15.903-9.578c-51.864 82.07-115.258 56.785-153.626-42.178c-4.148-11.79-21.665-5.626-17.517 6.163c33.943 103.669 123.957 149.343 187.046 45.594zm-56.81-184.606c0-19.996-21.795-32.561-39.137-22.563c-17.343 9.998-17.343 35.129 0 45.127c17.342 9.998 39.137-2.567 39.137-22.564zm-227.849 84.24c3.022-82.379 123.022-187.457 264.534-223.615c12.151-2.641 8.214-20.752-3.938-18.11C165.364 140.21 10.3 256.402 16.818 358.091c-22.656 13.673-22.42 46.86.695 60.138C40.86 431.64 70.2 414.786 70.2 387.965c0-20.16-16.577-34.689-34.725-34.967zm384.299 64.231c16.684 10.855 40.815 5.884 50.554-13.6c11.988-23.983-6.715-52.168-33.585-50.612c-25.226 1.461-40.078 28.127-29.484 49.94c-81.503 35.459-232.894-23.872-321.905-118.185c-8.146-8.987-21.895 3.474-13.75 12.462c84.425 93.353 255.969 168.84 348.17 119.995zm-147.43-382.3c.008-22.93-22.901-40.713-46.097-33.17c-25.595 8.325-32.517 41.3-12.43 59.215c16.9 15.07 42.346 10.054 53.278-7.54c63.334 41.87 102.635 184.962 60.758 336.407c-3.622 11.723 14.123 17.206 17.745 5.483C383.65 272.41 363.065 90.39 272.344 34.927z"/>
 </svg>
 `,
-          // Jest / Testing
-          jest: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+        // Jest / Testing
+        jest: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
     <title>Jest</title>
     <path d="M22.251 11.82a3.117 3.117 0 0 0-2.328-3.01L22.911 0H8.104L11.1 8.838a3.116 3.116 0 0 0-2.244 2.988c0 1.043.52 1.967 1.313 2.536a8.279 8.279 0 0 1-1.084 1.244 8.14 8.14 0 0 1-2.55 1.647c-.834-.563-1.195-1.556-.869-2.446a3.11 3.11 0 0 0-.91-6.08 3.117 3.117 0 0 0-3.113 3.113c0 .848.347 1.626.903 2.182-.048.097-.097.195-.146.299-.465.959-.993 2.043-1.195 3.259-.403 2.432.257 4.384 1.849 5.489A5.093 5.093 0 0 0 5.999 24c1.827 0 3.682-.917 5.475-1.807 1.279-.632 2.599-1.292 3.898-1.612.48-.118.98-.187 1.508-.264 1.07-.153 2.175-.312 3.168-.89a4.482 4.482 0 0 0 2.182-3.091c.174-.994 0-1.994-.444-2.87.298-.48.465-1.042.465-1.647zm-1.355 0c0 .965-.785 1.75-1.75 1.75a1.753 1.753 0 0 1-1.085-3.126l.007-.007c.056-.042.118-.084.18-.125 0 0 .008 0 .008-.007.028-.014.055-.035.083-.05.007 0 .014-.006.021-.006.028-.014.063-.028.097-.042.035-.014.07-.027.098-.041.007 0 .013-.007.02-.007.028-.007.056-.021.084-.028.007 0 .02-.007.028-.007.034-.007.062-.014.097-.02h.007l.104-.022c.007 0 .02 0 .028-.007.028 0 .055-.007.083-.007h.035c.035 0 .07-.007.111-.007h.09c.028 0 .05 0 .077.007h.014c.055.007.111.014.167.028a1.766 1.766 0 0 1 1.396 1.723zM10.043 1.39h10.93l-2.509 7.4c-.104.02-.208.055-.312.09l-2.64-5.385-2.648 5.35c-.104-.034-.216-.055-.327-.076l-2.494-7.38zm4.968 9.825a3.083 3.083 0 0 0-.938-1.668l1.438-2.904 1.452 2.967c-.43.43-.743.98-.868 1.605H15.01zm-3.481-1.098c.034-.007.062-.014.097-.02h.02c.029-.008.056-.008.084-.015h.028c.028 0 .049-.007.076-.007h.271c.028 0 .049.007.07.007.014 0 .02 0 .035.007.027.007.048.007.076.014.007 0 .014 0 .028.007l.097.02h.007c.028.008.056.015.083.029.007 0 .014.007.028.007.021.007.049.014.07.027.007 0 .014.007.02.007.028.014.056.021.084.035h.007a.374.374 0 0 1 .09.049h.007c.028.014.056.034.084.048.007 0 .007.007.013.007.028.014.05.035.077.049l.007.007c.083.062.16.132.236.201l.007.007a1.747 1.747 0 0 1 .48 1.209 1.752 1.752 0 0 1-3.502 0 1.742 1.742 0 0 1 1.32-1.695zm-6.838-.049c.966 0 1.751.786 1.751 1.751s-.785 1.751-1.75 1.751-1.752-.785-1.752-1.75.786-1.752 1.751-1.752zm16.163 6.025a3.07 3.07 0 0 1-1.508 2.133c-.758.438-1.689.577-2.669.716a17.29 17.29 0 0 0-1.64.291c-1.445.355-2.834 1.05-4.182 1.717-1.724.854-3.35 1.66-4.857 1.66a3.645 3.645 0 0 1-2.154-.688c-1.529-1.056-1.453-3.036-1.272-4.12.167-1.015.632-1.966 1.077-2.877.028-.055.049-.104.077-.16.152.056.312.098.479.126-.264 1.473.486 2.994 1.946 3.745l.264.139.284-.104c1.216-.431 2.342-1.133 3.336-2.071a9.334 9.334 0 0 0 1.445-1.716c.16.027.32.034.48.034a3.117 3.117 0 0 0 3.008-2.327h1.167a3.109 3.109 0 0 0 3.01 2.327c.576 0 1.11-.16 1.57-.43.18.52.236 1.063.139 1.605z"/>
 </svg>
 `,
-          테스트:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="테스트"><path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg>',
-          // News / 뉴스
-          news: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg>',
-          뉴스: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg>',
-          // Linux / 윈도우 / OS
-          linux:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Linux"><path d="M12 2c-2 0-4 2-4 5v3c0 2 1 3.5 2 4.5l-2 3.5c-.3.5 0 1 .5 1H9c.5 0 1-.5 1-1l.5-1.5c.4.1.7.2 1 .2h1c.3 0 .6-.1 1-.2L14 17c0 .5.5 1 1 1h.5c.5 0 .8-.5.5-1L14 13.5c1-1 2-2.5 2-4.5V7c0-3-2-5-4-5Z"/><circle cx="10" cy="9" r="1"/><circle cx="14" cy="9" r="1"/></svg>',
-          윈도우:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Windows"><path d="M3 5.5L10.5 4.5V11.5H3V5.5Z"/><path d="M11.5 4.3L21 3V11.5H11.5V4.3Z"/><path d="M3 12.5H10.5V19.5L3 18.5V12.5Z"/><path d="M11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>',
-          windows:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Windows"><path d="M3 5.5L10.5 4.5V11.5H3V5.5Z"/><path d="M11.5 4.3L21 3V11.5H11.5V4.3Z"/><path d="M3 12.5H10.5V19.5L3 18.5V12.5Z"/><path d="M11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>',
-          // Git
-          git: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Git"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h6M18 8v6a2 2 0 0 1-2 2h-2"/><path d="M6 8v6a2 2 0 0 0 2 2h2"/></svg>',
-          // Python
-          python:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Python"><path d="M12 2C8.7 2 7 3.5 7 5v2h5v1H5.5C4 8 3 9.2 3 11s.8 3.2 2.5 3.8L7 15v2c0 1.5 1.7 3 5 3s5-1.5 5-3v-2h-5v-1h6.5c1.5 0 2.5-1.2 2.5-3s-.8-3.2-2.5-3.8L17 7V5c0-1.5-1.7-3-5-3Z"/><circle cx="9.5" cy="5.5" r="1"/><circle cx="14.5" cy="18.5" r="1"/></svg>',
-          // Node.js
-          node: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Node.js"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 7v10M7 9.5l5 3 5-3"/></svg>',
-          nodejs:
-            '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Node.js"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 7v10M7 9.5l5 3 5-3"/></svg>',
-          여행: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>`,
-          맛집: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils-icon lucide-utensils"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
-          독서: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text-icon lucide-book-open-text"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>`,
-          트러블슈팅: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bug-icon lucide-bug"><path d="M12 20v-9"/><path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/><path d="M14.12 3.88 16 2"/><path d="M21 21a4 4 0 0 0-3.81-4"/><path d="M21 5a4 4 0 0 1-3.55 3.97"/><path d="M22 13h-4"/><path d="M3 21a4 4 0 0 1 3.81-4"/><path d="M3 5a4 4 0 0 0 3.55 3.97"/><path d="M6 13H2"/><path d="m8 2 1.88 1.88"/><path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></svg>`,
-        };
+        테스트:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="테스트"><path d="M12 2L4 6v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V6l-8-4Z"/><path d="M9 12l2 2 4-4"/></svg>',
+        // News / 뉴스
+        news: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg>',
+        뉴스: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-newspaper-icon lucide-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg>',
+        // Linux / 윈도우 / OS
+        linux:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Linux"><path d="M12 2c-2 0-4 2-4 5v3c0 2 1 3.5 2 4.5l-2 3.5c-.3.5 0 1 .5 1H9c.5 0 1-.5 1-1l.5-1.5c.4.1.7.2 1 .2h1c.3 0 .6-.1 1-.2L14 17c0 .5.5 1 1 1h.5c.5 0 .8-.5.5-1L14 13.5c1-1 2-2.5 2-4.5V7c0-3-2-5-4-5Z"/><circle cx="10" cy="9" r="1"/><circle cx="14" cy="9" r="1"/></svg>',
+        윈도우:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Windows"><path d="M3 5.5L10.5 4.5V11.5H3V5.5Z"/><path d="M11.5 4.3L21 3V11.5H11.5V4.3Z"/><path d="M3 12.5H10.5V19.5L3 18.5V12.5Z"/><path d="M11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>',
+        windows:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Windows"><path d="M3 5.5L10.5 4.5V11.5H3V5.5Z"/><path d="M11.5 4.3L21 3V11.5H11.5V4.3Z"/><path d="M3 12.5H10.5V19.5L3 18.5V12.5Z"/><path d="M11.5 12.5H21V21L11.5 19.7V12.5Z"/></svg>',
+        // Git
+        git: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Git"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h6M18 8v6a2 2 0 0 1-2 2h-2"/><path d="M6 8v6a2 2 0 0 0 2 2h2"/></svg>',
+        // Python
+        python:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Python"><path d="M12 2C8.7 2 7 3.5 7 5v2h5v1H5.5C4 8 3 9.2 3 11s.8 3.2 2.5 3.8L7 15v2c0 1.5 1.7 3 5 3s5-1.5 5-3v-2h-5v-1h6.5c1.5 0 2.5-1.2 2.5-3s-.8-3.2-2.5-3.8L17 7V5c0-1.5-1.7-3-5-3Z"/><circle cx="9.5" cy="5.5" r="1"/><circle cx="14.5" cy="18.5" r="1"/></svg>',
+        // Node.js
+        node: '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Node.js"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 7v10M7 9.5l5 3 5-3"/></svg>',
+        nodejs:
+          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="Node.js"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 7v10M7 9.5l5 3 5-3"/></svg>',
+        여행: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>`,
+        맛집: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils-icon lucide-utensils"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
+        독서: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text-icon lucide-book-open-text"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>`,
+        트러블슈팅: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bug-icon lucide-bug"><path d="M12 20v-9"/><path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/><path d="M14.12 3.88 16 2"/><path d="M21 21a4 4 0 0 0-3.81-4"/><path d="M21 5a4 4 0 0 1-3.55 3.97"/><path d="M22 13h-4"/><path d="M3 21a4 4 0 0 1 3.81-4"/><path d="M3 5a4 4 0 0 0 3.55 3.97"/><path d="M6 13H2"/><path d="m8 2 1.88 1.88"/><path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></svg>`,
+      };
 
-        var FALLBACK_ICONS = [
-          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>',
-          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
-          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Z"/><path d="M12 6v6l4 2"/></svg>',
-          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M12 2L2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
-          '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>',
-        ];
+      var FALLBACK_ICONS = [
+        '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></svg>',
+        '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
+        '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Z"/><path d="M12 6v6l4 2"/></svg>',
+        '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M12 2L2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
+        '<svg class="icon-svg" viewBox="0 0 24 24" role="img" aria-label="category icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>',
+      ];
 
-        function iconSvg(index, categoryName) {
-          if (categoryName) {
-            var norm = normalizeText(categoryName);
-            // Try exact match first
-            if (ICON_MAP[norm]) {
-              return ICON_MAP[norm];
-            }
-            // Try partial keyword match
-            var keys = Object.keys(ICON_MAP);
-            for (var k = 0; k < keys.length; k += 1) {
-              if (norm.indexOf(keys[k]) > -1 || keys[k].indexOf(norm) > -1) {
-                return ICON_MAP[keys[k]];
-              }
+      function iconSvg(index, categoryName) {
+        if (categoryName) {
+          var norm = normalizeText(categoryName);
+          // Try exact match first
+          if (ICON_MAP[norm]) {
+            return ICON_MAP[norm];
+          }
+          // Try partial keyword match
+          var keys = Object.keys(ICON_MAP);
+          for (var k = 0; k < keys.length; k += 1) {
+            if (norm.indexOf(keys[k]) > -1 || keys[k].indexOf(norm) > -1) {
+              return ICON_MAP[keys[k]];
             }
           }
-          return FALLBACK_ICONS[index % FALLBACK_ICONS.length];
         }
+        return FALLBACK_ICONS[index % FALLBACK_ICONS.length];
+      }
 
-        function extractTopCategories() {
-          var result = [];
-          var seen = {};
+      function extractTopCategories() {
+        var result = [];
+        var seen = {};
 
-          if (!categorySource) {
-            return result;
-          }
-
-          // Prefer Tistory top-category anchors (exclude wrapper "분류 전체보기")
-          var links = categorySource.querySelectorAll(
-            '.category_list > li > a',
-          );
-          if (!links.length) {
-            // Fallback for unexpected markup variants
-            links = categorySource.querySelectorAll('li > a');
-          }
-
-          for (var i = 0; i < links.length; i += 1) {
-            var name = categoryLabel(links[i].textContent || '');
-            var norm = normalizeCategoryKey(name);
-            var href = links[i].getAttribute('href') || '';
-            if (
-              norm === '분류 전체보기' ||
-              name.indexOf('분류 전체보기') > -1
-            ) {
-              continue;
-            }
-            if (!name || !norm || seen[norm]) {
-              continue;
-            }
-
-            seen[norm] = true;
-            result.push({ title: name, category: name, href: href });
-          }
-
+        if (!categorySource) {
           return result;
         }
 
-        function buildDynamicRail(categories) {
-          var html = [];
-          targetConfig = {};
-
-          for (var i = 0; i < categories.length; i += 1) {
-            var target = 'cat-' + i;
-            targetConfig[target] = {
-              title: categories[i].title,
-              category: categories[i].category,
-              href: categories[i].href || '',
-            };
-
-            html.push(
-              '<button type="button" class="rail-btn" data-target="' +
-                target +
-                '" aria-pressed="false" title="' +
-                categories[i].title.replace(/"/g, '&quot;') +
-                '">' +
-                '<span class="icon" aria-hidden="true">' +
-                iconSvg(i, categories[i].category) +
-                '</span>' +
-                '<span class="rail-btn-label" aria-hidden="true">' +
-                categories[i].title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
-                '</span>' +
-                '</button>',
-            );
-          }
-
-          railDynamic.innerHTML = html.join('');
-          buttons = rail.querySelectorAll('.rail-btn[data-target]');
+        // Prefer Tistory top-category anchors (exclude wrapper "분류 전체보기")
+        var links = categorySource.querySelectorAll(
+          '.category_list > li > a',
+        );
+        if (!links.length) {
+          // Fallback for unexpected markup variants
+          links = categorySource.querySelectorAll('li > a');
         }
 
-        function readSavedTarget() {
-          try {
-            var saved = window.sessionStorage.getItem(TARGET_KEY);
-            return saved || '';
-          } catch (e) {
-            return '';
+        for (var i = 0; i < links.length; i += 1) {
+          var name = categoryLabel(links[i].textContent || '');
+          var norm = normalizeCategoryKey(name);
+          var href = links[i].getAttribute('href') || '';
+          if (
+            norm === '분류 전체보기' ||
+            name.indexOf('분류 전체보기') > -1
+          ) {
+            continue;
+          }
+          if (!name || !norm || seen[norm]) {
+            continue;
+          }
+
+          seen[norm] = true;
+          result.push({ title: name, category: name, href: href });
+        }
+
+        return result;
+      }
+
+      function buildDynamicRail(categories) {
+        var html = [];
+        targetConfig = {};
+
+        for (var i = 0; i < categories.length; i += 1) {
+          var target = 'cat-' + i;
+          targetConfig[target] = {
+            title: categories[i].title,
+            category: categories[i].category,
+            href: categories[i].href || '',
+          };
+
+          html.push(
+            '<button type="button" class="rail-btn" data-target="' +
+            target +
+            '" aria-pressed="false" title="' +
+            categories[i].title.replace(/"/g, '&quot;') +
+            '">' +
+            '<span class="icon" aria-hidden="true">' +
+            iconSvg(i, categories[i].category) +
+            '</span>' +
+            '<span class="rail-btn-label" aria-hidden="true">' +
+            categories[i].title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</span>' +
+            '</button>',
+          );
+        }
+
+        railDynamic.innerHTML = html.join('');
+        buttons = rail.querySelectorAll('.rail-btn[data-target]');
+      }
+
+      function readSavedTarget() {
+        try {
+          var saved = window.sessionStorage.getItem(TARGET_KEY);
+          return saved || '';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function saveTarget(target) {
+        try {
+          window.sessionStorage.setItem(TARGET_KEY, target);
+        } catch (e) {
+          // no-op for environments where storage is not available
+        }
+      }
+
+      function getText(el, selector) {
+        var node = el.querySelector(selector);
+        return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
+      }
+
+      function cleanSnippet(text) {
+        var t = (text || '')
+          .replace(/---[\s\S]*?---/g, ' ')
+          .replace(/```[\s\S]*?```/g, ' ')
+          .replace(/`[^`]*`/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+
+        if (t.length > 170) {
+          t = t.substring(0, 170).trim() + '...';
+        }
+
+        return t;
+      }
+
+      function getSummaryText(card) {
+        var summary = getText(card, '.entry-summary');
+        if (summary) {
+          return cleanSnippet(summary);
+        }
+
+        var content = card.querySelector('.post-content');
+        if (!content) {
+          return '';
+        }
+
+        var clone = content.cloneNode(true);
+        var noisyNodes = clone.querySelectorAll(
+          'pre, code, script, style, figure, table, iframe, svg',
+        );
+        for (var i = 0; i < noisyNodes.length; i += 1) {
+          noisyNodes[i].remove();
+        }
+
+        var firstParagraph = clone.querySelector('p');
+        var raw = firstParagraph
+          ? firstParagraph.textContent
+          : clone.textContent;
+        return cleanSnippet(raw);
+      }
+
+      function escapeHtml(text) {
+        return String(text || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/\"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function getThumbUrl(card) {
+        var thumbImg = card.querySelector('.thumb-wrap img, .thumb');
+        if (thumbImg && thumbImg.src) {
+          return thumbImg.src;
+        }
+        var contentImg = card.querySelector('.post-content img');
+        if (contentImg && contentImg.src) {
+          return contentImg.src;
+        }
+        return '';
+      }
+
+      var posts = [];
+      for (var p = 0; p < cards.length; p += 1) {
+        var card = cards[p];
+        var title =
+          getText(card, '.entry-title') || getText(card, '.entry-head h2');
+        if (!title) {
+          continue;
+        }
+        var summary = getSummaryText(card);
+        var date = getText(card, '.entry-meta abbr');
+        var category = (
+          card.getAttribute('data-category') ||
+          getText(card, '.badge.outline') ||
+          ''
+        ).trim();
+        var linkNode = card.querySelector('.entry-link');
+        var thumb = getThumbUrl(card);
+        var replyCountNode = card.querySelector('.tistory-reply-count');
+        var commentCount =
+          parseInt((replyCountNode ? replyCountNode.textContent : '').replace(/[^0-9]/g, ''), 10) || 0;
+
+        posts.push({
+          title: title,
+          summary: summary,
+          date: date,
+          category: category,
+          href: linkNode
+            ? linkNode.getAttribute('href')
+            : window.location.href,
+          thumb: thumb,
+          commentCount: commentCount,
+          element: card,
+        });
+      }
+
+      function readCachedPosts() {
+        try {
+          var raw = window.sessionStorage.getItem(CACHE_KEY);
+          if (!raw) {
+            return [];
+          }
+          var parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed)) {
+            return [];
+          }
+          return parsed;
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function writeCachedPosts(list) {
+        try {
+          var serializable = [];
+          for (var i = 0; i < list.length; i += 1) {
+            serializable.push({
+              title: list[i].title,
+              summary: list[i].summary,
+              date: list[i].date,
+              category: list[i].category,
+              href: list[i].href,
+              thumb: list[i].thumb || '',
+              commentCount: list[i].commentCount || 0,
+              element: null,
+            });
+          }
+          window.sessionStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify(serializable),
+          );
+        } catch (e) {
+          // no-op for environments where storage is not available
+        }
+      }
+
+      function mergePosts(current, cached) {
+        var merged = [];
+        var indexByPath = {};
+
+        function add(post, prefer) {
+          var pathKey = normalizePath(post.href || '');
+          var fallbackKey = normalizeText(post.title || '');
+          var key = pathKey || fallbackKey;
+          if (!key) {
+            return;
+          }
+
+          if (indexByPath[key] === undefined) {
+            indexByPath[key] = merged.length;
+            merged.push(post);
+            return;
+          }
+
+          if (prefer) {
+            merged[indexByPath[key]] = post;
           }
         }
 
-        function saveTarget(target) {
-          try {
-            window.sessionStorage.setItem(TARGET_KEY, target);
-          } catch (e) {
-            // no-op for environments where storage is not available
+        for (var j = 0; j < cached.length; j += 1) {
+          add(cached[j], false);
+        }
+        for (var i = 0; i < current.length; i += 1) {
+          // Current page data should overwrite stale cached entry with the same href.
+          add(current[i], true);
+        }
+
+        return merged;
+      }
+
+      posts = mergePosts(posts, readCachedPosts());
+      if (posts.length) {
+        writeCachedPosts(posts);
+      }
+
+      var categories = extractTopCategories();
+      if (!categories.length) {
+        var categorySeen = {};
+        categories = [];
+        for (var c = 0; c < posts.length; c += 1) {
+          var topCategory = (posts[c].category || '').split('/')[0].trim();
+          var topNorm = normalizeText(topCategory);
+          if (!topNorm || categorySeen[topNorm]) {
+            continue;
+          }
+          categorySeen[topNorm] = true;
+          categories.push({
+            title: topCategory,
+            category: topCategory,
+            href: '',
+          });
+        }
+      }
+
+      if (!categories.length) {
+        categories = [{ title: '전체', category: '', href: '' }];
+      }
+
+      buildDynamicRail(categories);
+
+      function hasPostsForCategory(conf) {
+        if (!conf || !conf.category) {
+          return false;
+        }
+        var catNorm = normalizeCategoryKey(conf.category);
+        for (var i = 0; i < posts.length; i += 1) {
+          if (getTopCategory(posts[i].category) === catNorm) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      var targetKeys = Object.keys(targetConfig);
+      var defaultTarget = targetKeys[0] || '';
+      for (var d = 0; d < targetKeys.length; d += 1) {
+        if (hasPostsForCategory(targetConfig[targetKeys[d]])) {
+          defaultTarget = targetKeys[d];
+          break;
+        }
+      }
+
+      var currentTarget = readSavedTarget() || defaultTarget;
+      if (!targetConfig[currentTarget]) {
+        currentTarget = defaultTarget;
+      }
+
+      function matchesTarget(post, target) {
+        var conf = targetConfig[target];
+        if (!conf) {
+          return false;
+        }
+        if (!conf.category) {
+          return true;
+        }
+        return (
+          getTopCategory(post.category) ===
+          normalizeCategoryKey(conf.category)
+        );
+      }
+
+      function matchesQuery(post, query) {
+        if (!query) {
+          return true;
+        }
+        var q = query.toLowerCase();
+        return (
+          (post.title + ' ' + post.summary).toLowerCase().indexOf(q) > -1
+        );
+      }
+
+      function renderDrawerLoading() {
+        // Show loading skeleton only when hydration is actually slow.
+        if (drawerLoadingTimer) {
+          clearTimeout(drawerLoadingTimer);
+        }
+
+        drawerList.setAttribute('aria-busy', 'true');
+
+        drawerLoadingTimer = setTimeout(function () {
+          if (!isHydrating) {
+            return;
+          }
+
+          var hasExistingItems = !!drawerList.querySelector('.drawer-item');
+          if (hasExistingItems) {
+            return;
+          }
+
+          drawerList.classList.add('is-loading');
+          drawerList.innerHTML =
+            '<div class="drawer-loading-wrap" aria-hidden="true">' +
+            '<p class="drawer-loading">카테고리 글을 불러오는 중...</p>' +
+            '<div class="drawer-skeleton"></div>' +
+            '<div class="drawer-skeleton"></div>' +
+            '<div class="drawer-skeleton"></div>' +
+            '</div>';
+        }, 320);
+      }
+
+      function clearDrawerLoading() {
+        if (drawerLoadingTimer) {
+          clearTimeout(drawerLoadingTimer);
+          drawerLoadingTimer = null;
+        }
+
+        drawerList.classList.remove('is-loading');
+        drawerList.setAttribute('aria-busy', 'false');
+      }
+
+      function makeCursor() {
+        var c = document.createElement('span');
+        c.className = 'typewriter-cursor';
+        c.setAttribute('aria-hidden', 'true');
+        return c;
+      }
+
+      function typewriterOut(el, duration) {
+        var text = el.textContent;
+        var len = text.length;
+        if (!len) {
+          return;
+        }
+        var cursor = makeCursor();
+        el.parentNode.insertBefore(cursor, el.nextSibling);
+        var charTime = Math.max(28, Math.floor(duration / len));
+        var remaining = len;
+        var timer = setInterval(function () {
+          remaining--;
+          el.textContent = text.slice(0, remaining);
+          if (remaining <= 0) {
+            clearInterval(timer);
+            cursor.remove();
+          }
+        }, charTime);
+      }
+
+      function typewriterIn(el, duration) {
+        var text = el.textContent;
+        var len = text.length;
+        el.textContent = '';
+        if (!len) {
+          return;
+        }
+        var cursor = makeCursor();
+        el.parentNode.insertBefore(cursor, el.nextSibling);
+        var charTime = Math.max(28, Math.floor(duration / len));
+        var pos = 0;
+        var timer = setInterval(function () {
+          pos++;
+          el.textContent = text.slice(0, pos);
+          if (pos >= len) {
+            clearInterval(timer);
+            setTimeout(function () {
+              cursor.remove();
+            }, 420);
+          }
+        }, charTime);
+      }
+
+      function renderDrawer(items) {
+        clearDrawerLoading();
+
+        if (!items.length) {
+          var msg = isHydrating
+            ? '카테고리 글을 불러오는 중...'
+            : '조건에 맞는 게시글이 없습니다.';
+          drawerList.innerHTML = '<p class="drawer-empty">' + msg + '</p>';
+          return;
+        }
+
+        var html = [];
+        for (var i = 0; i < items.length; i += 1) {
+          var samePath = normalizePath(items[i].href) === currentPath;
+          var sameTitle =
+            currentPostTitle &&
+            normalizeText(items[i].title) === normalizeText(currentPostTitle);
+          var currentClass = samePath || sameTitle ? ' is-current' : '';
+          var safeCategory = escapeHtml(items[i].category);
+          var safeDate = escapeHtml(items[i].date);
+          var safeTitle = escapeHtml(items[i].title);
+          var safeSummary = escapeHtml(items[i].summary);
+          var itemHref = items[i].href || "";
+          var thumbUrl = thumbCache[normalizePath(itemHref)] || items[i].thumb || "";
+          var thumbHtml = thumbUrl
+            ? '<span class="drawer-item-thumb"><img src="' +
+            thumbUrl.replace(/"/g, "&quot;") +
+            '" alt="" loading="lazy" decoding="async"/></span>'
+            : "";
+
+          var lazyAttr = !thumbUrl && itemHref && itemHref !== "#"
+            ? ' data-thumb-href="' + itemHref.replace(/"/g, "&quot;") + '"'
+            : "";
+
+          var cntNum = items[i].commentCount || 0;
+          var commentHtml = cntNum > 0
+            ? ' <span class="drawer-comment-cnt" title="댓글 ' +
+            cntNum +
+            '개"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-icon lucide-message-circle"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>' +
+            cntNum +
+            "</span>"
+            : "";
+
+          html.push(
+            '<button type="button" class="drawer-item' +
+            currentClass +
+            '" data-href="' +
+            (itemHref || '#').replace(/"/g, '&quot;') +
+            '"' +
+            lazyAttr +
+            '>' +
+            '<span class="drawer-item-top"><strong>' +
+            safeCategory +
+            '</strong><span>' +
+            safeDate +
+            commentHtml +
+            '</span></span>' +
+            '<span class="drawer-item-body">' +
+            '<span class="drawer-item-text">' +
+            '<span class="drawer-item-subject">' +
+            safeTitle +
+            '</span>' +
+            '<span class="drawer-item-teaser">' +
+            safeSummary +
+            '</span>' +
+            '</span>' +
+            thumbHtml +
+            '</span>' +
+            '</button>',
+          );
+        }
+        drawerList.innerHTML = html.join('');
+        lazyLoadDrawerThumbs();
+
+        var drawerButtons = drawerList.querySelectorAll('.drawer-item');
+        for (var j = 0; j < drawerButtons.length; j += 1) {
+          drawerButtons[j].addEventListener('click', function () {
+            var href = this.getAttribute('data-href');
+            if (href && href !== '#') {
+              this.classList.add('is-transitioning');
+              saveTarget(currentTarget);
+              window.sessionStorage.setItem(
+                'tistory-drawer-scroll-v1',
+                String(drawerList.scrollTop),
+              );
+              window.sessionStorage.setItem('tistory-content-enter', '1');
+              // setMobileNav(false); // 이동 애니메이션을 위해 즉시 닫지 않음
+              var contentEl = document.getElementById('content-body');
+              var reduced = window.matchMedia(
+                '(prefers-reduced-motion: reduce)',
+              ).matches;
+              if (contentEl && !reduced) {
+                contentEl.classList.add('is-exiting');
+                var crumbEl =
+                  activePostCrumb && !activePostCrumb.hidden
+                    ? activePostCrumb
+                    : activeCrumb;
+                if (crumbEl) {
+                  typewriterOut(crumbEl, 680);
+                }
+                setTimeout(function () {
+                  window.location.href = href;
+                }, 980);
+              } else {
+                window.location.href = href;
+              }
+            }
+          });
+        }
+
+        var savedScroll = window.sessionStorage.getItem(
+          'tistory-drawer-scroll-v1',
+        );
+        if (savedScroll !== null) {
+          window.sessionStorage.removeItem('tistory-drawer-scroll-v1');
+          drawerList.scrollTop = parseInt(savedScroll, 10) || 0;
+        }
+      }
+
+      function lazyLoadDrawerThumbs() {
+        if (!window.IntersectionObserver || !window.fetch || !window.DOMParser) {
+          return;
+        }
+        var unresolved = drawerList.querySelectorAll(".drawer-item[data-thumb-href]");
+        if (!unresolved.length) {
+          return;
+        }
+        var observer = new IntersectionObserver(function (entries) {
+          for (var e = 0; e < entries.length; e += 1) {
+            if (!entries[e].isIntersecting) continue;
+            var item = entries[e].target;
+            observer.unobserve(item);
+            fetchAndApplyThumb(item);
+          }
+        }, { rootMargin: "120px" });
+
+        for (var i = 0; i < unresolved.length; i += 1) {
+          observer.observe(unresolved[i]);
+        }
+      }
+
+      function fetchAndApplyThumb(item) {
+        var href = item.getAttribute("data-thumb-href");
+        if (!href) return;
+        var pathKey = normalizePath(href);
+
+        if (thumbCache[pathKey]) {
+          applyThumbToItem(item, thumbCache[pathKey]);
+          return;
+        }
+
+        fetch(href, { credentials: "same-origin" }).then(function (res) {
+          return res.ok ? res.text() : "";
+        }).then(function (html) {
+          if (!html) return;
+          var doc = new DOMParser().parseFromString(html, "text/html");
+          var imgUrl = "";
+
+          var contentImg = doc.querySelector(".post-content img, .tt_article_useless_p_margin img");
+          if (contentImg && contentImg.src) imgUrl = contentImg.src;
+
+          if (!imgUrl) {
+            var og = doc.querySelector('meta[property="og:image"]');
+            if (og && og.content && og.content.indexOf("opengraph.png") === -1) imgUrl = og.content;
+          }
+
+          if (!imgUrl) return;
+
+          saveThumbEntry(href, imgUrl);
+          applyThumbToItem(item, imgUrl);
+
+          for (var i = 0; i < posts.length; i += 1) {
+            if (normalizePath(posts[i].href) === pathKey && !posts[i].thumb) posts[i].thumb = imgUrl;
+          }
+          writeCachedPosts(posts);
+        }).catch(function () { });
+      }
+
+      function applyThumbToItem(item, url) {
+        var body = item.querySelector(".drawer-item-body");
+        if (!body) return;
+        if (body.querySelector(".drawer-item-thumb")) return;
+        var thumbSpan = document.createElement("span");
+        thumbSpan.className = "drawer-item-thumb";
+        var img = document.createElement("img");
+        img.src = url;
+        img.alt = "";
+        img.loading = "lazy";
+        img.decoding = "async";
+        thumbSpan.appendChild(img);
+        body.appendChild(thumbSpan);
+        item.removeAttribute("data-thumb-href");
+      }
+
+      function applyFilter() {
+        var query = search.value.replace(/\s+/g, ' ').trim();
+        var filtered = [];
+        var currentPostVisible = false;
+
+        for (var i = 0; i < posts.length; i += 1) {
+          var visible =
+            matchesTarget(posts[i], currentTarget) &&
+            matchesQuery(posts[i], query);
+          if (posts[i].element) {
+            if (currentPostTitle) {
+              // 포스트 조회 모드: 현재 글 카드만 표시 여부 판단
+              posts[i].element.style.display = visible ? 'block' : 'none';
+              var samePath = normalizePath(posts[i].href) === currentPath;
+              var sameTitle =
+                normalizeText(posts[i].title) ===
+                normalizeText(currentPostTitle);
+              if (samePath || sameTitle) {
+                currentPostVisible = !!visible;
+              }
+            } else {
+              // 목록 모드: 콘텐츠 영역 카드는 항상 숨김 — 드로어가 글 목록 담당
+              posts[i].element.style.display = 'none';
+            }
+          }
+          if (visible) {
+            filtered.push(posts[i]);
           }
         }
 
-        function getText(el, selector) {
+        renderDrawer(filtered);
+        syncPostCrumb(currentPostVisible);
+
+        if (contentEmptyState) {
+          var hintTitle = document.getElementById('empty-hint-title');
+          var hintDesc = document.getElementById('empty-hint-desc');
+          if (currentPostTitle && currentPostVisible) {
+            // 포스트 조회 모드 + 현재 카테고리 일치: 글 본문 표시, 빈 상태 숨김
+            contentEmptyState.hidden = true;
+          } else if (query && !filtered.length) {
+            // 검색 결과 없음
+            contentEmptyState.hidden = false;
+            if (hintTitle) {
+              hintTitle.textContent = '검색 결과가 없습니다.';
+            }
+            if (hintDesc) {
+              hintDesc.textContent =
+                '검색어를 바꾸거나 다른 카테고리를 선택해보세요.';
+            }
+          } else {
+            // 목록 모드 또는 다른 카테고리 선택 시: 선택 안내 표시
+            contentEmptyState.hidden = false;
+            if (hintTitle) {
+              hintTitle.textContent = '컨텐츠를 선택해주세요.';
+            }
+            if (hintDesc) {
+              hintDesc.textContent =
+                '왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.';
+            }
+          }
+        }
+
+        if (visibleCount) {
+          visibleCount.textContent = String(filtered.length);
+        }
+      }
+
+      function parsePostsFromDocument(doc) {
+        var remote = [];
+        var remoteCards = doc.querySelectorAll(
+          '#content .entry.card, .entry.card',
+        );
+
+        function getRemoteText(el, selector) {
           var node = el.querySelector(selector);
           return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
         }
 
-        function cleanSnippet(text) {
-          var t = (text || '')
-            .replace(/---[\s\S]*?---/g, ' ')
-            .replace(/```[\s\S]*?```/g, ' ')
-            .replace(/`[^`]*`/g, ' ')
-            .replace(/\s+/g, ' ')
-            .trim();
-
-          if (t.length > 170) {
-            t = t.substring(0, 170).trim() + '...';
-          }
-
-          return t;
-        }
-
-        function getSummaryText(card) {
-          var summary = getText(card, '.entry-summary');
-          if (summary) {
-            return cleanSnippet(summary);
-          }
-
-          var content = card.querySelector('.post-content');
-          if (!content) {
-            return '';
-          }
-
-          var clone = content.cloneNode(true);
-          var noisyNodes = clone.querySelectorAll(
-            'pre, code, script, style, figure, table, iframe, svg',
-          );
-          for (var i = 0; i < noisyNodes.length; i += 1) {
-            noisyNodes[i].remove();
-          }
-
-          var firstParagraph = clone.querySelector('p');
-          var raw = firstParagraph
-            ? firstParagraph.textContent
-            : clone.textContent;
-          return cleanSnippet(raw);
-        }
-
-        function escapeHtml(text) {
-          return String(text || '')
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/\"/g, '&quot;')
-            .replace(/'/g, '&#39;');
-        }
-
-        var posts = [];
-        for (var p = 0; p < cards.length; p += 1) {
-          var card = cards[p];
+        for (var i = 0; i < remoteCards.length; i += 1) {
+          var card = remoteCards[i];
           var title =
-            getText(card, '.entry-title') || getText(card, '.entry-head h2');
+            getRemoteText(card, '.entry-title') ||
+            getRemoteText(card, '.entry-head h2');
           if (!title) {
             continue;
           }
-          var summary = getSummaryText(card);
-          var date = getText(card, '.entry-meta abbr');
+
+          var summary = cleanSnippet(
+            getRemoteText(card, '.entry-summary') ||
+            getRemoteText(card, '.post-content'),
+          );
+          var date = getRemoteText(card, '.entry-meta abbr');
           var category = (
             card.getAttribute('data-category') ||
-            getText(card, '.badge.outline') ||
+            getRemoteText(card, '.badge.outline') ||
             ''
           ).trim();
           var linkNode = card.querySelector('.entry-link');
-          posts.push({
+
+          // 원격 카드에서도 썸네일 추출
+          var remoteThumbImg = card.querySelector(".thumb-wrap img, .thumb, .post-content img");
+          var remoteThumb = remoteThumbImg && remoteThumbImg.src ? remoteThumbImg.src : "";
+          var remoteReplyNode = card.querySelector(".tistory-reply-count");
+          var remoteCommentCount =
+            parseInt((remoteReplyNode ? remoteReplyNode.textContent : "").replace(/[^0-9]/g, ""), 10) || 0;
+
+          remote.push({
             title: title,
             summary: summary,
             date: date,
             category: category,
-            href: linkNode
-              ? linkNode.getAttribute('href')
-              : window.location.href,
-            element: card,
+            href: linkNode ? linkNode.getAttribute('href') : '',
+            thumb: remoteThumb,
+            commentCount: remoteCommentCount,
+            element: null,
           });
         }
 
-        function readCachedPosts() {
-          try {
-            var raw = window.sessionStorage.getItem(CACHE_KEY);
-            if (!raw) {
-              return [];
-            }
-            var parsed = JSON.parse(raw);
-            if (!Array.isArray(parsed)) {
-              return [];
-            }
-            return parsed;
-          } catch (e) {
-            return [];
-          }
+        return remote;
+      }
+
+      function fetchCategoryPosts(onDone) {
+        if (!window.fetch || !window.DOMParser) {
+          onDone([]);
+          return;
         }
 
-        function writeCachedPosts(list) {
-          try {
-            var serializable = [];
-            for (var i = 0; i < list.length; i += 1) {
-              serializable.push({
-                title: list[i].title,
-                summary: list[i].summary,
-                date: list[i].date,
-                category: list[i].category,
-                href: list[i].href,
-                element: null,
-              });
-            }
-            window.sessionStorage.setItem(
-              CACHE_KEY,
-              JSON.stringify(serializable),
-            );
-          } catch (e) {
-            // no-op for environments where storage is not available
+        var urls = [];
+        var seen = {};
+
+        for (var i = 0; i < categories.length; i += 1) {
+          var href = categories[i].href || '';
+          var pathKey = normalizePath(href);
+          if (!href || !pathKey || seen[pathKey]) {
+            continue;
           }
+          seen[pathKey] = true;
+          urls.push(href);
         }
 
-        function mergePosts(current, cached) {
-          var merged = [];
-          var indexByPath = {};
-
-          function add(post, prefer) {
-            var pathKey = normalizePath(post.href || '');
-            var fallbackKey = normalizeText(post.title || '');
-            var key = pathKey || fallbackKey;
-            if (!key) {
-              return;
-            }
-
-            if (indexByPath[key] === undefined) {
-              indexByPath[key] = merged.length;
-              merged.push(post);
-              return;
-            }
-
-            if (prefer) {
-              merged[indexByPath[key]] = post;
-            }
-          }
-
-          for (var j = 0; j < cached.length; j += 1) {
-            add(cached[j], false);
-          }
-          for (var i = 0; i < current.length; i += 1) {
-            // Current page data should overwrite stale cached entry with the same href.
-            add(current[i], true);
-          }
-
-          return merged;
+        if (!urls.length) {
+          onDone([]);
+          return;
         }
 
-        posts = mergePosts(posts, readCachedPosts());
-        if (posts.length) {
-          writeCachedPosts(posts);
-        }
-
-        var categories = extractTopCategories();
-        if (!categories.length) {
-          var categorySeen = {};
-          categories = [];
-          for (var c = 0; c < posts.length; c += 1) {
-            var topCategory = (posts[c].category || '').split('/')[0].trim();
-            var topNorm = normalizeText(topCategory);
-            if (!topNorm || categorySeen[topNorm]) {
-              continue;
-            }
-            categorySeen[topNorm] = true;
-            categories.push({
-              title: topCategory,
-              category: topCategory,
-              href: '',
-            });
-          }
-        }
-
-        if (!categories.length) {
-          categories = [{ title: '전체', category: '', href: '' }];
-        }
-
-        buildDynamicRail(categories);
-
-        function hasPostsForCategory(conf) {
-          if (!conf || !conf.category) {
-            return false;
-          }
-          var catNorm = normalizeCategoryKey(conf.category);
-          for (var i = 0; i < posts.length; i += 1) {
-            if (getTopCategory(posts[i].category) === catNorm) {
-              return true;
-            }
-          }
-          return false;
-        }
-
-        var targetKeys = Object.keys(targetConfig);
-        var defaultTarget = targetKeys[0] || '';
-        for (var d = 0; d < targetKeys.length; d += 1) {
-          if (hasPostsForCategory(targetConfig[targetKeys[d]])) {
-            defaultTarget = targetKeys[d];
-            break;
-          }
-        }
-
-        var currentTarget = readSavedTarget() || defaultTarget;
-        if (!targetConfig[currentTarget]) {
-          currentTarget = defaultTarget;
-        }
-
-        function matchesTarget(post, target) {
-          var conf = targetConfig[target];
-          if (!conf) {
-            return false;
-          }
-          if (!conf.category) {
-            return true;
-          }
-          return (
-            getTopCategory(post.category) ===
-            normalizeCategoryKey(conf.category)
-          );
-        }
-
-        function matchesQuery(post, query) {
-          if (!query) {
-            return true;
-          }
-          var q = query.toLowerCase();
-          return (
-            (post.title + ' ' + post.summary).toLowerCase().indexOf(q) > -1
-          );
-        }
-
-        function renderDrawerLoading() {
-          // Show loading skeleton only when hydration is actually slow.
-          if (drawerLoadingTimer) {
-            clearTimeout(drawerLoadingTimer);
-          }
-
-          drawerList.setAttribute('aria-busy', 'true');
-
-          drawerLoadingTimer = setTimeout(function () {
-            if (!isHydrating) {
-              return;
-            }
-
-            var hasExistingItems = !!drawerList.querySelector('.drawer-item');
-            if (hasExistingItems) {
-              return;
-            }
-
-            drawerList.classList.add('is-loading');
-            drawerList.innerHTML =
-              '<div class="drawer-loading-wrap" aria-hidden="true">' +
-              '<p class="drawer-loading">카테고리 글을 불러오는 중...</p>' +
-              '<div class="drawer-skeleton"></div>' +
-              '<div class="drawer-skeleton"></div>' +
-              '<div class="drawer-skeleton"></div>' +
-              '</div>';
-          }, 320);
-        }
-
-        function clearDrawerLoading() {
-          if (drawerLoadingTimer) {
-            clearTimeout(drawerLoadingTimer);
-            drawerLoadingTimer = null;
-          }
-
-          drawerList.classList.remove('is-loading');
-          drawerList.setAttribute('aria-busy', 'false');
-        }
-
-        function makeCursor() {
-          var c = document.createElement('span');
-          c.className = 'typewriter-cursor';
-          c.setAttribute('aria-hidden', 'true');
-          return c;
-        }
-
-        function typewriterOut(el, duration) {
-          var text = el.textContent;
-          var len = text.length;
-          if (!len) {
-            return;
-          }
-          var cursor = makeCursor();
-          el.parentNode.insertBefore(cursor, el.nextSibling);
-          var charTime = Math.max(28, Math.floor(duration / len));
-          var remaining = len;
-          var timer = setInterval(function () {
-            remaining--;
-            el.textContent = text.slice(0, remaining);
-            if (remaining <= 0) {
-              clearInterval(timer);
-              cursor.remove();
-            }
-          }, charTime);
-        }
-
-        function typewriterIn(el, duration) {
-          var text = el.textContent;
-          var len = text.length;
-          el.textContent = '';
-          if (!len) {
-            return;
-          }
-          var cursor = makeCursor();
-          el.parentNode.insertBefore(cursor, el.nextSibling);
-          var charTime = Math.max(28, Math.floor(duration / len));
-          var pos = 0;
-          var timer = setInterval(function () {
-            pos++;
-            el.textContent = text.slice(0, pos);
-            if (pos >= len) {
-              clearInterval(timer);
-              setTimeout(function () {
-                cursor.remove();
-              }, 420);
-            }
-          }, charTime);
-        }
-
-        function renderDrawer(items) {
-          clearDrawerLoading();
-
-          if (!items.length) {
-            var msg = isHydrating
-              ? '카테고리 글을 불러오는 중...'
-              : '조건에 맞는 게시글이 없습니다.';
-            drawerList.innerHTML = '<p class="drawer-empty">' + msg + '</p>';
-            return;
-          }
-
-          var html = [];
-          for (var i = 0; i < items.length; i += 1) {
-            var samePath = normalizePath(items[i].href) === currentPath;
-            var sameTitle =
-              currentPostTitle &&
-              normalizeText(items[i].title) === normalizeText(currentPostTitle);
-            var currentClass = samePath || sameTitle ? ' is-current' : '';
-            var safeCategory = escapeHtml(items[i].category);
-            var safeDate = escapeHtml(items[i].date);
-            var safeTitle = escapeHtml(items[i].title);
-            var safeSummary = escapeHtml(items[i].summary);
-            html.push(
-              '<button type="button" class="drawer-item' +
-                currentClass +
-                '" data-href="' +
-                (items[i].href || '#').replace(/"/g, '&quot;') +
-                '">' +
-                '<span class="drawer-item-top"><strong>' +
-                safeCategory +
-                '</strong><span>' +
-                safeDate +
-                '</span></span>' +
-                '<span class="drawer-item-subject">' +
-                safeTitle +
-                '</span>' +
-                '<span class="drawer-item-teaser">' +
-                safeSummary +
-                '</span>' +
-                '</button>',
-            );
-          }
-          drawerList.innerHTML = html.join('');
-
-          var drawerButtons = drawerList.querySelectorAll('.drawer-item');
-          for (var j = 0; j < drawerButtons.length; j += 1) {
-            drawerButtons[j].addEventListener('click', function () {
-              var href = this.getAttribute('data-href');
-              if (href && href !== '#') {
-                this.classList.add('is-transitioning');
-                saveTarget(currentTarget);
-                window.sessionStorage.setItem(
-                  'tistory-drawer-scroll-v1',
-                  String(drawerList.scrollTop),
-                );
-                window.sessionStorage.setItem('tistory-content-enter', '1');
-                // setMobileNav(false); // 이동 애니메이션을 위해 즉시 닫지 않음
-                var contentEl = document.getElementById('content-body');
-                var reduced = window.matchMedia(
-                  '(prefers-reduced-motion: reduce)',
-                ).matches;
-                if (contentEl && !reduced) {
-                  contentEl.classList.add('is-exiting');
-                  var crumbEl =
-                    activePostCrumb && !activePostCrumb.hidden
-                      ? activePostCrumb
-                      : activeCrumb;
-                  if (crumbEl) {
-                    typewriterOut(crumbEl, 680);
-                  }
-                  setTimeout(function () {
-                    window.location.href = href;
-                  }, 980);
-                } else {
-                  window.location.href = href;
-                }
-              }
-            });
-          }
-
-          var savedScroll = window.sessionStorage.getItem(
-            'tistory-drawer-scroll-v1',
-          );
-          if (savedScroll !== null) {
-            window.sessionStorage.removeItem('tistory-drawer-scroll-v1');
-            drawerList.scrollTop = parseInt(savedScroll, 10) || 0;
-          }
-        }
-
-        function applyFilter() {
-          var query = search.value.replace(/\s+/g, ' ').trim();
-          var filtered = [];
-          var currentPostVisible = false;
-
-          for (var i = 0; i < posts.length; i += 1) {
-            var visible =
-              matchesTarget(posts[i], currentTarget) &&
-              matchesQuery(posts[i], query);
-            if (posts[i].element) {
-              if (currentPostTitle) {
-                // 포스트 조회 모드: 현재 글 카드만 표시 여부 판단
-                posts[i].element.style.display = visible ? 'block' : 'none';
-                var samePath = normalizePath(posts[i].href) === currentPath;
-                var sameTitle =
-                  normalizeText(posts[i].title) ===
-                  normalizeText(currentPostTitle);
-                if (samePath || sameTitle) {
-                  currentPostVisible = !!visible;
-                }
-              } else {
-                // 목록 모드: 콘텐츠 영역 카드는 항상 숨김 — 드로어가 글 목록 담당
-                posts[i].element.style.display = 'none';
-              }
-            }
-            if (visible) {
-              filtered.push(posts[i]);
-            }
-          }
-
-          renderDrawer(filtered);
-          syncPostCrumb(currentPostVisible);
-
-          if (contentEmptyState) {
-            var hintTitle = document.getElementById('empty-hint-title');
-            var hintDesc = document.getElementById('empty-hint-desc');
-            if (currentPostTitle && currentPostVisible) {
-              // 포스트 조회 모드 + 현재 카테고리 일치: 글 본문 표시, 빈 상태 숨김
-              contentEmptyState.hidden = true;
-            } else if (query && !filtered.length) {
-              // 검색 결과 없음
-              contentEmptyState.hidden = false;
-              if (hintTitle) {
-                hintTitle.textContent = '검색 결과가 없습니다.';
-              }
-              if (hintDesc) {
-                hintDesc.textContent =
-                  '검색어를 바꾸거나 다른 카테고리를 선택해보세요.';
-              }
-            } else {
-              // 목록 모드 또는 다른 카테고리 선택 시: 선택 안내 표시
-              contentEmptyState.hidden = false;
-              if (hintTitle) {
-                hintTitle.textContent = '컨텐츠를 선택해주세요.';
-              }
-              if (hintDesc) {
-                hintDesc.textContent =
-                  '왼쪽 목록에서 글을 선택하면 본문이 표시됩니다.';
-              }
-            }
-          }
-
-          if (visibleCount) {
-            visibleCount.textContent = String(filtered.length);
-          }
-        }
-
-        function parsePostsFromDocument(doc) {
-          var remote = [];
-          var remoteCards = doc.querySelectorAll(
-            '#content .entry.card, .entry.card',
-          );
-
-          function getRemoteText(el, selector) {
-            var node = el.querySelector(selector);
-            return node ? node.textContent.replace(/\s+/g, ' ').trim() : '';
-          }
-
-          for (var i = 0; i < remoteCards.length; i += 1) {
-            var card = remoteCards[i];
-            var title =
-              getRemoteText(card, '.entry-title') ||
-              getRemoteText(card, '.entry-head h2');
-            if (!title) {
-              continue;
-            }
-
-            var summary = cleanSnippet(
-              getRemoteText(card, '.entry-summary') ||
-                getRemoteText(card, '.post-content'),
-            );
-            var date = getRemoteText(card, '.entry-meta abbr');
-            var category = (
-              card.getAttribute('data-category') ||
-              getRemoteText(card, '.badge.outline') ||
-              ''
-            ).trim();
-            var linkNode = card.querySelector('.entry-link');
-
-            remote.push({
-              title: title,
-              summary: summary,
-              date: date,
-              category: category,
-              href: linkNode ? linkNode.getAttribute('href') : '',
-              element: null,
-            });
-          }
-
-          return remote;
-        }
-
-        function fetchCategoryPosts(onDone) {
-          if (!window.fetch || !window.DOMParser) {
-            onDone([]);
-            return;
-          }
-
-          var urls = [];
-          var seen = {};
-
-          for (var i = 0; i < categories.length; i += 1) {
-            var href = categories[i].href || '';
-            var pathKey = normalizePath(href);
-            if (!href || !pathKey || seen[pathKey]) {
-              continue;
-            }
-            seen[pathKey] = true;
-            urls.push(href);
-          }
-
-          if (!urls.length) {
-            onDone([]);
-            return;
-          }
-
-          Promise.all(
-            urls.map(function (url) {
-              return fetch(url, { credentials: 'same-origin' })
-                .then(function (res) {
-                  return res.ok ? res.text() : '';
-                })
-                .then(function (html) {
-                  if (!html) {
-                    return [];
-                  }
-                  var doc = new DOMParser().parseFromString(html, 'text/html');
-                  return parsePostsFromDocument(doc);
-                })
-                .catch(function () {
+        Promise.all(
+          urls.map(function (url) {
+            return fetch(url, { credentials: 'same-origin' })
+              .then(function (res) {
+                return res.ok ? res.text() : '';
+              })
+              .then(function (html) {
+                if (!html) {
                   return [];
-                });
-            }),
-          ).then(function (all) {
-            var combined = [];
-            for (var j = 0; j < all.length; j += 1) {
-              combined = combined.concat(all[j]);
-            }
-            onDone(combined);
-          });
+                }
+                var doc = new DOMParser().parseFromString(html, 'text/html');
+                return parsePostsFromDocument(doc);
+              })
+              .catch(function () {
+                return [];
+              });
+          }),
+        ).then(function (all) {
+          var combined = [];
+          for (var j = 0; j < all.length; j += 1) {
+            combined = combined.concat(all[j]);
+          }
+          onDone(combined);
+        });
+      }
+
+      function hasAnyLocalPostsForCategory(categoryName) {
+        var catNorm = normalizeCategoryKey(categoryName);
+        if (!catNorm) {
+          return false;
         }
 
-        function hasAnyLocalPostsForCategory(categoryName) {
-          var catNorm = normalizeCategoryKey(categoryName);
-          if (!catNorm) {
-            return false;
+        for (var i = 0; i < posts.length; i += 1) {
+          if (getTopCategory(posts[i].category) === catNorm) {
+            return true;
           }
+        }
 
-          for (var i = 0; i < posts.length; i += 1) {
-            if (getTopCategory(posts[i].category) === catNorm) {
+        return false;
+      }
+
+      function hasEnoughLocalPostsForCurrentTarget() {
+        var count = 0;
+        for (var i = 0; i < posts.length; i += 1) {
+          if (matchesTarget(posts[i], currentTarget)) {
+            count += 1;
+            if (count >= 2) {
               return true;
             }
           }
-
-          return false;
         }
+        return false;
+      }
 
-        function hasEnoughLocalPostsForCurrentTarget() {
-          var count = 0;
-          for (var i = 0; i < posts.length; i += 1) {
-            if (matchesTarget(posts[i], currentTarget)) {
-              count += 1;
-              if (count >= 2) {
-                return true;
-              }
-            }
-          }
-          return false;
-        }
-
-        function needsCategoryCoverageHydration() {
-          for (var i = 0; i < categories.length; i += 1) {
-            if (!categories[i].category || !categories[i].href) {
-              continue;
-            }
-
-            if (!hasAnyLocalPostsForCategory(categories[i].category)) {
-              return true;
-            }
-          }
-          return false;
-        }
-
-        function shouldHydratePosts() {
-          var isDirectEntryLike = !!currentPostTitle || posts.length <= 1;
-
-          if (isDirectEntryLike) {
-            return !hasEnoughLocalPostsForCurrentTarget();
+      function needsCategoryCoverageHydration() {
+        for (var i = 0; i < categories.length; i += 1) {
+          if (!categories[i].category || !categories[i].href) {
+            continue;
           }
 
-          return needsCategoryCoverageHydration();
+          if (!hasAnyLocalPostsForCategory(categories[i].category)) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      function shouldHydratePosts() {
+        var isDirectEntryLike = !!currentPostTitle || posts.length <= 1;
+
+        if (isDirectEntryLike) {
+          return !hasEnoughLocalPostsForCurrentTarget();
         }
 
-        function hydratePostsForDirectEntry() {
-          if (!shouldHydratePosts()) {
+        return needsCategoryCoverageHydration();
+      }
+
+      function hydratePostsForDirectEntry() {
+        if (!shouldHydratePosts()) {
+          return;
+        }
+
+        isHydrating = true;
+        renderDrawerLoading();
+
+        fetchCategoryPosts(function (fetchedPosts) {
+          isHydrating = false;
+
+          if (!fetchedPosts.length) {
+            applyFilter();
             return;
           }
 
-          isHydrating = true;
-          renderDrawerLoading();
+          var before = posts.length;
+          posts = mergePosts(posts, fetchedPosts);
 
-          fetchCategoryPosts(function (fetchedPosts) {
-            isHydrating = false;
-
-            if (!fetchedPosts.length) {
-              applyFilter();
-              return;
-            }
-
-            var before = posts.length;
-            posts = mergePosts(posts, fetchedPosts);
-
-            if (posts.length !== before) {
-              writeCachedPosts(posts);
-            }
-
-            applyFilter();
-          });
-        }
-
-        function activate(target) {
-          currentTarget = target;
-          saveTarget(target);
-          var conf = targetConfig[target];
-          drawerTitle.textContent = conf ? conf.title : target;
-          activeCrumb.textContent = conf ? conf.title : target;
-
-          for (var i = 0; i < buttons.length; i += 1) {
-            var isTarget = buttons[i].getAttribute('data-target') === target;
-            buttons[i].classList.toggle('is-active', isTarget);
-            buttons[i].setAttribute(
-              'aria-pressed',
-              isTarget ? 'true' : 'false',
-            );
+          if (posts.length !== before) {
+            writeCachedPosts(posts);
           }
 
           applyFilter();
+        });
+      }
+
+      function activate(target) {
+        currentTarget = target;
+        saveTarget(target);
+        var conf = targetConfig[target];
+        drawerTitle.textContent = conf ? conf.title : target;
+        activeCrumb.textContent = conf ? conf.title : target;
+
+        for (var i = 0; i < buttons.length; i += 1) {
+          var isTarget = buttons[i].getAttribute('data-target') === target;
+          buttons[i].classList.toggle('is-active', isTarget);
+          buttons[i].setAttribute(
+            'aria-pressed',
+            isTarget ? 'true' : 'false',
+          );
         }
 
-        for (var n = 0; n < buttons.length; n += 1) {
-          buttons[n].addEventListener('click', function () {
-            activate(this.getAttribute('data-target'));
+        applyFilter();
+      }
 
-            // 현재 카테고리에 속한 글을 보고 있지 않으면 첫 번째(최신) 글로 자동 이동
-            if (contentEmptyState && !contentEmptyState.hidden) {
-              var firstItem = drawerList.querySelector('.drawer-item');
-              if (firstItem) {
-                var firstHref = firstItem.getAttribute('data-href');
-                if (firstHref && firstHref !== '#') {
-                  firstItem.classList.add('is-transitioning');
-                  window.sessionStorage.setItem(
-                    'tistory-drawer-scroll-v1',
-                    '0',
-                  );
-                  window.sessionStorage.setItem('tistory-content-enter', '1');
-                  var firstContentEl = document.getElementById('content-body');
-                  var firstReduced = window.matchMedia(
-                    '(prefers-reduced-motion: reduce)',
-                  ).matches;
-                  if (firstContentEl && !firstReduced) {
-                    firstContentEl.classList.add('is-exiting');
-                    var firstCrumbEl =
-                      activePostCrumb && !activePostCrumb.hidden
-                        ? activePostCrumb
-                        : activeCrumb;
-                    if (firstCrumbEl) {
-                      typewriterOut(firstCrumbEl, 680);
-                    }
-                    setTimeout(function () {
-                      window.location.href = firstHref;
-                    }, 980);
-                  } else {
-                    window.location.href = firstHref;
+      for (var n = 0; n < buttons.length; n += 1) {
+        buttons[n].addEventListener('click', function () {
+          activate(this.getAttribute('data-target'));
+
+          // 현재 카테고리에 속한 글을 보고 있지 않으면 첫 번째(최신) 글로 자동 이동
+          if (contentEmptyState && !contentEmptyState.hidden) {
+            var firstItem = drawerList.querySelector('.drawer-item');
+            if (firstItem) {
+              var firstHref = firstItem.getAttribute('data-href');
+              if (firstHref && firstHref !== '#') {
+                firstItem.classList.add('is-transitioning');
+                window.sessionStorage.setItem(
+                  'tistory-drawer-scroll-v1',
+                  '0',
+                );
+                window.sessionStorage.setItem('tistory-content-enter', '1');
+                var firstContentEl = document.getElementById('content-body');
+                var firstReduced = window.matchMedia(
+                  '(prefers-reduced-motion: reduce)',
+                ).matches;
+                if (firstContentEl && !firstReduced) {
+                  firstContentEl.classList.add('is-exiting');
+                  var firstCrumbEl =
+                    activePostCrumb && !activePostCrumb.hidden
+                      ? activePostCrumb
+                      : activeCrumb;
+                  if (firstCrumbEl) {
+                    typewriterOut(firstCrumbEl, 680);
                   }
+                  setTimeout(function () {
+                    window.location.href = firstHref;
+                  }, 980);
+                } else {
+                  window.location.href = firstHref;
                 }
               }
             }
-          });
-        }
-
-        if (mobileNavToggle) {
-          mobileNavToggle.addEventListener('click', function () {
-            setMobileNav(!document.body.classList.contains('nav-open'));
-          });
-        }
-
-        if (mobileNavBackdrop) {
-          mobileNavBackdrop.addEventListener('click', function () {
-            setMobileNav(false);
-          });
-        }
-
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape') {
-            setMobileNav(false);
           }
         });
+      }
 
-        window.addEventListener('resize', function () {
-          if (!isMobileSidebarMode()) {
-            setMobileNav(false);
-          }
+      if (mobileNavToggle) {
+        mobileNavToggle.addEventListener('click', function () {
+          setMobileNav(!document.body.classList.contains('nav-open'));
         });
+      }
 
-        search.addEventListener('input', applyFilter);
-        activate(currentTarget);
-        if (
-          shouldAnimateEnter &&
-          !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        ) {
-          var enterCrumbEl =
-            activePostCrumb && !activePostCrumb.hidden
-              ? activePostCrumb
-              : activeCrumb;
-          if (enterCrumbEl) {
-            typewriterIn(enterCrumbEl, 850);
-          }
+      if (mobileNavBackdrop) {
+        mobileNavBackdrop.addEventListener('click', function () {
+          setMobileNav(false);
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          setMobileNav(false);
         }
-        hydratePostsForDirectEntry();
+      });
 
-        // 목록 모드에서는 Tistory 기본 글 목록 카드·페이지네이션 숨김
-        // 드로어가 글 목록을 담당하므로 콘텐츠 영역에 중복 표시 불필요
-        if (!currentPostTitle) {
-          var heroCard = document.querySelector('.hero-card');
-          if (heroCard) {
-            heroCard.style.display = 'none';
-          }
-          var pagingEl = document.getElementById('paging');
-          if (pagingEl) {
-            pagingEl.style.display = 'none';
-          }
+      window.addEventListener('resize', function () {
+        if (!isMobileSidebarMode()) {
+          setMobileNav(false);
         }
+      });
 
-        // Move Tistory injected floating element into inset-header
-        var floatingSlot = document.getElementById('inset-floating-slot');
-        function resetFloatingStyle(el) {
+      search.addEventListener('input', applyFilter);
+      activate(currentTarget);
+      if (
+        shouldAnimateEnter &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        var enterCrumbEl =
+          activePostCrumb && !activePostCrumb.hidden
+            ? activePostCrumb
+            : activeCrumb;
+        if (enterCrumbEl) {
+          typewriterIn(enterCrumbEl, 850);
+        }
+      }
+      hydratePostsForDirectEntry();
+
+      // 목록 모드에서는 Tistory 기본 글 목록 카드·페이지네이션 숨김
+      // 드로어가 글 목록을 담당하므로 콘텐츠 영역에 중복 표시 불필요
+      if (!currentPostTitle) {
+        var heroCard = document.querySelector('.hero-card');
+        if (heroCard) {
+          heroCard.style.display = 'none';
+        }
+        var pagingEl = document.getElementById('paging');
+        if (pagingEl) {
+          pagingEl.style.display = 'none';
+        }
+      }
+
+      // Move Tistory injected floating element into inset-header
+      var floatingSlot = document.getElementById('inset-floating-slot');
+      function resetFloatingStyle(el) {
+        if (!el) {
+          return;
+        }
+        el.style.position = 'static';
+        el.style.top = 'auto';
+        el.style.right = 'auto';
+        el.style.bottom = 'auto';
+        el.style.left = 'auto';
+        el.style.transform = 'none';
+        el.style.zIndex = 'auto';
+        el.style.margin = '0';
+        // Also reset immediate children (Tistory sometimes wraps in a div)
+        var children = el.children;
+        for (var i = 0; i < children.length; i += 1) {
+          resetFloatingStyle(children[i]);
+        }
+      }
+      function moveTistoryFloating() {
+        var floating = document.getElementById('tistory_floating');
+        if (!floating || !floatingSlot) {
+          return;
+        }
+        if (floating.parentNode !== floatingSlot) {
+          floatingSlot.appendChild(floating);
+        }
+        resetFloatingStyle(floating);
+      }
+      moveTistoryFloating();
+      var floatingObserver = new MutationObserver(function () {
+        moveTistoryFloating();
+      });
+      // subtree:true to catch late injection inside body children
+      floatingObserver.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+      // Interactive Features
+      // 0. Drawer Item 3D Tilt Effect (Holographic Card Style)
+      (function () {
+        var tiltedItem = null;
+
+        function resetTilt(el) {
           if (!el) {
             return;
           }
-          el.style.position = 'static';
-          el.style.top = 'auto';
-          el.style.right = 'auto';
-          el.style.bottom = 'auto';
-          el.style.left = 'auto';
-          el.style.transform = 'none';
-          el.style.zIndex = 'auto';
-          el.style.margin = '0';
-          // Also reset immediate children (Tistory sometimes wraps in a div)
-          var children = el.children;
-          for (var i = 0; i < children.length; i += 1) {
-            resetFloatingStyle(children[i]);
-          }
+          // CSS transition 복원 → 부드럽게 원위치로 복귀
+          el.style.transition = '';
+          el.style.removeProperty('--rx');
+          el.style.removeProperty('--ry');
+          el.style.removeProperty('--mx');
+          el.style.removeProperty('--my');
         }
-        function moveTistoryFloating() {
-          var floating = document.getElementById('tistory_floating');
-          if (!floating || !floatingSlot) {
-            return;
-          }
-          if (floating.parentNode !== floatingSlot) {
-            floatingSlot.appendChild(floating);
-          }
-          resetFloatingStyle(floating);
-        }
-        moveTistoryFloating();
-        var floatingObserver = new MutationObserver(function () {
-          moveTistoryFloating();
-        });
-        // subtree:true to catch late injection inside body children
-        floatingObserver.observe(document.body, {
-          childList: true,
-          subtree: true,
-        });
-        // Interactive Features
-        // 0. Drawer Item 3D Tilt Effect (Holographic Card Style)
-        (function () {
-          var tiltedItem = null;
 
-          function resetTilt(el) {
-            if (!el) {
-              return;
-            }
-            // CSS transition 복원 → 부드럽게 원위치로 복귀
-            el.style.transition = '';
-            el.style.removeProperty('--rx');
-            el.style.removeProperty('--ry');
-            el.style.removeProperty('--mx');
-            el.style.removeProperty('--my');
-          }
+        drawerList.addEventListener('mousemove', function (e) {
+          var item = e.target.closest('.drawer-item');
 
-          drawerList.addEventListener('mousemove', function (e) {
-            var item = e.target.closest('.drawer-item');
-
-            if (tiltedItem && tiltedItem !== item) {
-              resetTilt(tiltedItem);
-              tiltedItem = null;
-            }
-
-            if (!item) {
-              return;
-            }
-
-            // 마우스 추적 중에는 transform transition 비활성화 → 즉각 반응
-            if (tiltedItem !== item) {
-              item.style.transition =
-                'background 0.25s ease, box-shadow 0.25s ease';
-            }
-
-            tiltedItem = item;
-            var rect = item.getBoundingClientRect();
-            var x = (e.clientX - rect.left) / rect.width;
-            var y = (e.clientY - rect.top) / rect.height;
-
-            item.style.setProperty('--rx', (0.5 - y) * 10 + 'deg');
-            item.style.setProperty('--ry', (x - 0.5) * 10 + 'deg');
-            item.style.setProperty('--mx', x * 100 + '%');
-            item.style.setProperty('--my', y * 100 + '%');
-          });
-
-          drawerList.addEventListener('mouseleave', function () {
+          if (tiltedItem && tiltedItem !== item) {
             resetTilt(tiltedItem);
             tiltedItem = null;
-          });
-        })();
+          }
 
-        // 1. Scroll Progress Bar
-        var progress = document.getElementById('scroll-progress');
-        var contentArea = document.getElementById('content');
-        if (progress && contentArea) {
-          contentArea.addEventListener('scroll', function () {
-            var scrollH = contentArea.scrollHeight - contentArea.clientHeight;
-            var pct = scrollH > 0 ? (contentArea.scrollTop / scrollH) * 100 : 0;
-            progress.style.width = pct + '%';
-          });
-        }
+          if (!item) {
+            return;
+          }
 
-        // 2. Admin Menu Toggle
-        var adminMenuToggle = document.getElementById('admin-menu-toggle');
-        var adminMenuPopup = document.getElementById('admin-menu-popup');
-        if (adminMenuToggle && adminMenuPopup) {
-          adminMenuToggle.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var opening = adminMenuPopup.hidden;
-            adminMenuPopup.hidden = !opening;
-            adminMenuToggle.setAttribute(
-              'aria-expanded',
-              opening ? 'true' : 'false',
-            );
-            adminMenuToggle.classList.toggle('is-active', opening);
-          });
-          document.addEventListener('click', function () {
-            if (!adminMenuPopup.hidden) {
-              adminMenuPopup.hidden = true;
-              adminMenuToggle.setAttribute('aria-expanded', 'false');
-              adminMenuToggle.classList.remove('is-active');
-            }
-          });
-          adminMenuPopup.addEventListener('click', function (e) {
-            e.stopPropagation();
-          });
-          document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && !adminMenuPopup.hidden) {
-              adminMenuPopup.hidden = true;
-              adminMenuToggle.setAttribute('aria-expanded', 'false');
-              adminMenuToggle.classList.remove('is-active');
-            }
-          });
-        }
+          // 마우스 추적 중에는 transform transition 비활성화 → 즉각 반응
+          if (tiltedItem !== item) {
+            item.style.transition =
+              'background 0.25s ease, box-shadow 0.25s ease';
+          }
 
-        // 3. Dark Mode Toggle
-        var darkModeBtn = document.getElementById('dark-mode-toggle');
-        function toggleDark() {
-          var isDark = document.body.classList.toggle('dark');
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        }
-        if (darkModeBtn) {
-          darkModeBtn.addEventListener('click', function (e) {
-            if (!document.startViewTransition) {
-              toggleDark();
-              return;
-            }
-            var x = e.clientX;
-            var y = e.clientY;
-            document.documentElement.style.setProperty('--click-x', x + 'px');
-            document.documentElement.style.setProperty('--click-y', y + 'px');
-            document.documentElement.classList.add('dark-mode-transition');
-            document
-              .startViewTransition(function () {
-                toggleDark();
-              })
-              .finished.finally(function () {
-                document.documentElement.classList.remove(
-                  'dark-mode-transition',
-                );
-              });
-          });
-        }
-        // 3. Medium Zoom
-        if (typeof mediumZoom !== 'undefined') {
-          mediumZoom('.post-content img', {
-            margin: 24,
-            background: 'var(--background)',
-          });
-        }
+          tiltedItem = item;
+          var rect = item.getBoundingClientRect();
+          var x = (e.clientX - rect.left) / rect.width;
+          var y = (e.clientY - rect.top) / rect.height;
 
-        // 4. Code Copy Button
-        var codeBlocks = document.querySelectorAll(
-          '.post-content pre, .post-content [data-ke-type="codeblock"]',
-        );
-        codeBlocks.forEach(function (pre) {
-          var btn = document.createElement('button');
-          btn.className = 'code-copy-btn';
-          btn.innerHTML =
-            '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-          btn.addEventListener('click', function () {
-            var code = pre.querySelector('code');
-            var text = code ? code.innerText : pre.innerText;
-            navigator.clipboard.writeText(text).then(function () {
-              btn.innerHTML =
-                '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-              btn.classList.add('copied');
-              setTimeout(function () {
-                btn.innerHTML =
-                  '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-                btn.classList.remove('copied');
-              }, 2000);
-            });
-          });
-          // pre의 자식으로 맨 위에 넣어야 정상 렌더
-          pre.insertBefore(btn, pre.firstChild);
+          item.style.setProperty('--rx', (0.5 - y) * 10 + 'deg');
+          item.style.setProperty('--ry', (x - 0.5) * 10 + 'deg');
+          item.style.setProperty('--mx', x * 100 + '%');
+          item.style.setProperty('--my', y * 100 + '%');
         });
 
-        // 5. 홈 버튼 / 블로그 타이틀 링크 — 페이지 전환 애니메이션
-        var homeLinks = document.querySelectorAll(
-          '.rail-home-btn, .crumb-blog',
-        );
-        for (var hl = 0; hl < homeLinks.length; hl += 1) {
-          homeLinks[hl].addEventListener('click', function (e) {
-            var dest = this.getAttribute('href');
-            if (!dest) {
-              return;
-            }
-            e.preventDefault();
-            window.sessionStorage.setItem('tistory-content-enter', '1');
-            var hlContentEl = document.getElementById('content-body');
-            var hlReduced = window.matchMedia(
-              '(prefers-reduced-motion: reduce)',
-            ).matches;
-            if (hlContentEl && !hlReduced) {
-              hlContentEl.classList.add('is-exiting');
-              var hlCrumbEl =
-                activePostCrumb && !activePostCrumb.hidden
-                  ? activePostCrumb
-                  : activeCrumb;
-              if (hlCrumbEl) {
-                typewriterOut(hlCrumbEl, 680);
-              }
-              setTimeout(function () {
-                window.location.href = dest;
-              }, 980);
-            } else {
-              window.location.href = dest;
-            }
-          });
-        }
+        drawerList.addEventListener('mouseleave', function () {
+          resetTilt(tiltedItem);
+          tiltedItem = null;
+        });
       })();
-    </script>
-  </body>
+
+      // 1. Scroll Progress Bar
+      var progress = document.getElementById('scroll-progress');
+      var contentArea = document.getElementById('content');
+      if (progress && contentArea) {
+        contentArea.addEventListener('scroll', function () {
+          var scrollH = contentArea.scrollHeight - contentArea.clientHeight;
+          var pct = scrollH > 0 ? (contentArea.scrollTop / scrollH) * 100 : 0;
+          progress.style.width = pct + '%';
+        });
+      }
+
+      // 2. Admin Menu Toggle
+      var adminMenuToggle = document.getElementById('admin-menu-toggle');
+      var adminMenuPopup = document.getElementById('admin-menu-popup');
+      if (adminMenuToggle && adminMenuPopup) {
+        adminMenuToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var opening = adminMenuPopup.hidden;
+          adminMenuPopup.hidden = !opening;
+          adminMenuToggle.setAttribute(
+            'aria-expanded',
+            opening ? 'true' : 'false',
+          );
+          adminMenuToggle.classList.toggle('is-active', opening);
+        });
+        document.addEventListener('click', function () {
+          if (!adminMenuPopup.hidden) {
+            adminMenuPopup.hidden = true;
+            adminMenuToggle.setAttribute('aria-expanded', 'false');
+            adminMenuToggle.classList.remove('is-active');
+          }
+        });
+        adminMenuPopup.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !adminMenuPopup.hidden) {
+            adminMenuPopup.hidden = true;
+            adminMenuToggle.setAttribute('aria-expanded', 'false');
+            adminMenuToggle.classList.remove('is-active');
+          }
+        });
+      }
+
+      // 3. Dark Mode Toggle
+      var darkModeBtn = document.getElementById('dark-mode-toggle');
+      function toggleDark() {
+        var isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      }
+      if (darkModeBtn) {
+        darkModeBtn.addEventListener('click', function (e) {
+          if (!document.startViewTransition) {
+            toggleDark();
+            return;
+          }
+          var x = e.clientX;
+          var y = e.clientY;
+          document.documentElement.style.setProperty('--click-x', x + 'px');
+          document.documentElement.style.setProperty('--click-y', y + 'px');
+          document.documentElement.classList.add('dark-mode-transition');
+          document
+            .startViewTransition(function () {
+              toggleDark();
+            })
+            .finished.finally(function () {
+              document.documentElement.classList.remove(
+                'dark-mode-transition',
+              );
+            });
+        });
+      }
+      // 3. Medium Zoom
+      if (typeof mediumZoom !== 'undefined') {
+        mediumZoom('.post-content img', {
+          margin: 24,
+          background: 'var(--background)',
+        });
+      }
+
+      // 4. Code Copy Button
+      var codeBlocks = document.querySelectorAll(
+        '.post-content pre, .post-content [data-ke-type="codeblock"]',
+      );
+      codeBlocks.forEach(function (pre) {
+        var btn = document.createElement('button');
+        btn.className = 'code-copy-btn';
+        btn.innerHTML =
+          '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        btn.addEventListener('click', function () {
+          var code = pre.querySelector('code');
+          var text = code ? code.innerText : pre.innerText;
+          navigator.clipboard.writeText(text).then(function () {
+            btn.innerHTML =
+              '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            btn.classList.add('copied');
+            setTimeout(function () {
+              btn.innerHTML =
+                '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              btn.classList.remove('copied');
+            }, 2000);
+          });
+        });
+        // pre의 자식으로 맨 위에 넣어야 정상 렌더
+        pre.insertBefore(btn, pre.firstChild);
+      });
+
+      // 5. 홈 버튼 / 블로그 타이틀 링크 — 페이지 전환 애니메이션
+      var homeLinks = document.querySelectorAll(
+        '.rail-home-btn, .crumb-blog',
+      );
+      for (var hl = 0; hl < homeLinks.length; hl += 1) {
+        homeLinks[hl].addEventListener('click', function (e) {
+          var dest = this.getAttribute('href');
+          if (!dest) {
+            return;
+          }
+          e.preventDefault();
+          window.sessionStorage.setItem('tistory-content-enter', '1');
+          var hlContentEl = document.getElementById('content-body');
+          var hlReduced = window.matchMedia(
+            '(prefers-reduced-motion: reduce)',
+          ).matches;
+          if (hlContentEl && !hlReduced) {
+            hlContentEl.classList.add('is-exiting');
+            var hlCrumbEl =
+              activePostCrumb && !activePostCrumb.hidden
+                ? activePostCrumb
+                : activeCrumb;
+            if (hlCrumbEl) {
+              typewriterOut(hlCrumbEl, 680);
+            }
+            setTimeout(function () {
+              window.location.href = dest;
+            }, 980);
+          } else {
+            window.location.href = dest;
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+
 </html>

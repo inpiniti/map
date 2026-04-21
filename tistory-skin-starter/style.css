@@ -1816,3 +1816,33 @@ body:not(.dark) .drawer-item.is-transitioning::after {
 .dark .drawer-title-wrap h2 {
   color: var(--foreground);
 }
+
+/* 마크다운 표 스타일 */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.post-content thead th {
+  background-color: var(--accent);
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.post-content tbody tr:nth-child(even) {
+  background-color: var(--background);
+}
+
+.post-content tbody tr:hover {
+  background-color: var(--accent);
+}

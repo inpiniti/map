@@ -650,6 +650,13 @@
           var hasPost = !!currentPostTitle && showPostCrumb !== false;
           activePostCrumb.hidden = !hasPost;
           postCrumbSep.hidden = !hasPost;
+
+          // 모바일 레이아웃 처리를 위해 클래스 토글
+          var breadcrumbEl = document.querySelector('.breadcrumb');
+          if (breadcrumbEl) {
+            breadcrumbEl.classList.toggle('has-post', hasPost);
+          }
+
           if (hasPost) {
             activePostCrumb.textContent = currentPostTitle;
           }
@@ -1209,7 +1216,7 @@
                   String(drawerList.scrollTop),
                 );
                 window.sessionStorage.setItem('tistory-content-enter', '1');
-                setMobileNav(false);
+                // setMobileNav(false); // 이동 애니메이션을 위해 즉시 닫지 않음
                 var contentEl = document.getElementById('content-body');
                 var reduced = window.matchMedia(
                   '(prefers-reduced-motion: reduce)',

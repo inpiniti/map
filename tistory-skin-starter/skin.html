@@ -53,6 +53,7 @@
                   <polyline points="9 21 9 13 15 13 15 21" />
                 </svg>
               </span>
+              <span class="rail-btn-label" aria-hidden="true">dev-soip</span>
             </a>
             <div id="rail-dynamic" aria-label="카테고리 메뉴"></div>
             <div style="flex-grow: 1"></div>
@@ -71,6 +72,7 @@
                     ></path>
                   </svg>
                 </span>
+                <span class="rail-btn-label" aria-hidden="true">설정</span>
               </button>
               <div id="admin-menu-popup" class="admin-menu-popup" hidden>
                 <div class="admin-menu-header">
@@ -191,6 +193,7 @@
                   ></path>
                 </svg>
               </span>
+              <span class="rail-btn-label" aria-hidden="true">다크모드</span>
             </button>
           </aside>
 
@@ -796,6 +799,9 @@
                 '">' +
                 '<span class="icon" aria-hidden="true">' +
                 iconSvg(i, categories[i].category) +
+                '</span>' +
+                '<span class="rail-btn-label" aria-hidden="true">' +
+                categories[i].title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
                 '</span>' +
                 '</button>',
             );

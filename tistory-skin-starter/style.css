@@ -18,6 +18,7 @@
   --shine-opacity: 0.15;
   --hover-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   --rail-width: 44px;
+  --rail-expanded-width: 148px;
   --drawer-width: 316px;
 }
 
@@ -145,6 +146,11 @@ a {
   overflow: hidden;
   background: transparent;
   box-shadow: none;
+  transition: grid-template-columns 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dock-shell:has(#left-rail:hover) {
+  grid-template-columns: var(--rail-expanded-width) var(--drawer-width) minmax(0, 1fr);
 }
 
 .shell-topbar {
@@ -168,17 +174,17 @@ a {
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   padding: 10px 6px;
   min-height: 0;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 #rail-dynamic {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -227,6 +233,47 @@ a {
   0% { transform: scale(0.82); }
   60% { transform: scale(1.08); }
   100% { transform: scale(1); }
+}
+
+/* 카테고리 버튼 hover 확장 */
+.rail-btn[data-target] {
+  justify-content: flex-start;
+  overflow: hidden;
+  transition:
+    width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.rail-btn[data-target] .icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+#left-rail:hover .rail-btn[data-target] {
+  width: calc(var(--rail-expanded-width) - 12px);
+}
+
+.rail-btn-label {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--foreground);
+  padding-left: 2px;
+  padding-right: 6px;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity 0.18s ease 0.1s,
+    transform 0.18s ease 0.1s;
+}
+
+#left-rail:hover .rail-btn-label {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .icon {
@@ -534,7 +581,7 @@ a {
 .rail-home-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -542,7 +589,10 @@ a {
   color: var(--card);
   text-decoration: none;
   flex-shrink: 0;
-  transition: background 120ms ease;
+  overflow: hidden;
+  transition:
+    width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    background 120ms ease;
   margin-bottom: 4px;
 }
 
@@ -551,6 +601,9 @@ a {
 }
 
 .rail-home-btn .icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
   color: var(--card);
 }
 
@@ -558,6 +611,42 @@ a {
   stroke: var(--card);
   fill: none;
   stroke-width: 1.8;
+}
+
+.rail-home-btn .rail-btn-label {
+  color: var(--card);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+#left-rail:hover .rail-home-btn {
+  width: calc(var(--rail-expanded-width) - 12px);
+}
+
+/* 하단 고정 버튼(설정, 다크모드) 확장 */
+#admin-menu-toggle,
+#dark-mode-toggle {
+  justify-content: flex-start;
+  overflow: hidden;
+  transition:
+    width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#admin-menu-toggle .icon,
+#dark-mode-toggle .icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+#left-rail:hover #admin-menu-toggle,
+#left-rail:hover #dark-mode-toggle {
+  width: calc(var(--rail-expanded-width) - 12px);
 }
 
 #inset-floating-slot {
@@ -1114,6 +1203,11 @@ button {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
+    transition: none;
+  }
+
+  .dock-shell:has(#left-rail:hover) {
+    grid-template-columns: 1fr;
   }
 
   .mobile-nav-toggle {
@@ -1464,10 +1558,6 @@ body:not(.dark) .drawer-item.is-transitioning::after {
 @keyframes contentSlideIn {
   from { transform: translateX(48px); opacity: 0; }
   to   { transform: translateX(0);    opacity: 1; }
-}
-
-#content {
-  overflow: hidden;
 }
 
 #content-body.is-exiting {

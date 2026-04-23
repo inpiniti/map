@@ -1,0 +1,743 @@
+:root {
+  --primary-blue: #3182f6;
+  --dark-black: #191f28;
+  --bg-grey: #f2f4f6;
+  --text-main: #191f28;
+  --text-grey: #4e5968;
+  --border-color: #e5e8eb;
+  --white: #ffffff;
+  --orange-price: #ff9d00;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f8fb;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text-main);
+}
+
+.aero-app {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+/* 1. Top Header (Optimized) */
+.top-header {
+  height: 56px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: relative;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-text { 
+  font-size: 18px; 
+  font-weight: 800; 
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.settings-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-grey);
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.settings-icon:hover {
+  color: var(--primary-blue);
+}
+
+/* 2. Year Selector (Integrated) */
+.year-selector {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.year-nav-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--text-grey);
+  cursor: pointer;
+  padding: 0 8px;
+  transition: color 0.1s;
+}
+
+.year-nav-btn:hover {
+  color: var(--primary-blue);
+}
+
+.current-year {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  min-width: 50px;
+  text-align: center;
+}
+
+/* 3. Month Selector Bar */
+.month-selector-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  display: flex !important;
+  align-items: stretch;
+  height: 60px;
+  padding: 0 !important;
+}
+
+.month-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.month-item:last-child {
+  border-right: none;
+}
+
+.month-item:hover {
+  background-color: #f7f9fb;
+}
+
+.month-item.active {
+  background-color: var(--primary-blue);
+  border-right-color: var(--primary-blue);
+}
+
+.month-item.active .month-text {
+  color: white;
+  font-weight: 700;
+}
+
+.month-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-grey);
+}
+
+.search-btn {
+  background: var(--dark-black);
+  color: var(--white);
+  padding: 0 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 20px;
+  height: 56px;
+  align-self: center;
+}
+
+/* 4. Main Container */
+.main-container {
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.your-flight h3 { margin: 0 0 20px; font-size: 15px; font-weight: 700; }
+
+.summary-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f7f9fc;
+  margin-bottom: 10px;
+}
+
+.summary-item.active {
+  background: var(--dark-black);
+  color: white;
+}
+
+.sum-icon { font-size: 18px; }
+.sum-text p { margin: 0; }
+.sum-text .date { font-size: 12px; opacity: 0.8; }
+.sum-text .path { font-size: 13px; font-weight: 600;  margin-top: 24px;
+}
+
+/* Loading & No Results */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #8b95a1;
+  font-size: 15px;
+}
+
+.no-results {
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.no-results-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.no-results p {
+  color: #333d4b;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.no-results .sub-text {
+  color: #8b95a1;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.sort-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sort-section label { font-size: 12px; color: var(--text-grey); font-weight: 600; }
+.sort-dropdown {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filter-section {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter-header h3 { margin: 0; font-size: 16px; }
+.filter-header .reset { font-size: 13px; color: var(--primary-blue); cursor: pointer; font-weight: 600; }
+
+.filter-group {
+  margin-bottom: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #f6f8fb;
+}
+
+.group-title { font-size: 13px; font-weight: 700; margin-bottom: 15px; color: var(--text-grey); }
+
+/* 계층형 필터 스타일 (TDS 느낌) */
+.filter-option.parent {
+  margin-bottom: 8px;
+}
+
+.sub-filter-group {
+  margin-left: 20px;
+  border-left: 1px solid var(--border-color);
+  padding-left: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-filter-group.hidden {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
+.filter-option label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 6px 0;
+  user-select: none;
+}
+
+.filter-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filter-option span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-grey);
+  line-height: 1.4;
+}
+
+.filter-option.parent span {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 15px;
+}
+
+.filter-option.sub span {
+  font-size: 13px;
+}
+
+.price-slider {
+  padding: 10px 0;
+}
+
+.slider-track {
+  height: 4px;
+  background: #edf2f7;
+  position: relative;
+  margin: 15px 0;
+  border-radius: 2px;
+}
+
+.slider-fill {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 100%;
+  background: var(--orange-price);
+}
+
+.slider-handle {
+  width: 14px;
+  height: 14px;
+  background: var(--white);
+  border: 3px solid var(--orange-price);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-handle.left { left: 10%; }
+.slider-handle.right { right: 10%; }
+
+.slider-labels { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: #a0aec0; }
+
+/* Results & Housing Card */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.found-count {
+  font-size: 15px;
+  color: var(--text-grey);
+}
+
+.found-count strong {
+  color: var(--primary-blue);
+}
+
+.sort-actions {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-grey);
+  cursor: pointer;
+}
+
+/* 청약 물건 카드 스타일 (HousingCard) */
+.housing-card {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.housing-card:hover {
+  border-color: var(--primary-blue);
+}
+
+.housing-card.expanded {
+  border-color: var(--border-color);
+}
+
+.card-main {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.house-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1.5;
+}
+
+.house-icon {
+  font-size: 24px;
+  width: 52px;
+  height: 52px;
+  background: #f0f7ff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+}
+
+.house-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.house-meta {
+  font-size: 13px;
+  color: var(--text-grey);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.separator {
+  color: #d1d8df;
+  font-size: 10px;
+}
+
+.house-info-summary {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+  justify-content: center;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-block label {
+  font-size: 11px;
+  color: #8b95a1;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.info-block .value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.info-block .value.highlight {
+  color: var(--primary-blue);
+}
+
+.day-tag {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+  color: #8b95a1;
+}
+
+.card-expand-btn {
+  font-size: 13px;
+  color: var(--primary-blue);
+  font-weight: 700;
+  padding: 10px 16px;
+  background: #f0f7ff;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.card-expand-btn:hover {
+  background: #e1f0ff;
+}
+
+/* --- Card Detail V3 (Flat Line-Based Layout) --- */
+.card-detail-v3 {
+  background: white;
+  border-radius: 0 0 12px 12px;
+  padding: 0;
+  border-top: 1px solid #f2f4f6;
+  animation: slideDown 0.3s ease-out;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1단: 요약 바 - 선으로 구분된 플랫 스타일 */
+.detail-summary-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f2f4f6;
+  background: #f9fafb;
+  margin: 0; /* Clear any external margin */
+  padding: 0; /* Clear any external padding */
+}
+
+.summary-item {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 0; /* Symmetric padding */
+  margin: 0; /* Clear any margin */
+  border-right: 1px solid #f2f4f6;
+  min-height: 44px;
+}
+
+.summary-item:last-child {
+  border-right: none;
+}
+
+.summary-item .label {
+  font-size: 11px;
+  color: #8b95a1;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.summary-item .value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333d4b;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* 2단: 일정 및 지도 - 좌우 구분선 */
+.detail-mid-section {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid #f2f4f6;
+  min-height: 320px; /* Increased height */
+}
+
+.schedule-column {
+  flex: 0 0 auto;
+  padding: 24px; /* Unified symmetric padding */
+  border-right: 1px solid #f2f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center timeline horizontally */
+  min-width: 240px; /* Ensure enough space for dates and labels */
+}
+
+.map-column {
+  flex: 1;
+  padding: 0;
+}
+
+.compact-map-box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 320px; /* Increased height */
+  border-radius: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.map-address-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4e5968;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 타임라인 미니 (대칭 정렬 수정) */
+.vertical-timeline.mini {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.vertical-timeline.mini .timeline-entry {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  position: relative;
+  width: 100%;
+}
+
+.vertical-timeline.mini .timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center relative to entry width */
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e5e8eb;
+  z-index: 0;
+}
+
+.vertical-timeline.mini .timeline-entry:first-child::before { top: 50%; }
+.vertical-timeline.mini .timeline-entry:last-child::before { bottom: 50%; }
+
+.vertical-timeline.mini .entry-time {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8b95a1;
+  text-align: right;
+  z-index: 1;
+}
+
+.vertical-timeline.mini .entry-node {
+  width: 8px;
+  height: 8px;
+  background: #e5e8eb;
+  border-radius: 50%;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.vertical-timeline.mini .timeline-entry.active .entry-node {
+  background: #3182f6;
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.1);
+}
+
+.vertical-timeline.mini .entry-info {
+  flex: 1;
+  z-index: 1;
+}
+
+.vertical-timeline.mini .entry-info h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333d4b;
+  margin: 0;
+  text-align: left;
+}
+
+/* 3단: 하단 표 - 깔끔한 보더리스 느낌 */
+.detail-bottom-section {
+  padding: 0;
+}
+
+.tos-table-v3 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tos-table-v3 th {
+  font-size: 11px;
+  color: #8b95a1;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f2f4f6;
+  background: #f9fafb;
+  text-align: left;
+}
+
+.tos-table-v3 td {
+  font-size: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.tos-table-v3 .bold { font-weight: 600; }
+.tos-table-v3 .total-val { color: #3182f6; font-weight: 600; }
+.tos-table-v3 .price-val { color: #ff8a00; font-weight: 700; }
+
+.apply-home-link-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background: #f9fafb;
+  border: 1px solid #f2f4f6;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #8b95a1;
+  cursor: pointer;
+}
+
+.apply-home-link-btn:hover {
+  background: #f2f4f6;
+  color: #4e5968;
+}
